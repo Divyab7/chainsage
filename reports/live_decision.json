@@ -1,0 +1,142 @@
+{
+  "name": "ChainSage Conviction Gate",
+  "version": "0.4.0",
+  "track": "BNB Hack Track 2 \u2014 Strategy Skills",
+  "description": "Only trade when derivatives, on-chain holder, and narrative layers align. Default to flat when they disagree.",
+  "universe": [
+    "BNB",
+    "CAKE",
+    "TWT",
+    "BTC"
+  ],
+  "scoring_rules": {
+    "derivatives": {
+      "bullish": "funding_rate > 0.01% AND price > ema_21",
+      "bearish": "funding_rate < -0.01% OR price < ema_21 * 0.98",
+      "neutral": "otherwise"
+    },
+    "on_chain": {
+      "bullish": "holder_change_7d > 2%",
+      "bearish": "holder_change_7d < -1%"
+    },
+    "narrative": {
+      "bullish": "sector_rank <= 10 AND fng >= 40",
+      "bearish": "fng < 20 OR sector_rank > 50"
+    }
+  },
+  "conviction_formula": "conviction = (sum(layer_scores) + 1) / 4, clamped to [0, 1]",
+  "exposure_formula": "target_exposure = conviction * 0.8 when signal=long",
+  "standard_falsifiers": [
+    "fng < 20",
+    "funding_rate > 0.05%",
+    "holder_distribution_concentration > 0.6",
+    "narrative_momentum < -0.3"
+  ],
+  "ecosystem": {
+    "chain": "BNB Smart Chain (BSC)",
+    "focus_tokens": [
+      "BNB",
+      "CAKE",
+      "TWT"
+    ],
+    "data_layer": "CoinMarketCap AI Agent Hub (MCP)",
+    "bsc_tokens": {
+      "BNB": {
+        "contract": "native",
+        "dex": "PancakeSwap"
+      },
+      "CAKE": {
+        "contract": "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
+        "dex": "PancakeSwap"
+      },
+      "TWT": {
+        "contract": "0x4B0F1812e5Df2A09796481Ff14017e6005508003",
+        "dex": "PancakeSwap"
+      }
+    },
+    "execution_path_track1": {
+      "signing": "Trust Wallet Agent Kit (TWAK) \u2014 self-custody local signing",
+      "sdk": "BNB AI Agent SDK \u2014 PancakeSwap swap execution on BSC",
+      "example": "When signal=long on BNB, TWAK agent swaps USDT \u2192 BNB on PancakeSwap at target_exposure"
+    }
+  },
+  "trust_wallet": {
+    "action": "cash",
+    "target_token": "BNB",
+    "target_exposure_pct": 0.0,
+    "bsc_contract": "native",
+    "dex": "PancakeSwap",
+    "note": "Skill emits allocation only \u2014 TWAK signs and executes on user rules"
+  },
+  "timeframe": "1D",
+  "entry_rules": [
+    "At least 2 of 3 layers score >= 0.2 (bullish per scoring_rules)",
+    "No layer scores <= -0.3 (strongly bearish)",
+    "Fear & Greed >= 20",
+    "No active falsifier",
+    "All required CMC MCP tool payloads available"
+  ],
+  "exit_rules": [
+    "Any layer turns strongly bearish (<= -0.3)",
+    "Fear & Greed drops below 20",
+    "Any standard falsifier triggers",
+    "CMC derivatives or metrics data becomes unavailable"
+  ],
+  "position_sizing": {
+    "method": "conviction_scaled",
+    "min_exposure": 0.0,
+    "max_position_size": 0.8,
+    "formula": "target_exposure = conviction * 0.8 when long",
+    "example": "conviction 0.63 \u2192 target_exposure 0.504 (63% \u00d7 80%)"
+  },
+  "risk_limits": {
+    "max_drawdown_gate": 0.25,
+    "default_signal": "flat",
+    "long_only": true
+  },
+  "cmc_data_sources": [
+    "get_crypto_quotes_latest",
+    "get_global_metrics_latest"
+  ],
+  "current_decision": {
+    "timestamp": "2026-06-19",
+    "asset": "BNB",
+    "signal": "flat",
+    "conviction": 0.0,
+    "target_exposure": 0.0,
+    "regime": "data-incomplete",
+    "layers": {},
+    "falsifiers": [
+      "CMC MCP data incomplete \u2014 do not trade"
+    ],
+    "reasons": [
+      "Required CMC tool payload missing for this asset"
+    ]
+  },
+  "mcp_tool_payloads": {
+    "get_crypto_quotes_latest": {
+      "price": 577.6215192794466,
+      "volume_24h": 1053568643.7689714,
+      "percent_change_7d": -4.84060713,
+      "percent_change_24h": -2.07302431,
+      "market_cap": 77853832160.63907
+    },
+    "get_global_metrics_latest": {
+      "value": 20.0,
+      "classification": "Fear"
+    },
+    "get_crypto_technical_analysis": {
+      "source": "unavailable"
+    },
+    "get_global_crypto_derivatives_metrics": {
+      "source": "unavailable"
+    },
+    "get_crypto_metrics": {
+      "source": "unavailable"
+    },
+    "trending_crypto_narratives": {
+      "source": "unavailable"
+    }
+  },
+  "data_source": "coinmarketcap_live"
+}

@@ -1,0 +1,38 @@
+{
+  "BNB": {
+    "total_return": -0.1303,
+    "max_drawdown": -0.3525,
+    "sharpe_ratio": -0.184,
+    "calmar_ratio": -0.102,
+    "win_rate": 0.377,
+    "days_in_market_pct": 0.333,
+    "time_in_market": 0.135
+  },
+  "CAKE": {
+    "total_return": 1.1422,
+    "max_drawdown": -0.3576,
+    "sharpe_ratio": 0.789,
+    "calmar_ratio": 0.615,
+    "win_rate": 0.383,
+    "days_in_market_pct": 0.341,
+    "time_in_market": 0.149
+  },
+  "TWT": {
+    "total_return": -0.061,
+    "max_drawdown": -0.3579,
+    "sharpe_ratio": 0.034,
+    "calmar_ratio": -0.046,
+    "win_rate": 0.384,
+    "days_in_market_pct": 0.289,
+    "time_in_market": 0.121
+  },
+  "BTC": {
+    "total_return": 0.065,
+    "max_drawdown": -0.1487,
+    "sharpe_ratio": 0.215,
+    "calmar_ratio": 0.112,
+    "win_rate": 0.366,
+    "days_in_market_pct": 0.309,
+    "time_in_market": 0.118
+  }
+}

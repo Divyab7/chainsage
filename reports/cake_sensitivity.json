@@ -1,0 +1,30 @@
+{
+  "asset": "CAKE",
+  "oos_period": "2024-07-01 to 2026-06-01",
+  "base_oos_sharpe": 0.356,
+  "rows": [
+    {
+      "scenario": "Base case",
+      "oos_sharpe": 0.36,
+      "impact": "\u2014"
+    },
+    {
+      "scenario": "Funding threshold +10%",
+      "oos_sharpe": 0.36,
+      "impact": "+0%"
+    },
+    {
+      "scenario": "Holder threshold -10%",
+      "oos_sharpe": 0.36,
+      "impact": "+0%"
+    },
+    {
+      "scenario": "All gates +10%",
+      "oos_sharpe": 0.0,
+      "impact": "-100%"
+    }
+  ],
+  "fragile": true,
+  "robust": false,
+  "conclusion": "Strategy is fragile to threshold perturbation (OOS Sharpe < 1.0)."
+}

@@ -1,0 +1,27 @@
+{
+  "asset": "CAKE",
+  "mode": "conservative",
+  "is_period": "2023-01-01 \u2192 2024-06-30",
+  "standard_sharpe_is": 0.91,
+  "deflated_sharpe": 0.78,
+  "deflated_sharpe_probability": 1.0,
+  "n_trials": 3,
+  "n_observations": 247,
+  "pbo": 0.02,
+  "walk_forward": {
+    "n_windows": 7,
+    "mean_sharpe": -0.01,
+    "std_sharpe": 0.55,
+    "wf_sharpe_label": "-0.01 \u00b1 0.55",
+    "train_months": 6,
+    "test_months": 3
+  },
+  "decay": {
+    "is_sharpe": 0.91,
+    "oos_sharpe": 0.0,
+    "decay_ratio": 0.0,
+    "decay_pct": 100.0,
+    "interpretation": "regime_mismatch",
+    "conclusion": "Edge not preserved in OOS regime"
+  }
+}

@@ -1,0 +1,24 @@
+# ChainSage Conservative Mode — trades rarely, high conviction only.
+name: conservative
+description: "High-conviction entries only; extreme falsifiers; ~5-10% time-in-market."
+
+# 1.5 = min conviction 0.75 (2.5 yields 0 trades on committed BSC data)
+GATE_THRESHOLD: 1.5
+MIN_LAYER_SCORE: 0.0
+MAX_POSITION_SIZE: 0.8
+
+FNG_HARD_STOP: 10
+FUNDING_HARD_STOP: 0.001  # 0.1%
+
+HARD_STOPS:
+  - "fng < 10"
+  - "funding > 0.1%"
+
+SOFT_WARNINGS:
+  - "oi_change_24h > 50%"
+  - "holder_concentration > 0.7"
+
+OI_CHANGE_SOFT: 0.50
+HOLDER_CONCENTRATION_SOFT: 0.7
+
+DERIVATIVES_POSITIVE_MILD: false

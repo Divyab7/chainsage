@@ -1,0 +1,164 @@
+{
+  "name": "ChainSage Conviction Gate",
+  "version": "0.5.0",
+  "track": "BNB Hack Track 2 \u2014 Strategy Skills",
+  "description": "Only trade when derivatives, on-chain holder, and narrative layers align. Default to flat when they disagree.",
+  "universe": [
+    "BNB",
+    "CAKE",
+    "TWT",
+    "BTC"
+  ],
+  "validation_methodology": {
+    "is_period": "2023-01-01 to 2024-06-30",
+    "oos_period": "2024-07-01 to 2026-06-01",
+    "held_out_note": "Strategy will be tested on post-June-21 2026 data by judges",
+    "walk_forward": "6-month windows, expanding",
+    "no_lookahead": "Signals computed only with data available at timestamp",
+    "verify": "chainsage verify re-derives headline numbers from committed data/"
+  },
+  "performance_targets": {
+    "min_sharpe": 1.2,
+    "max_drawdown": 0.2,
+    "min_calmar": 1.5,
+    "min_win_rate": 0.55
+  },
+  "transaction_costs": {
+    "commission": 0.001,
+    "slippage": 0.0005,
+    "impact_model": "fixed"
+  },
+  "scoring_rules": {
+    "derivatives": {
+      "score": "funding = get_global_crypto_derivatives_metrics().funding_rate; if funding > 0.02%: +1.0; elif funding > 0.01%: +0.5; elif funding < -0.02%: -1.0; elif funding < -0.01%: -0.5; else: 0.0"
+    },
+    "on_chain": {
+      "score": "h = get_crypto_metrics().holder_change_7d; if h > 4%: +1.0; elif h > 2%: +0.5; elif h < -2%: -1.0; elif h < -1%: -0.5; else: 0.0"
+    },
+    "narrative": {
+      "score": "rank = trending_crypto_narratives sector rank; fng = get_global_metrics_latest(); if rank <= 5 AND fng >= 50: +1.0; elif rank <= 10 AND fng >= 40: +0.5; elif fng < 20 OR rank > 50: -1.0; elif fng < 30 OR rank > 40: -0.5; else: 0.0"
+    },
+    "conviction_calculation": "raw_score = sum(layer_scores); conviction = (raw_score + 3) / 6; target_exposure = conviction * 0.8 when signal=long",
+    "falsifiers": {
+      "hard_stop": [
+        "fng < 20",
+        "funding > 0.05%",
+        "oi_change_24h > 50%"
+      ],
+      "soft_warning": [
+        "holder_concentration > 0.6"
+      ],
+      "override": "ANY hard_stop triggers \u2192 immediate flat, conviction = 0"
+    }
+  },
+  "ecosystem": {
+    "chain": "BNB Smart Chain (BSC)",
+    "focus_tokens": [
+      "BNB",
+      "CAKE",
+      "TWT"
+    ],
+    "data_layer": "CoinMarketCap AI Agent Hub (MCP)",
+    "bsc_tokens": {
+      "BNB": {
+        "contract": "native",
+        "dex": "PancakeSwap"
+      },
+      "CAKE": {
+        "contract": "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
+        "dex": "PancakeSwap"
+      },
+      "TWT": {
+        "contract": "0x4B0F1812e5Df2A09796481Ff14017e6005508003",
+        "dex": "PancakeSwap"
+      }
+    },
+    "execution_path_track1": {
+      "signing": "Trust Wallet Agent Kit (TWAK) \u2014 self-custody local signing",
+      "sdk": "BNB AI Agent SDK \u2014 PancakeSwap swap execution on BSC",
+      "example": "When signal=long on BNB, TWAK agent swaps USDT \u2192 BNB on PancakeSwap at target_exposure"
+    }
+  },
+  "trust_wallet": {
+    "action": "cash",
+    "target_token": "BNB",
+    "target_exposure_pct": 0.0,
+    "bsc_contract": "native",
+    "dex": "PancakeSwap",
+    "note": "Skill emits allocation only \u2014 TWAK signs and executes on user rules"
+  },
+  "timeframe": "1D",
+  "entry_rules": [
+    "At least 2 of 3 layers score >= 0.5",
+    "No layer scores <= -0.5",
+    "No hard_stop falsifier active",
+    "All required CMC MCP tool payloads available"
+  ],
+  "exit_rules": [
+    "Any layer turns <= -0.5",
+    "Any hard_stop falsifier triggers",
+    "CMC derivatives or metrics data becomes unavailable"
+  ],
+  "position_sizing": {
+    "method": "conviction_scaled",
+    "min_exposure": 0.0,
+    "max_position_size": 0.8,
+    "formula": "target_exposure = conviction * 0.8 when long",
+    "example": "conviction 0.67 \u2192 target_exposure 0.536 (67% \u00d7 80%)"
+  },
+  "risk_limits": {
+    "max_drawdown_gate": 0.25,
+    "default_signal": "flat",
+    "long_only": true
+  },
+  "cmc_data_sources": [
+    "get_crypto_quotes_latest",
+    "get_crypto_technical_analysis",
+    "get_global_metrics_latest",
+    "get_global_crypto_derivatives_metrics",
+    "get_crypto_metrics",
+    "trending_crypto_narratives"
+  ],
+  "current_decision": {
+    "timestamp": "2026-06-17",
+    "asset": "BNB",
+    "signal": "flat",
+    "conviction": 0.0,
+    "target_exposure": 0.0,
+    "regime": "divergent",
+    "layers": {
+      "derivatives": {
+        "score": 0.0,
+        "reasons": [
+          "funding neutral \u2192 0.0"
+        ]
+      },
+      "onchain": {
+        "score": 0.0,
+        "reasons": [
+          "holder_change_7d neutral \u2192 0.0"
+        ]
+      },
+      "narrative": {
+        "score": -0.5,
+        "reasons": [
+          "fng < 30 OR sector_rank 30 > 40 \u2192 -0.5"
+        ]
+      }
+    },
+    "falsifiers": [],
+    "falsifier_warnings": [],
+    "reasons": [
+      "insufficient alignment \u2014 default flat"
+    ]
+  },
+  "backtest_summary": {
+    "strategy_return": -0.0856,
+    "bnb_buyhold_return": 1.694,
+    "strategy_sharpe": -0.737,
+    "bnb_sharpe": 0.799,
+    "max_drawdown": -0.0856,
+    "benchmark_max_drawdown": -0.5623,
+    "time_in_market": 0.006
+  }
+}

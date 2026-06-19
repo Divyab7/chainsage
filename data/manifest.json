@@ -1,0 +1,21 @@
+{
+  "sources": [
+    "binance_spot_klines (price, volume)",
+    "binance_futures_funding (derivatives layer)",
+    "cmc_v3_fear_greed_or_alternative_me (sentiment)",
+    "volume_trend_proxy (on-chain layer)",
+    "relative_btc_momentum (narrative layer)"
+  ],
+  "assets": [
+    "BNB",
+    "CAKE",
+    "TWT",
+    "BTC"
+  ],
+  "rows": {
+    "BTC": 1000,
+    "BNB": 1000,
+    "CAKE": 1000,
+    "TWT": 1000
+  }
+}

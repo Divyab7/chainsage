@@ -1,0 +1,7645 @@
+{
+  "assets": {
+    "BNB": {
+      "metrics": {
+        "total_return": -0.1303,
+        "max_drawdown": -0.3525,
+        "sharpe_ratio": -0.184,
+        "calmar_ratio": -0.102,
+        "win_rate": 0.377,
+        "days_in_market_pct": 0.333,
+        "time_in_market": 0.135
+      },
+      "benchmark_metrics": {
+        "total_return": 1.694,
+        "max_drawdown": -0.5623,
+        "sharpe_ratio": 0.799,
+        "calmar_ratio": 0.525,
+        "win_rate": 0.525,
+        "days_in_market_pct": 0.999,
+        "time_in_market": 0.999
+      },
+      "period_start": "2023-10-27",
+      "period_end": "2026-06-17",
+      "equity_curve": [
+        {
+          "date": "2023-10-27",
+          "strategy": 1.0,
+          "benchmark": 1.0616
+        },
+        {
+          "date": "2023-11-02",
+          "strategy": 1.0022,
+          "benchmark": 1.0985
+        },
+        {
+          "date": "2023-11-08",
+          "strategy": 1.0022,
+          "benchmark": 1.1686
+        },
+        {
+          "date": "2023-11-14",
+          "strategy": 1.003,
+          "benchmark": 1.1478
+        },
+        {
+          "date": "2023-11-20",
+          "strategy": 0.9782,
+          "benchmark": 1.199
+        },
+        {
+          "date": "2023-11-26",
+          "strategy": 0.9428,
+          "benchmark": 1.0976
+        },
+        {
+          "date": "2023-12-02",
+          "strategy": 0.9428,
+          "benchmark": 1.0848
+        },
+        {
+          "date": "2023-12-08",
+          "strategy": 0.9428,
+          "benchmark": 1.1317
+        },
+        {
+          "date": "2023-12-14",
+          "strategy": 0.9566,
+          "benchmark": 1.1999
+        },
+        {
+          "date": "2023-12-20",
+          "strategy": 0.9528,
+          "benchmark": 1.2331
+        },
+        {
+          "date": "2023-12-26",
+          "strategy": 0.9484,
+          "benchmark": 1.4102
+        },
+        {
+          "date": "2024-01-01",
+          "strategy": 0.9748,
+          "benchmark": 1.4851
+        },
+        {
+          "date": "2024-01-07",
+          "strategy": 0.9719,
+          "benchmark": 1.4325
+        },
+        {
+          "date": "2024-01-13",
+          "strategy": 0.9719,
+          "benchmark": 1.4315
+        },
+        {
+          "date": "2024-01-19",
+          "strategy": 0.9665,
+          "benchmark": 1.4908
+        },
+        {
+          "date": "2024-01-25",
+          "strategy": 0.9665,
+          "benchmark": 1.3837
+        },
+        {
+          "date": "2024-01-31",
+          "strategy": 0.9665,
+          "benchmark": 1.4235
+        },
+        {
+          "date": "2024-02-06",
+          "strategy": 0.9665,
+          "benchmark": 1.4339
+        },
+        {
+          "date": "2024-02-12",
+          "strategy": 0.9711,
+          "benchmark": 1.5528
+        },
+        {
+          "date": "2024-02-18",
+          "strategy": 1.0053,
+          "benchmark": 1.657
+        },
+        {
+          "date": "2024-02-24",
+          "strategy": 1.0539,
+          "benchmark": 1.8081
+        },
+        {
+          "date": "2024-03-01",
+          "strategy": 1.0891,
+          "benchmark": 1.9299
+        },
+        {
+          "date": "2024-03-07",
+          "strategy": 1.1494,
+          "benchmark": 2.2482
+        },
+        {
+          "date": "2024-03-13",
+          "strategy": 1.3432,
+          "benchmark": 2.9867
+        },
+        {
+          "date": "2024-03-19",
+          "strategy": 1.1884,
+          "benchmark": 2.405
+        },
+        {
+          "date": "2024-03-25",
+          "strategy": 1.1874,
+          "benchmark": 2.7807
+        },
+        {
+          "date": "2024-03-31",
+          "strategy": 1.1649,
+          "benchmark": 2.874
+        },
+        {
+          "date": "2024-04-06",
+          "strategy": 1.1649,
+          "benchmark": 2.7731
+        },
+        {
+          "date": "2024-04-12",
+          "strategy": 1.1578,
+          "benchmark": 2.8214
+        },
+        {
+          "date": "2024-04-18",
+          "strategy": 1.1261,
+          "benchmark": 2.6153
+        },
+        {
+          "date": "2024-04-24",
+          "strategy": 1.1295,
+          "benchmark": 2.8839
+        },
+        {
+          "date": "2024-04-30",
+          "strategy": 1.118,
+          "benchmark": 2.7399
+        },
+        {
+          "date": "2024-05-06",
+          "strategy": 1.118,
+          "benchmark": 2.7864
+        },
+        {
+          "date": "2024-05-12",
+          "strategy": 1.105,
+          "benchmark": 2.8176
+        },
+        {
+          "date": "2024-05-18",
+          "strategy": 1.105,
+          "benchmark": 2.7489
+        },
+        {
+          "date": "2024-05-24",
+          "strategy": 1.0867,
+          "benchmark": 2.8437
+        },
+        {
+          "date": "2024-05-30",
+          "strategy": 1.0858,
+          "benchmark": 2.819
+        },
+        {
+          "date": "2024-06-05",
+          "strategy": 1.1515,
+          "benchmark": 3.3103
+        },
+        {
+          "date": "2024-06-11",
+          "strategy": 1.065,
+          "benchmark": 2.8541
+        },
+        {
+          "date": "2024-06-17",
+          "strategy": 1.0641,
+          "benchmark": 2.8626
+        },
+        {
+          "date": "2024-06-23",
+          "strategy": 1.0641,
+          "benchmark": 2.7357
+        },
+        {
+          "date": "2024-06-29",
+          "strategy": 1.0641,
+          "benchmark": 2.7001
+        },
+        {
+          "date": "2024-07-05",
+          "strategy": 1.0641,
+          "benchmark": 2.3577
+        },
+        {
+          "date": "2024-07-11",
+          "strategy": 1.0641,
+          "benchmark": 2.486
+        },
+        {
+          "date": "2024-07-17",
+          "strategy": 1.0889,
+          "benchmark": 2.6949
+        },
+        {
+          "date": "2024-07-23",
+          "strategy": 1.0804,
+          "benchmark": 2.7565
+        },
+        {
+          "date": "2024-07-29",
+          "strategy": 1.0804,
+          "benchmark": 2.7205
+        },
+        {
+          "date": "2024-08-04",
+          "strategy": 1.0464,
+          "benchmark": 2.3539
+        },
+        {
+          "date": "2024-08-10",
+          "strategy": 1.0464,
+          "benchmark": 2.478
+        },
+        {
+          "date": "2024-08-16",
+          "strategy": 1.0458,
+          "benchmark": 2.4619
+        },
+        {
+          "date": "2024-08-22",
+          "strategy": 1.0693,
+          "benchmark": 2.7613
+        },
+        {
+          "date": "2024-08-28",
+          "strategy": 1.0597,
+          "benchmark": 2.5438
+        },
+        {
+          "date": "2024-09-03",
+          "strategy": 1.0597,
+          "benchmark": 2.4571
+        },
+        {
+          "date": "2024-09-09",
+          "strategy": 1.0597,
+          "benchmark": 2.4571
+        },
+        {
+          "date": "2024-09-15",
+          "strategy": 1.0682,
+          "benchmark": 2.6215
+        },
+        {
+          "date": "2024-09-21",
+          "strategy": 1.0808,
+          "benchmark": 2.7883
+        },
+        {
+          "date": "2024-09-27",
+          "strategy": 1.0711,
+          "benchmark": 2.8745
+        },
+        {
+          "date": "2024-10-03",
+          "strategy": 1.0649,
+          "benchmark": 2.5808
+        },
+        {
+          "date": "2024-10-09",
+          "strategy": 1.0542,
+          "benchmark": 2.7035
+        },
+        {
+          "date": "2024-10-15",
+          "strategy": 1.0509,
+          "benchmark": 2.8162
+        },
+        {
+          "date": "2024-10-21",
+          "strategy": 1.0486,
+          "benchmark": 2.8366
+        },
+        {
+          "date": "2024-10-27",
+          "strategy": 1.0423,
+          "benchmark": 2.7911
+        },
+        {
+          "date": "2024-11-02",
+          "strategy": 1.0308,
+          "benchmark": 2.6935
+        },
+        {
+          "date": "2024-11-08",
+          "strategy": 1.0351,
+          "benchmark": 2.8319
+        },
+        {
+          "date": "2024-11-14",
+          "strategy": 1.0907,
+          "benchmark": 2.9479
+        },
+        {
+          "date": "2024-11-20",
+          "strategy": 1.0907,
+          "benchmark": 2.8678
+        },
+        {
+          "date": "2024-11-26",
+          "strategy": 1.0764,
+          "benchmark": 2.9063
+        },
+        {
+          "date": "2024-12-02",
+          "strategy": 1.0754,
+          "benchmark": 3.0688
+        },
+        {
+          "date": "2024-12-08",
+          "strategy": 1.0806,
+          "benchmark": 3.5149
+        },
+        {
+          "date": "2024-12-14",
+          "strategy": 1.0287,
+          "benchmark": 3.3908
+        },
+        {
+          "date": "2024-12-20",
+          "strategy": 1.0287,
+          "benchmark": 3.2146
+        },
+        {
+          "date": "2024-12-26",
+          "strategy": 1.0287,
+          "benchmark": 3.2658
+        },
+        {
+          "date": "2025-01-01",
+          "strategy": 1.0287,
+          "benchmark": 3.3531
+        },
+        {
+          "date": "2025-01-07",
+          "strategy": 1.0042,
+          "benchmark": 3.3065
+        },
+        {
+          "date": "2025-01-13",
+          "strategy": 1.0019,
+          "benchmark": 3.2622
+        },
+        {
+          "date": "2025-01-19",
+          "strategy": 0.9724,
+          "benchmark": 3.2363
+        },
+        {
+          "date": "2025-01-25",
+          "strategy": 0.9784,
+          "benchmark": 3.2515
+        },
+        {
+          "date": "2025-01-31",
+          "strategy": 0.9784,
+          "benchmark": 3.2092
+        },
+        {
+          "date": "2025-02-06",
+          "strategy": 0.9392,
+          "benchmark": 2.7083
+        },
+        {
+          "date": "2025-02-12",
+          "strategy": 0.9821,
+          "benchmark": 3.3014
+        },
+        {
+          "date": "2025-02-18",
+          "strategy": 0.9494,
+          "benchmark": 3.0705
+        },
+        {
+          "date": "2025-02-24",
+          "strategy": 0.9494,
+          "benchmark": 2.9095
+        },
+        {
+          "date": "2025-03-02",
+          "strategy": 0.9494,
+          "benchmark": 2.9557
+        },
+        {
+          "date": "2025-03-08",
+          "strategy": 0.9494,
+          "benchmark": 2.8096
+        },
+        {
+          "date": "2025-03-14",
+          "strategy": 0.9494,
+          "benchmark": 2.7843
+        },
+        {
+          "date": "2025-03-20",
+          "strategy": 0.9494,
+          "benchmark": 2.9866
+        },
+        {
+          "date": "2025-03-26",
+          "strategy": 0.9414,
+          "benchmark": 2.9275
+        },
+        {
+          "date": "2025-04-01",
+          "strategy": 0.9253,
+          "benchmark": 2.895
+        },
+        {
+          "date": "2025-04-07",
+          "strategy": 0.9253,
+          "benchmark": 2.6272
+        },
+        {
+          "date": "2025-04-13",
+          "strategy": 0.9253,
+          "benchmark": 2.7678
+        },
+        {
+          "date": "2025-04-19",
+          "strategy": 0.9253,
+          "benchmark": 2.8031
+        },
+        {
+          "date": "2025-04-25",
+          "strategy": 0.9103,
+          "benchmark": 2.8418
+        },
+        {
+          "date": "2025-05-01",
+          "strategy": 0.9103,
+          "benchmark": 2.8405
+        },
+        {
+          "date": "2025-05-07",
+          "strategy": 0.9103,
+          "benchmark": 2.855
+        },
+        {
+          "date": "2025-05-13",
+          "strategy": 0.9367,
+          "benchmark": 3.146
+        },
+        {
+          "date": "2025-05-19",
+          "strategy": 0.9267,
+          "benchmark": 3.0773
+        },
+        {
+          "date": "2025-05-25",
+          "strategy": 0.9134,
+          "benchmark": 3.1712
+        },
+        {
+          "date": "2025-05-31",
+          "strategy": 0.9119,
+          "benchmark": 3.1171
+        },
+        {
+          "date": "2025-06-06",
+          "strategy": 0.9119,
+          "benchmark": 3.0445
+        },
+        {
+          "date": "2025-06-12",
+          "strategy": 0.9119,
+          "benchmark": 3.1016
+        },
+        {
+          "date": "2025-06-18",
+          "strategy": 0.9032,
+          "benchmark": 3.0543
+        },
+        {
+          "date": "2025-06-24",
+          "strategy": 0.9032,
+          "benchmark": 3.0485
+        },
+        {
+          "date": "2025-06-30",
+          "strategy": 0.9032,
+          "benchmark": 3.1118
+        },
+        {
+          "date": "2025-07-06",
+          "strategy": 0.9032,
+          "benchmark": 3.1413
+        },
+        {
+          "date": "2025-07-12",
+          "strategy": 0.9149,
+          "benchmark": 3.249
+        },
+        {
+          "date": "2025-07-18",
+          "strategy": 0.9466,
+          "benchmark": 3.4577
+        },
+        {
+          "date": "2025-07-24",
+          "strategy": 0.9748,
+          "benchmark": 3.6511
+        },
+        {
+          "date": "2025-07-30",
+          "strategy": 0.9631,
+          "benchmark": 3.7589
+        },
+        {
+          "date": "2025-08-05",
+          "strategy": 0.9631,
+          "benchmark": 3.5771
+        },
+        {
+          "date": "2025-08-11",
+          "strategy": 0.9631,
+          "benchmark": 3.8138
+        },
+        {
+          "date": "2025-08-17",
+          "strategy": 0.9762,
+          "benchmark": 4.052
+        },
+        {
+          "date": "2025-08-23",
+          "strategy": 0.9449,
+          "benchmark": 4.1706
+        },
+        {
+          "date": "2025-08-29",
+          "strategy": 0.9442,
+          "benchmark": 4.0848
+        },
+        {
+          "date": "2025-09-04",
+          "strategy": 0.9442,
+          "benchmark": 3.9964
+        },
+        {
+          "date": "2025-09-10",
+          "strategy": 0.9438,
+          "benchmark": 4.2339
+        },
+        {
+          "date": "2025-09-16",
+          "strategy": 0.9606,
+          "benchmark": 4.527
+        },
+        {
+          "date": "2025-09-22",
+          "strategy": 0.9806,
+          "benchmark": 4.7035
+        },
+        {
+          "date": "2025-09-28",
+          "strategy": 1.0001,
+          "benchmark": 4.704
+        },
+        {
+          "date": "2025-10-04",
+          "strategy": 1.0297,
+          "benchmark": 5.4512
+        },
+        {
+          "date": "2025-10-10",
+          "strategy": 1.0095,
+          "benchmark": 5.2225
+        },
+        {
+          "date": "2025-10-16",
+          "strategy": 0.9681,
+          "benchmark": 5.4232
+        },
+        {
+          "date": "2025-10-22",
+          "strategy": 0.9681,
+          "benchmark": 5.0773
+        },
+        {
+          "date": "2025-10-28",
+          "strategy": 0.9681,
+          "benchmark": 5.2271
+        },
+        {
+          "date": "2025-11-03",
+          "strategy": 0.9681,
+          "benchmark": 4.7065
+        },
+        {
+          "date": "2025-11-09",
+          "strategy": 0.9681,
+          "benchmark": 4.7211
+        },
+        {
+          "date": "2025-11-15",
+          "strategy": 0.9681,
+          "benchmark": 4.4163
+        },
+        {
+          "date": "2025-11-21",
+          "strategy": 0.9681,
+          "benchmark": 3.934
+        },
+        {
+          "date": "2025-11-27",
+          "strategy": 0.9681,
+          "benchmark": 4.2432
+        },
+        {
+          "date": "2025-12-03",
+          "strategy": 0.9681,
+          "benchmark": 4.3617
+        },
+        {
+          "date": "2025-12-09",
+          "strategy": 0.9681,
+          "benchmark": 4.2506
+        },
+        {
+          "date": "2025-12-15",
+          "strategy": 0.9681,
+          "benchmark": 4.0673
+        },
+        {
+          "date": "2025-12-21",
+          "strategy": 0.9681,
+          "benchmark": 4.0675
+        },
+        {
+          "date": "2025-12-27",
+          "strategy": 0.9681,
+          "benchmark": 4.003
+        },
+        {
+          "date": "2026-01-02",
+          "strategy": 0.9681,
+          "benchmark": 4.1746
+        },
+        {
+          "date": "2026-01-08",
+          "strategy": 0.9625,
+          "benchmark": 4.2267
+        },
+        {
+          "date": "2026-01-14",
+          "strategy": 0.9662,
+          "benchmark": 4.493
+        },
+        {
+          "date": "2026-01-20",
+          "strategy": 0.9335,
+          "benchmark": 4.1885
+        },
+        {
+          "date": "2026-01-26",
+          "strategy": 0.9328,
+          "benchmark": 4.1658
+        },
+        {
+          "date": "2026-02-01",
+          "strategy": 0.9256,
+          "benchmark": 3.5933
+        },
+        {
+          "date": "2026-02-07",
+          "strategy": 0.9256,
+          "benchmark": 3.0649
+        },
+        {
+          "date": "2026-02-13",
+          "strategy": 0.9256,
+          "benchmark": 2.932
+        },
+        {
+          "date": "2026-02-19",
+          "strategy": 0.9256,
+          "benchmark": 2.8793
+        },
+        {
+          "date": "2026-02-25",
+          "strategy": 0.9256,
+          "benchmark": 2.9816
+        },
+        {
+          "date": "2026-03-03",
+          "strategy": 0.9256,
+          "benchmark": 3.0012
+        },
+        {
+          "date": "2026-03-09",
+          "strategy": 0.9256,
+          "benchmark": 3.0063
+        },
+        {
+          "date": "2026-03-15",
+          "strategy": 0.9256,
+          "benchmark": 3.1917
+        },
+        {
+          "date": "2026-03-21",
+          "strategy": 0.9084,
+          "benchmark": 2.9877
+        },
+        {
+          "date": "2026-03-27",
+          "strategy": 0.9084,
+          "benchmark": 2.9083
+        },
+        {
+          "date": "2026-04-02",
+          "strategy": 0.9084,
+          "benchmark": 2.7642
+        },
+        {
+          "date": "2026-04-08",
+          "strategy": 0.9084,
+          "benchmark": 2.8477
+        },
+        {
+          "date": "2026-04-14",
+          "strategy": 0.9084,
+          "benchmark": 2.9074
+        },
+        {
+          "date": "2026-04-20",
+          "strategy": 0.8966,
+          "benchmark": 2.9809
+        },
+        {
+          "date": "2026-04-26",
+          "strategy": 0.8959,
+          "benchmark": 3.0117
+        },
+        {
+          "date": "2026-05-02",
+          "strategy": 0.8959,
+          "benchmark": 2.9277
+        },
+        {
+          "date": "2026-05-08",
+          "strategy": 0.9181,
+          "benchmark": 3.0761
+        },
+        {
+          "date": "2026-05-14",
+          "strategy": 0.941,
+          "benchmark": 3.213
+        },
+        {
+          "date": "2026-05-20",
+          "strategy": 0.9221,
+          "benchmark": 3.0767
+        },
+        {
+          "date": "2026-05-26",
+          "strategy": 0.9221,
+          "benchmark": 3.1096
+        },
+        {
+          "date": "2026-06-01",
+          "strategy": 0.9037,
+          "benchmark": 3.2833
+        },
+        {
+          "date": "2026-06-07",
+          "strategy": 0.8697,
+          "benchmark": 2.8633
+        },
+        {
+          "date": "2026-06-13",
+          "strategy": 0.8697,
+          "benchmark": 2.888
+        }
+      ],
+      "drawdown_curve": [
+        {
+          "date": "2023-10-27",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-11-02",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-11-08",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-11-14",
+          "strategy": 0.0,
+          "benchmark": -0.0178
+        },
+        {
+          "date": "2023-11-20",
+          "strategy": -0.0247,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-11-26",
+          "strategy": -0.06,
+          "benchmark": -0.0846
+        },
+        {
+          "date": "2023-12-02",
+          "strategy": -0.06,
+          "benchmark": -0.0952
+        },
+        {
+          "date": "2023-12-08",
+          "strategy": -0.06,
+          "benchmark": -0.0561
+        },
+        {
+          "date": "2023-12-14",
+          "strategy": -0.0463,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-12-20",
+          "strategy": -0.05,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-12-26",
+          "strategy": -0.0544,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-01-01",
+          "strategy": -0.0281,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-01-07",
+          "strategy": -0.031,
+          "benchmark": -0.0354
+        },
+        {
+          "date": "2024-01-13",
+          "strategy": -0.031,
+          "benchmark": -0.0361
+        },
+        {
+          "date": "2024-01-19",
+          "strategy": -0.0364,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-01-25",
+          "strategy": -0.0364,
+          "benchmark": -0.0718
+        },
+        {
+          "date": "2024-01-31",
+          "strategy": -0.0364,
+          "benchmark": -0.0451
+        },
+        {
+          "date": "2024-02-06",
+          "strategy": -0.0364,
+          "benchmark": -0.0382
+        },
+        {
+          "date": "2024-02-12",
+          "strategy": -0.0318,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-02-18",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-02-24",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-03-01",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-03-07",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-03-13",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-03-19",
+          "strategy": -0.1152,
+          "benchmark": -0.1948
+        },
+        {
+          "date": "2024-03-25",
+          "strategy": -0.116,
+          "benchmark": -0.069
+        },
+        {
+          "date": "2024-03-31",
+          "strategy": -0.1327,
+          "benchmark": -0.0377
+        },
+        {
+          "date": "2024-04-06",
+          "strategy": -0.1327,
+          "benchmark": -0.0715
+        },
+        {
+          "date": "2024-04-12",
+          "strategy": -0.138,
+          "benchmark": -0.0553
+        },
+        {
+          "date": "2024-04-18",
+          "strategy": -0.1616,
+          "benchmark": -0.1244
+        },
+        {
+          "date": "2024-04-24",
+          "strategy": -0.1591,
+          "benchmark": -0.0344
+        },
+        {
+          "date": "2024-04-30",
+          "strategy": -0.1677,
+          "benchmark": -0.0826
+        },
+        {
+          "date": "2024-05-06",
+          "strategy": -0.1677,
+          "benchmark": -0.0671
+        },
+        {
+          "date": "2024-05-12",
+          "strategy": -0.1773,
+          "benchmark": -0.0566
+        },
+        {
+          "date": "2024-05-18",
+          "strategy": -0.1773,
+          "benchmark": -0.0796
+        },
+        {
+          "date": "2024-05-24",
+          "strategy": -0.191,
+          "benchmark": -0.0479
+        },
+        {
+          "date": "2024-05-30",
+          "strategy": -0.1916,
+          "benchmark": -0.0561
+        },
+        {
+          "date": "2024-06-05",
+          "strategy": -0.1427,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-06-11",
+          "strategy": -0.2071,
+          "benchmark": -0.1378
+        },
+        {
+          "date": "2024-06-17",
+          "strategy": -0.2078,
+          "benchmark": -0.1352
+        },
+        {
+          "date": "2024-06-23",
+          "strategy": -0.2078,
+          "benchmark": -0.1736
+        },
+        {
+          "date": "2024-06-29",
+          "strategy": -0.2078,
+          "benchmark": -0.1843
+        },
+        {
+          "date": "2024-07-05",
+          "strategy": -0.2078,
+          "benchmark": -0.2878
+        },
+        {
+          "date": "2024-07-11",
+          "strategy": -0.2078,
+          "benchmark": -0.249
+        },
+        {
+          "date": "2024-07-17",
+          "strategy": -0.1893,
+          "benchmark": -0.1859
+        },
+        {
+          "date": "2024-07-23",
+          "strategy": -0.1957,
+          "benchmark": -0.1673
+        },
+        {
+          "date": "2024-07-29",
+          "strategy": -0.1957,
+          "benchmark": -0.1782
+        },
+        {
+          "date": "2024-08-04",
+          "strategy": -0.221,
+          "benchmark": -0.2889
+        },
+        {
+          "date": "2024-08-10",
+          "strategy": -0.221,
+          "benchmark": -0.2514
+        },
+        {
+          "date": "2024-08-16",
+          "strategy": -0.2214,
+          "benchmark": -0.2563
+        },
+        {
+          "date": "2024-08-22",
+          "strategy": -0.2039,
+          "benchmark": -0.1658
+        },
+        {
+          "date": "2024-08-28",
+          "strategy": -0.2111,
+          "benchmark": -0.2316
+        },
+        {
+          "date": "2024-09-03",
+          "strategy": -0.2111,
+          "benchmark": -0.2577
+        },
+        {
+          "date": "2024-09-09",
+          "strategy": -0.2111,
+          "benchmark": -0.2577
+        },
+        {
+          "date": "2024-09-15",
+          "strategy": -0.2047,
+          "benchmark": -0.2081
+        },
+        {
+          "date": "2024-09-21",
+          "strategy": -0.1954,
+          "benchmark": -0.1577
+        },
+        {
+          "date": "2024-09-27",
+          "strategy": -0.2026,
+          "benchmark": -0.1316
+        },
+        {
+          "date": "2024-10-03",
+          "strategy": -0.2072,
+          "benchmark": -0.2204
+        },
+        {
+          "date": "2024-10-09",
+          "strategy": -0.2152,
+          "benchmark": -0.1833
+        },
+        {
+          "date": "2024-10-15",
+          "strategy": -0.2176,
+          "benchmark": -0.1493
+        },
+        {
+          "date": "2024-10-21",
+          "strategy": -0.2193,
+          "benchmark": -0.1431
+        },
+        {
+          "date": "2024-10-27",
+          "strategy": -0.224,
+          "benchmark": -0.1568
+        },
+        {
+          "date": "2024-11-02",
+          "strategy": -0.2326,
+          "benchmark": -0.1863
+        },
+        {
+          "date": "2024-11-08",
+          "strategy": -0.2294,
+          "benchmark": -0.1445
+        },
+        {
+          "date": "2024-11-14",
+          "strategy": -0.188,
+          "benchmark": -0.1095
+        },
+        {
+          "date": "2024-11-20",
+          "strategy": -0.188,
+          "benchmark": -0.1337
+        },
+        {
+          "date": "2024-11-26",
+          "strategy": -0.1986,
+          "benchmark": -0.122
+        },
+        {
+          "date": "2024-12-02",
+          "strategy": -0.1994,
+          "benchmark": -0.073
+        },
+        {
+          "date": "2024-12-08",
+          "strategy": -0.1955,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-12-14",
+          "strategy": -0.2341,
+          "benchmark": -0.0353
+        },
+        {
+          "date": "2024-12-20",
+          "strategy": -0.2341,
+          "benchmark": -0.0854
+        },
+        {
+          "date": "2024-12-26",
+          "strategy": -0.2341,
+          "benchmark": -0.0709
+        },
+        {
+          "date": "2025-01-01",
+          "strategy": -0.2341,
+          "benchmark": -0.046
+        },
+        {
+          "date": "2025-01-07",
+          "strategy": -0.2524,
+          "benchmark": -0.0593
+        },
+        {
+          "date": "2025-01-13",
+          "strategy": -0.2541,
+          "benchmark": -0.0719
+        },
+        {
+          "date": "2025-01-19",
+          "strategy": -0.2761,
+          "benchmark": -0.0793
+        },
+        {
+          "date": "2025-01-25",
+          "strategy": -0.2716,
+          "benchmark": -0.0749
+        },
+        {
+          "date": "2025-01-31",
+          "strategy": -0.2716,
+          "benchmark": -0.087
+        },
+        {
+          "date": "2025-02-06",
+          "strategy": -0.3008,
+          "benchmark": -0.2295
+        },
+        {
+          "date": "2025-02-12",
+          "strategy": -0.2688,
+          "benchmark": -0.0607
+        },
+        {
+          "date": "2025-02-18",
+          "strategy": -0.2932,
+          "benchmark": -0.1264
+        },
+        {
+          "date": "2025-02-24",
+          "strategy": -0.2932,
+          "benchmark": -0.1722
+        },
+        {
+          "date": "2025-03-02",
+          "strategy": -0.2932,
+          "benchmark": -0.1591
+        },
+        {
+          "date": "2025-03-08",
+          "strategy": -0.2932,
+          "benchmark": -0.2007
+        },
+        {
+          "date": "2025-03-14",
+          "strategy": -0.2932,
+          "benchmark": -0.2079
+        },
+        {
+          "date": "2025-03-20",
+          "strategy": -0.2932,
+          "benchmark": -0.1503
+        },
+        {
+          "date": "2025-03-26",
+          "strategy": -0.2991,
+          "benchmark": -0.1671
+        },
+        {
+          "date": "2025-04-01",
+          "strategy": -0.3111,
+          "benchmark": -0.1764
+        },
+        {
+          "date": "2025-04-07",
+          "strategy": -0.3111,
+          "benchmark": -0.2526
+        },
+        {
+          "date": "2025-04-13",
+          "strategy": -0.3111,
+          "benchmark": -0.2126
+        },
+        {
+          "date": "2025-04-19",
+          "strategy": -0.3111,
+          "benchmark": -0.2025
+        },
+        {
+          "date": "2025-04-25",
+          "strategy": -0.3223,
+          "benchmark": -0.1915
+        },
+        {
+          "date": "2025-05-01",
+          "strategy": -0.3223,
+          "benchmark": -0.1919
+        },
+        {
+          "date": "2025-05-07",
+          "strategy": -0.3223,
+          "benchmark": -0.1877
+        },
+        {
+          "date": "2025-05-13",
+          "strategy": -0.3026,
+          "benchmark": -0.105
+        },
+        {
+          "date": "2025-05-19",
+          "strategy": -0.3101,
+          "benchmark": -0.1245
+        },
+        {
+          "date": "2025-05-25",
+          "strategy": -0.32,
+          "benchmark": -0.0978
+        },
+        {
+          "date": "2025-05-31",
+          "strategy": -0.3211,
+          "benchmark": -0.1132
+        },
+        {
+          "date": "2025-06-06",
+          "strategy": -0.3211,
+          "benchmark": -0.1338
+        },
+        {
+          "date": "2025-06-12",
+          "strategy": -0.3211,
+          "benchmark": -0.1176
+        },
+        {
+          "date": "2025-06-18",
+          "strategy": -0.3276,
+          "benchmark": -0.131
+        },
+        {
+          "date": "2025-06-24",
+          "strategy": -0.3276,
+          "benchmark": -0.1327
+        },
+        {
+          "date": "2025-06-30",
+          "strategy": -0.3276,
+          "benchmark": -0.1147
+        },
+        {
+          "date": "2025-07-06",
+          "strategy": -0.3276,
+          "benchmark": -0.1063
+        },
+        {
+          "date": "2025-07-12",
+          "strategy": -0.3189,
+          "benchmark": -0.0756
+        },
+        {
+          "date": "2025-07-18",
+          "strategy": -0.2953,
+          "benchmark": -0.0163
+        },
+        {
+          "date": "2025-07-24",
+          "strategy": -0.2743,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-07-30",
+          "strategy": -0.283,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-08-05",
+          "strategy": -0.283,
+          "benchmark": -0.0484
+        },
+        {
+          "date": "2025-08-11",
+          "strategy": -0.283,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-08-17",
+          "strategy": -0.2732,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-08-23",
+          "strategy": -0.2965,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-08-29",
+          "strategy": -0.2971,
+          "benchmark": -0.0206
+        },
+        {
+          "date": "2025-09-04",
+          "strategy": -0.2971,
+          "benchmark": -0.0418
+        },
+        {
+          "date": "2025-09-10",
+          "strategy": -0.2973,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-09-16",
+          "strategy": -0.2848,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-09-22",
+          "strategy": -0.27,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-09-28",
+          "strategy": -0.2554,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-10-04",
+          "strategy": -0.2334,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-10-10",
+          "strategy": -0.2484,
+          "benchmark": -0.042
+        },
+        {
+          "date": "2025-10-16",
+          "strategy": -0.2793,
+          "benchmark": -0.0051
+        },
+        {
+          "date": "2025-10-22",
+          "strategy": -0.2793,
+          "benchmark": -0.0686
+        },
+        {
+          "date": "2025-10-28",
+          "strategy": -0.2793,
+          "benchmark": -0.0411
+        },
+        {
+          "date": "2025-11-03",
+          "strategy": -0.2793,
+          "benchmark": -0.1366
+        },
+        {
+          "date": "2025-11-09",
+          "strategy": -0.2793,
+          "benchmark": -0.1339
+        },
+        {
+          "date": "2025-11-15",
+          "strategy": -0.2793,
+          "benchmark": -0.1898
+        },
+        {
+          "date": "2025-11-21",
+          "strategy": -0.2793,
+          "benchmark": -0.2783
+        },
+        {
+          "date": "2025-11-27",
+          "strategy": -0.2793,
+          "benchmark": -0.2216
+        },
+        {
+          "date": "2025-12-03",
+          "strategy": -0.2793,
+          "benchmark": -0.1999
+        },
+        {
+          "date": "2025-12-09",
+          "strategy": -0.2793,
+          "benchmark": -0.2202
+        },
+        {
+          "date": "2025-12-15",
+          "strategy": -0.2793,
+          "benchmark": -0.2539
+        },
+        {
+          "date": "2025-12-21",
+          "strategy": -0.2793,
+          "benchmark": -0.2538
+        },
+        {
+          "date": "2025-12-27",
+          "strategy": -0.2793,
+          "benchmark": -0.2657
+        },
+        {
+          "date": "2026-01-02",
+          "strategy": -0.2793,
+          "benchmark": -0.2342
+        },
+        {
+          "date": "2026-01-08",
+          "strategy": -0.2834,
+          "benchmark": -0.2246
+        },
+        {
+          "date": "2026-01-14",
+          "strategy": -0.2807,
+          "benchmark": -0.1758
+        },
+        {
+          "date": "2026-01-20",
+          "strategy": -0.305,
+          "benchmark": -0.2316
+        },
+        {
+          "date": "2026-01-26",
+          "strategy": -0.3055,
+          "benchmark": -0.2358
+        },
+        {
+          "date": "2026-02-01",
+          "strategy": -0.3109,
+          "benchmark": -0.3408
+        },
+        {
+          "date": "2026-02-07",
+          "strategy": -0.3109,
+          "benchmark": -0.4378
+        },
+        {
+          "date": "2026-02-13",
+          "strategy": -0.3109,
+          "benchmark": -0.4621
+        },
+        {
+          "date": "2026-02-19",
+          "strategy": -0.3109,
+          "benchmark": -0.4718
+        },
+        {
+          "date": "2026-02-25",
+          "strategy": -0.3109,
+          "benchmark": -0.453
+        },
+        {
+          "date": "2026-03-03",
+          "strategy": -0.3109,
+          "benchmark": -0.4494
+        },
+        {
+          "date": "2026-03-09",
+          "strategy": -0.3109,
+          "benchmark": -0.4485
+        },
+        {
+          "date": "2026-03-15",
+          "strategy": -0.3109,
+          "benchmark": -0.4145
+        },
+        {
+          "date": "2026-03-21",
+          "strategy": -0.3237,
+          "benchmark": -0.4519
+        },
+        {
+          "date": "2026-03-27",
+          "strategy": -0.3237,
+          "benchmark": -0.4665
+        },
+        {
+          "date": "2026-04-02",
+          "strategy": -0.3237,
+          "benchmark": -0.4929
+        },
+        {
+          "date": "2026-04-08",
+          "strategy": -0.3237,
+          "benchmark": -0.4776
+        },
+        {
+          "date": "2026-04-14",
+          "strategy": -0.3237,
+          "benchmark": -0.4666
+        },
+        {
+          "date": "2026-04-20",
+          "strategy": -0.3325,
+          "benchmark": -0.4532
+        },
+        {
+          "date": "2026-04-26",
+          "strategy": -0.333,
+          "benchmark": -0.4475
+        },
+        {
+          "date": "2026-05-02",
+          "strategy": -0.333,
+          "benchmark": -0.4629
+        },
+        {
+          "date": "2026-05-08",
+          "strategy": -0.3165,
+          "benchmark": -0.4357
+        },
+        {
+          "date": "2026-05-14",
+          "strategy": -0.2994,
+          "benchmark": -0.4106
+        },
+        {
+          "date": "2026-05-20",
+          "strategy": -0.3135,
+          "benchmark": -0.4356
+        },
+        {
+          "date": "2026-05-26",
+          "strategy": -0.3135,
+          "benchmark": -0.4296
+        },
+        {
+          "date": "2026-06-01",
+          "strategy": -0.3272,
+          "benchmark": -0.3977
+        },
+        {
+          "date": "2026-06-07",
+          "strategy": -0.3525,
+          "benchmark": -0.4747
+        },
+        {
+          "date": "2026-06-13",
+          "strategy": -0.3525,
+          "benchmark": -0.4702
+        }
+      ]
+    },
+    "CAKE": {
+      "metrics": {
+        "total_return": 1.1422,
+        "max_drawdown": -0.3576,
+        "sharpe_ratio": 0.789,
+        "calmar_ratio": 0.615,
+        "win_rate": 0.383,
+        "days_in_market_pct": 0.341,
+        "time_in_market": 0.149
+      },
+      "benchmark_metrics": {
+        "total_return": 0.1423,
+        "max_drawdown": -0.7753,
+        "sharpe_ratio": 0.451,
+        "calmar_ratio": 0.046,
+        "win_rate": 0.482,
+        "days_in_market_pct": 0.996,
+        "time_in_market": 0.996
+      },
+      "period_start": "2023-10-27",
+      "period_end": "2026-06-17",
+      "equity_curve": [
+        {
+          "date": "2023-10-27",
+          "strategy": 1.0,
+          "benchmark": 1.0598
+        },
+        {
+          "date": "2023-11-02",
+          "strategy": 1.0963,
+          "benchmark": 1.3536
+        },
+        {
+          "date": "2023-11-08",
+          "strategy": 1.3334,
+          "benchmark": 1.8778
+        },
+        {
+          "date": "2023-11-14",
+          "strategy": 1.3475,
+          "benchmark": 2.0277
+        },
+        {
+          "date": "2023-11-20",
+          "strategy": 1.4043,
+          "benchmark": 2.253
+        },
+        {
+          "date": "2023-11-26",
+          "strategy": 1.3031,
+          "benchmark": 2.0234
+        },
+        {
+          "date": "2023-12-02",
+          "strategy": 1.3031,
+          "benchmark": 2.0555
+        },
+        {
+          "date": "2023-12-08",
+          "strategy": 1.3384,
+          "benchmark": 2.1889
+        },
+        {
+          "date": "2023-12-14",
+          "strategy": 1.3187,
+          "benchmark": 2.0971
+        },
+        {
+          "date": "2023-12-20",
+          "strategy": 1.3187,
+          "benchmark": 1.9411
+        },
+        {
+          "date": "2023-12-26",
+          "strategy": 1.6107,
+          "benchmark": 3.0659
+        },
+        {
+          "date": "2024-01-01",
+          "strategy": 1.6002,
+          "benchmark": 3.0347
+        },
+        {
+          "date": "2024-01-07",
+          "strategy": 1.6011,
+          "benchmark": 2.4853
+        },
+        {
+          "date": "2024-01-13",
+          "strategy": 1.6011,
+          "benchmark": 2.5581
+        },
+        {
+          "date": "2024-01-19",
+          "strategy": 1.6011,
+          "benchmark": 2.3631
+        },
+        {
+          "date": "2024-01-25",
+          "strategy": 1.6011,
+          "benchmark": 2.1352
+        },
+        {
+          "date": "2024-01-31",
+          "strategy": 1.6011,
+          "benchmark": 2.1542
+        },
+        {
+          "date": "2024-02-06",
+          "strategy": 1.6011,
+          "benchmark": 2.1101
+        },
+        {
+          "date": "2024-02-12",
+          "strategy": 1.6235,
+          "benchmark": 2.247
+        },
+        {
+          "date": "2024-02-18",
+          "strategy": 1.6225,
+          "benchmark": 2.4038
+        },
+        {
+          "date": "2024-02-24",
+          "strategy": 1.7071,
+          "benchmark": 2.7955
+        },
+        {
+          "date": "2024-03-01",
+          "strategy": 1.6657,
+          "benchmark": 2.7721
+        },
+        {
+          "date": "2024-03-07",
+          "strategy": 1.7404,
+          "benchmark": 3.1135
+        },
+        {
+          "date": "2024-03-13",
+          "strategy": 2.1545,
+          "benchmark": 4.4844
+        },
+        {
+          "date": "2024-03-19",
+          "strategy": 1.9107,
+          "benchmark": 3.1551
+        },
+        {
+          "date": "2024-03-25",
+          "strategy": 1.9107,
+          "benchmark": 3.8293
+        },
+        {
+          "date": "2024-03-31",
+          "strategy": 1.9469,
+          "benchmark": 4.0069
+        },
+        {
+          "date": "2024-04-06",
+          "strategy": 1.9469,
+          "benchmark": 3.3925
+        },
+        {
+          "date": "2024-04-12",
+          "strategy": 1.9469,
+          "benchmark": 2.7652
+        },
+        {
+          "date": "2024-04-18",
+          "strategy": 1.9469,
+          "benchmark": 2.4055
+        },
+        {
+          "date": "2024-04-24",
+          "strategy": 1.9469,
+          "benchmark": 2.5173
+        },
+        {
+          "date": "2024-04-30",
+          "strategy": 1.9087,
+          "benchmark": 2.2331
+        },
+        {
+          "date": "2024-05-06",
+          "strategy": 1.9087,
+          "benchmark": 2.305
+        },
+        {
+          "date": "2024-05-12",
+          "strategy": 1.9087,
+          "benchmark": 2.247
+        },
+        {
+          "date": "2024-05-18",
+          "strategy": 1.9087,
+          "benchmark": 2.325
+        },
+        {
+          "date": "2024-05-24",
+          "strategy": 1.9687,
+          "benchmark": 2.5433
+        },
+        {
+          "date": "2024-05-30",
+          "strategy": 1.9759,
+          "benchmark": 2.4021
+        },
+        {
+          "date": "2024-06-05",
+          "strategy": 2.0652,
+          "benchmark": 2.7756
+        },
+        {
+          "date": "2024-06-11",
+          "strategy": 1.9103,
+          "benchmark": 2.1421
+        },
+        {
+          "date": "2024-06-17",
+          "strategy": 1.9103,
+          "benchmark": 2.1135
+        },
+        {
+          "date": "2024-06-23",
+          "strategy": 1.9103,
+          "benchmark": 1.8908
+        },
+        {
+          "date": "2024-06-29",
+          "strategy": 1.9103,
+          "benchmark": 1.8388
+        },
+        {
+          "date": "2024-07-05",
+          "strategy": 1.9103,
+          "benchmark": 1.5035
+        },
+        {
+          "date": "2024-07-11",
+          "strategy": 1.9103,
+          "benchmark": 1.6196
+        },
+        {
+          "date": "2024-07-17",
+          "strategy": 1.9424,
+          "benchmark": 1.7305
+        },
+        {
+          "date": "2024-07-23",
+          "strategy": 1.9019,
+          "benchmark": 1.7158
+        },
+        {
+          "date": "2024-07-29",
+          "strategy": 1.9019,
+          "benchmark": 1.6941
+        },
+        {
+          "date": "2024-08-04",
+          "strategy": 1.9019,
+          "benchmark": 1.3674
+        },
+        {
+          "date": "2024-08-10",
+          "strategy": 1.9019,
+          "benchmark": 1.3865
+        },
+        {
+          "date": "2024-08-16",
+          "strategy": 1.8907,
+          "benchmark": 1.364
+        },
+        {
+          "date": "2024-08-22",
+          "strategy": 2.0351,
+          "benchmark": 1.6828
+        },
+        {
+          "date": "2024-08-28",
+          "strategy": 1.9538,
+          "benchmark": 1.5563
+        },
+        {
+          "date": "2024-09-03",
+          "strategy": 1.9523,
+          "benchmark": 1.4463
+        },
+        {
+          "date": "2024-09-09",
+          "strategy": 1.9523,
+          "benchmark": 1.4584
+        },
+        {
+          "date": "2024-09-15",
+          "strategy": 1.9594,
+          "benchmark": 1.5407
+        },
+        {
+          "date": "2024-09-21",
+          "strategy": 2.0625,
+          "benchmark": 1.7331
+        },
+        {
+          "date": "2024-09-27",
+          "strategy": 2.1712,
+          "benchmark": 1.9047
+        },
+        {
+          "date": "2024-10-03",
+          "strategy": 2.133,
+          "benchmark": 1.5563
+        },
+        {
+          "date": "2024-10-09",
+          "strategy": 2.133,
+          "benchmark": 1.5893
+        },
+        {
+          "date": "2024-10-15",
+          "strategy": 2.133,
+          "benchmark": 1.6265
+        },
+        {
+          "date": "2024-10-21",
+          "strategy": 2.0804,
+          "benchmark": 1.6629
+        },
+        {
+          "date": "2024-10-27",
+          "strategy": 2.0666,
+          "benchmark": 1.5373
+        },
+        {
+          "date": "2024-11-02",
+          "strategy": 2.0666,
+          "benchmark": 1.4801
+        },
+        {
+          "date": "2024-11-08",
+          "strategy": 2.0814,
+          "benchmark": 1.5893
+        },
+        {
+          "date": "2024-11-14",
+          "strategy": 2.1113,
+          "benchmark": 1.5425
+        },
+        {
+          "date": "2024-11-20",
+          "strategy": 2.1113,
+          "benchmark": 1.6196
+        },
+        {
+          "date": "2024-11-26",
+          "strategy": 2.475,
+          "benchmark": 2.2669
+        },
+        {
+          "date": "2024-12-02",
+          "strategy": 2.8081,
+          "benchmark": 2.7946
+        },
+        {
+          "date": "2024-12-08",
+          "strategy": 3.2739,
+          "benchmark": 3.6265
+        },
+        {
+          "date": "2024-12-14",
+          "strategy": 2.8821,
+          "benchmark": 2.7903
+        },
+        {
+          "date": "2024-12-20",
+          "strategy": 2.8821,
+          "benchmark": 2.1906
+        },
+        {
+          "date": "2024-12-26",
+          "strategy": 2.8821,
+          "benchmark": 2.1127
+        },
+        {
+          "date": "2025-01-01",
+          "strategy": 2.8182,
+          "benchmark": 2.26
+        },
+        {
+          "date": "2025-01-07",
+          "strategy": 2.7346,
+          "benchmark": 2.169
+        },
+        {
+          "date": "2025-01-13",
+          "strategy": 2.6222,
+          "benchmark": 1.9575
+        },
+        {
+          "date": "2025-01-19",
+          "strategy": 2.4112,
+          "benchmark": 1.8726
+        },
+        {
+          "date": "2025-01-25",
+          "strategy": 2.4092,
+          "benchmark": 1.8284
+        },
+        {
+          "date": "2025-01-31",
+          "strategy": 2.4092,
+          "benchmark": 1.7487
+        },
+        {
+          "date": "2025-02-06",
+          "strategy": 2.4092,
+          "benchmark": 1.1837
+        },
+        {
+          "date": "2025-02-12",
+          "strategy": 3.0916,
+          "benchmark": 2.2955
+        },
+        {
+          "date": "2025-02-18",
+          "strategy": 3.0216,
+          "benchmark": 2.2062
+        },
+        {
+          "date": "2025-02-24",
+          "strategy": 2.9973,
+          "benchmark": 1.8804
+        },
+        {
+          "date": "2025-03-02",
+          "strategy": 2.9973,
+          "benchmark": 1.8163
+        },
+        {
+          "date": "2025-03-08",
+          "strategy": 2.9973,
+          "benchmark": 1.4636
+        },
+        {
+          "date": "2025-03-14",
+          "strategy": 2.9973,
+          "benchmark": 1.409
+        },
+        {
+          "date": "2025-03-20",
+          "strategy": 2.9973,
+          "benchmark": 2.0754
+        },
+        {
+          "date": "2025-03-26",
+          "strategy": 3.1841,
+          "benchmark": 1.9653
+        },
+        {
+          "date": "2025-04-01",
+          "strategy": 3.1841,
+          "benchmark": 1.6525
+        },
+        {
+          "date": "2025-04-07",
+          "strategy": 3.1841,
+          "benchmark": 1.4783
+        },
+        {
+          "date": "2025-04-13",
+          "strategy": 3.1841,
+          "benchmark": 1.6274
+        },
+        {
+          "date": "2025-04-19",
+          "strategy": 3.1338,
+          "benchmark": 1.6967
+        },
+        {
+          "date": "2025-04-25",
+          "strategy": 3.2635,
+          "benchmark": 1.7981
+        },
+        {
+          "date": "2025-05-01",
+          "strategy": 3.1526,
+          "benchmark": 1.805
+        },
+        {
+          "date": "2025-05-07",
+          "strategy": 3.1526,
+          "benchmark": 1.76
+        },
+        {
+          "date": "2025-05-13",
+          "strategy": 3.308,
+          "benchmark": 2.1231
+        },
+        {
+          "date": "2025-05-19",
+          "strategy": 3.1856,
+          "benchmark": 1.9272
+        },
+        {
+          "date": "2025-05-25",
+          "strategy": 3.0448,
+          "benchmark": 2.0347
+        },
+        {
+          "date": "2025-05-31",
+          "strategy": 2.9606,
+          "benchmark": 1.9957
+        },
+        {
+          "date": "2025-06-06",
+          "strategy": 2.9606,
+          "benchmark": 2.0069
+        },
+        {
+          "date": "2025-06-12",
+          "strategy": 2.8985,
+          "benchmark": 2.1941
+        },
+        {
+          "date": "2025-06-18",
+          "strategy": 2.8029,
+          "benchmark": 1.9324
+        },
+        {
+          "date": "2025-06-24",
+          "strategy": 2.8029,
+          "benchmark": 1.9125
+        },
+        {
+          "date": "2025-06-30",
+          "strategy": 2.8214,
+          "benchmark": 2.0243
+        },
+        {
+          "date": "2025-07-06",
+          "strategy": 2.6848,
+          "benchmark": 1.9688
+        },
+        {
+          "date": "2025-07-12",
+          "strategy": 2.5984,
+          "benchmark": 2.0269
+        },
+        {
+          "date": "2025-07-18",
+          "strategy": 2.7703,
+          "benchmark": 2.2834
+        },
+        {
+          "date": "2025-07-24",
+          "strategy": 2.7799,
+          "benchmark": 2.2972
+        },
+        {
+          "date": "2025-07-30",
+          "strategy": 2.6649,
+          "benchmark": 2.4194
+        },
+        {
+          "date": "2025-08-05",
+          "strategy": 2.6649,
+          "benchmark": 2.2227
+        },
+        {
+          "date": "2025-08-11",
+          "strategy": 2.6048,
+          "benchmark": 2.3787
+        },
+        {
+          "date": "2025-08-17",
+          "strategy": 2.5242,
+          "benchmark": 2.3951
+        },
+        {
+          "date": "2025-08-23",
+          "strategy": 2.4811,
+          "benchmark": 2.4003
+        },
+        {
+          "date": "2025-08-29",
+          "strategy": 2.4791,
+          "benchmark": 2.1551
+        },
+        {
+          "date": "2025-09-04",
+          "strategy": 2.4791,
+          "benchmark": 2.0303
+        },
+        {
+          "date": "2025-09-10",
+          "strategy": 2.4791,
+          "benchmark": 2.1794
+        },
+        {
+          "date": "2025-09-16",
+          "strategy": 2.482,
+          "benchmark": 2.2036
+        },
+        {
+          "date": "2025-09-22",
+          "strategy": 2.4638,
+          "benchmark": 2.2877
+        },
+        {
+          "date": "2025-09-28",
+          "strategy": 2.5334,
+          "benchmark": 2.2877
+        },
+        {
+          "date": "2025-10-04",
+          "strategy": 2.6592,
+          "benchmark": 2.9653
+        },
+        {
+          "date": "2025-10-10",
+          "strategy": 2.4469,
+          "benchmark": 2.4705
+        },
+        {
+          "date": "2025-10-16",
+          "strategy": 2.5273,
+          "benchmark": 2.5147
+        },
+        {
+          "date": "2025-10-22",
+          "strategy": 2.5273,
+          "benchmark": 2.3527
+        },
+        {
+          "date": "2025-10-28",
+          "strategy": 2.5273,
+          "benchmark": 2.2652
+        },
+        {
+          "date": "2025-11-03",
+          "strategy": 2.5273,
+          "benchmark": 1.9307
+        },
+        {
+          "date": "2025-11-09",
+          "strategy": 2.5273,
+          "benchmark": 2.2097
+        },
+        {
+          "date": "2025-11-15",
+          "strategy": 2.4944,
+          "benchmark": 2.0988
+        },
+        {
+          "date": "2025-11-21",
+          "strategy": 2.4944,
+          "benchmark": 1.7998
+        },
+        {
+          "date": "2025-11-27",
+          "strategy": 2.4944,
+          "benchmark": 2.1508
+        },
+        {
+          "date": "2025-12-03",
+          "strategy": 2.4944,
+          "benchmark": 2.0806
+        },
+        {
+          "date": "2025-12-09",
+          "strategy": 2.4944,
+          "benchmark": 2.0529
+        },
+        {
+          "date": "2025-12-15",
+          "strategy": 2.4944,
+          "benchmark": 1.76
+        },
+        {
+          "date": "2025-12-21",
+          "strategy": 2.4944,
+          "benchmark": 1.5624
+        },
+        {
+          "date": "2025-12-27",
+          "strategy": 2.4944,
+          "benchmark": 1.6075
+        },
+        {
+          "date": "2026-01-02",
+          "strategy": 2.5038,
+          "benchmark": 1.7357
+        },
+        {
+          "date": "2026-01-08",
+          "strategy": 2.4657,
+          "benchmark": 1.6854
+        },
+        {
+          "date": "2026-01-14",
+          "strategy": 2.4195,
+          "benchmark": 1.7825
+        },
+        {
+          "date": "2026-01-20",
+          "strategy": 2.4477,
+          "benchmark": 1.6404
+        },
+        {
+          "date": "2026-01-26",
+          "strategy": 2.4477,
+          "benchmark": 1.6508
+        },
+        {
+          "date": "2026-02-01",
+          "strategy": 2.4477,
+          "benchmark": 1.3128
+        },
+        {
+          "date": "2026-02-07",
+          "strategy": 2.4477,
+          "benchmark": 1.1958
+        },
+        {
+          "date": "2026-02-13",
+          "strategy": 2.4477,
+          "benchmark": 1.1282
+        },
+        {
+          "date": "2026-02-19",
+          "strategy": 2.4477,
+          "benchmark": 1.0867
+        },
+        {
+          "date": "2026-02-25",
+          "strategy": 2.4477,
+          "benchmark": 1.1516
+        },
+        {
+          "date": "2026-03-03",
+          "strategy": 2.4477,
+          "benchmark": 1.1646
+        },
+        {
+          "date": "2026-03-09",
+          "strategy": 2.4477,
+          "benchmark": 1.1854
+        },
+        {
+          "date": "2026-03-15",
+          "strategy": 2.4477,
+          "benchmark": 1.3146
+        },
+        {
+          "date": "2026-03-21",
+          "strategy": 2.3806,
+          "benchmark": 1.1776
+        },
+        {
+          "date": "2026-03-27",
+          "strategy": 2.3806,
+          "benchmark": 1.1837
+        },
+        {
+          "date": "2026-04-02",
+          "strategy": 2.3806,
+          "benchmark": 1.1551
+        },
+        {
+          "date": "2026-04-08",
+          "strategy": 2.3529,
+          "benchmark": 1.2808
+        },
+        {
+          "date": "2026-04-14",
+          "strategy": 2.335,
+          "benchmark": 1.3527
+        },
+        {
+          "date": "2026-04-20",
+          "strategy": 2.3194,
+          "benchmark": 1.3267
+        },
+        {
+          "date": "2026-04-26",
+          "strategy": 2.3194,
+          "benchmark": 1.3258
+        },
+        {
+          "date": "2026-05-02",
+          "strategy": 2.3194,
+          "benchmark": 1.2704
+        },
+        {
+          "date": "2026-05-08",
+          "strategy": 2.3111,
+          "benchmark": 1.3527
+        },
+        {
+          "date": "2026-05-14",
+          "strategy": 2.2958,
+          "benchmark": 1.3241
+        },
+        {
+          "date": "2026-05-20",
+          "strategy": 2.2958,
+          "benchmark": 1.2669
+        },
+        {
+          "date": "2026-05-26",
+          "strategy": 2.2958,
+          "benchmark": 1.2279
+        },
+        {
+          "date": "2026-06-01",
+          "strategy": 2.2412,
+          "benchmark": 1.2496
+        },
+        {
+          "date": "2026-06-07",
+          "strategy": 2.1422,
+          "benchmark": 1.0988
+        },
+        {
+          "date": "2026-06-13",
+          "strategy": 2.1422,
+          "benchmark": 1.1707
+        }
+      ],
+      "drawdown_curve": [
+        {
+          "date": "2023-10-27",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-11-02",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-11-08",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-11-14",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-11-20",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-11-26",
+          "strategy": -0.0721,
+          "benchmark": -0.1019
+        },
+        {
+          "date": "2023-12-02",
+          "strategy": -0.0721,
+          "benchmark": -0.0877
+        },
+        {
+          "date": "2023-12-08",
+          "strategy": -0.0469,
+          "benchmark": -0.0285
+        },
+        {
+          "date": "2023-12-14",
+          "strategy": -0.061,
+          "benchmark": -0.0692
+        },
+        {
+          "date": "2023-12-20",
+          "strategy": -0.061,
+          "benchmark": -0.1384
+        },
+        {
+          "date": "2023-12-26",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-01-01",
+          "strategy": -0.0065,
+          "benchmark": -0.0102
+        },
+        {
+          "date": "2024-01-07",
+          "strategy": -0.006,
+          "benchmark": -0.1894
+        },
+        {
+          "date": "2024-01-13",
+          "strategy": -0.006,
+          "benchmark": -0.1656
+        },
+        {
+          "date": "2024-01-19",
+          "strategy": -0.006,
+          "benchmark": -0.2292
+        },
+        {
+          "date": "2024-01-25",
+          "strategy": -0.006,
+          "benchmark": -0.3036
+        },
+        {
+          "date": "2024-01-31",
+          "strategy": -0.006,
+          "benchmark": -0.2974
+        },
+        {
+          "date": "2024-02-06",
+          "strategy": -0.006,
+          "benchmark": -0.3118
+        },
+        {
+          "date": "2024-02-12",
+          "strategy": 0.0,
+          "benchmark": -0.2671
+        },
+        {
+          "date": "2024-02-18",
+          "strategy": -0.0006,
+          "benchmark": -0.216
+        },
+        {
+          "date": "2024-02-24",
+          "strategy": 0.0,
+          "benchmark": -0.0882
+        },
+        {
+          "date": "2024-03-01",
+          "strategy": -0.0243,
+          "benchmark": -0.0958
+        },
+        {
+          "date": "2024-03-07",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-03-13",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-03-19",
+          "strategy": -0.1132,
+          "benchmark": -0.2964
+        },
+        {
+          "date": "2024-03-25",
+          "strategy": -0.1132,
+          "benchmark": -0.1461
+        },
+        {
+          "date": "2024-03-31",
+          "strategy": -0.0964,
+          "benchmark": -0.1065
+        },
+        {
+          "date": "2024-04-06",
+          "strategy": -0.0964,
+          "benchmark": -0.2435
+        },
+        {
+          "date": "2024-04-12",
+          "strategy": -0.0964,
+          "benchmark": -0.3834
+        },
+        {
+          "date": "2024-04-18",
+          "strategy": -0.0964,
+          "benchmark": -0.4636
+        },
+        {
+          "date": "2024-04-24",
+          "strategy": -0.0964,
+          "benchmark": -0.4387
+        },
+        {
+          "date": "2024-04-30",
+          "strategy": -0.1141,
+          "benchmark": -0.502
+        },
+        {
+          "date": "2024-05-06",
+          "strategy": -0.1141,
+          "benchmark": -0.486
+        },
+        {
+          "date": "2024-05-12",
+          "strategy": -0.1141,
+          "benchmark": -0.4989
+        },
+        {
+          "date": "2024-05-18",
+          "strategy": -0.1141,
+          "benchmark": -0.4815
+        },
+        {
+          "date": "2024-05-24",
+          "strategy": -0.0862,
+          "benchmark": -0.4329
+        },
+        {
+          "date": "2024-05-30",
+          "strategy": -0.0829,
+          "benchmark": -0.4643
+        },
+        {
+          "date": "2024-06-05",
+          "strategy": -0.0414,
+          "benchmark": -0.3811
+        },
+        {
+          "date": "2024-06-11",
+          "strategy": -0.1133,
+          "benchmark": -0.5223
+        },
+        {
+          "date": "2024-06-17",
+          "strategy": -0.1133,
+          "benchmark": -0.5287
+        },
+        {
+          "date": "2024-06-23",
+          "strategy": -0.1133,
+          "benchmark": -0.5784
+        },
+        {
+          "date": "2024-06-29",
+          "strategy": -0.1133,
+          "benchmark": -0.59
+        },
+        {
+          "date": "2024-07-05",
+          "strategy": -0.1133,
+          "benchmark": -0.6647
+        },
+        {
+          "date": "2024-07-11",
+          "strategy": -0.1133,
+          "benchmark": -0.6388
+        },
+        {
+          "date": "2024-07-17",
+          "strategy": -0.0984,
+          "benchmark": -0.6141
+        },
+        {
+          "date": "2024-07-23",
+          "strategy": -0.1172,
+          "benchmark": -0.6174
+        },
+        {
+          "date": "2024-07-29",
+          "strategy": -0.1172,
+          "benchmark": -0.6222
+        },
+        {
+          "date": "2024-08-04",
+          "strategy": -0.1172,
+          "benchmark": -0.6951
+        },
+        {
+          "date": "2024-08-10",
+          "strategy": -0.1172,
+          "benchmark": -0.6908
+        },
+        {
+          "date": "2024-08-16",
+          "strategy": -0.1224,
+          "benchmark": -0.6958
+        },
+        {
+          "date": "2024-08-22",
+          "strategy": -0.0554,
+          "benchmark": -0.6247
+        },
+        {
+          "date": "2024-08-28",
+          "strategy": -0.0932,
+          "benchmark": -0.653
+        },
+        {
+          "date": "2024-09-03",
+          "strategy": -0.0939,
+          "benchmark": -0.6775
+        },
+        {
+          "date": "2024-09-09",
+          "strategy": -0.0939,
+          "benchmark": -0.6748
+        },
+        {
+          "date": "2024-09-15",
+          "strategy": -0.0906,
+          "benchmark": -0.6564
+        },
+        {
+          "date": "2024-09-21",
+          "strategy": -0.0427,
+          "benchmark": -0.6135
+        },
+        {
+          "date": "2024-09-27",
+          "strategy": 0.0,
+          "benchmark": -0.5753
+        },
+        {
+          "date": "2024-10-03",
+          "strategy": -0.0176,
+          "benchmark": -0.653
+        },
+        {
+          "date": "2024-10-09",
+          "strategy": -0.0176,
+          "benchmark": -0.6456
+        },
+        {
+          "date": "2024-10-15",
+          "strategy": -0.0176,
+          "benchmark": -0.6373
+        },
+        {
+          "date": "2024-10-21",
+          "strategy": -0.0418,
+          "benchmark": -0.6292
+        },
+        {
+          "date": "2024-10-27",
+          "strategy": -0.0482,
+          "benchmark": -0.6572
+        },
+        {
+          "date": "2024-11-02",
+          "strategy": -0.0482,
+          "benchmark": -0.6699
+        },
+        {
+          "date": "2024-11-08",
+          "strategy": -0.0414,
+          "benchmark": -0.6456
+        },
+        {
+          "date": "2024-11-14",
+          "strategy": -0.0276,
+          "benchmark": -0.656
+        },
+        {
+          "date": "2024-11-20",
+          "strategy": -0.0276,
+          "benchmark": -0.6388
+        },
+        {
+          "date": "2024-11-26",
+          "strategy": 0.0,
+          "benchmark": -0.4945
+        },
+        {
+          "date": "2024-12-02",
+          "strategy": 0.0,
+          "benchmark": -0.3768
+        },
+        {
+          "date": "2024-12-08",
+          "strategy": 0.0,
+          "benchmark": -0.1913
+        },
+        {
+          "date": "2024-12-14",
+          "strategy": -0.1197,
+          "benchmark": -0.3778
+        },
+        {
+          "date": "2024-12-20",
+          "strategy": -0.1197,
+          "benchmark": -0.5115
+        },
+        {
+          "date": "2024-12-26",
+          "strategy": -0.1197,
+          "benchmark": -0.5289
+        },
+        {
+          "date": "2025-01-01",
+          "strategy": -0.1392,
+          "benchmark": -0.496
+        },
+        {
+          "date": "2025-01-07",
+          "strategy": -0.1647,
+          "benchmark": -0.5163
+        },
+        {
+          "date": "2025-01-13",
+          "strategy": -0.1991,
+          "benchmark": -0.5635
+        },
+        {
+          "date": "2025-01-19",
+          "strategy": -0.2635,
+          "benchmark": -0.5824
+        },
+        {
+          "date": "2025-01-25",
+          "strategy": -0.2641,
+          "benchmark": -0.5923
+        },
+        {
+          "date": "2025-01-31",
+          "strategy": -0.2641,
+          "benchmark": -0.61
+        },
+        {
+          "date": "2025-02-06",
+          "strategy": -0.2641,
+          "benchmark": -0.736
+        },
+        {
+          "date": "2025-02-12",
+          "strategy": -0.0557,
+          "benchmark": -0.4881
+        },
+        {
+          "date": "2025-02-18",
+          "strategy": -0.0771,
+          "benchmark": -0.508
+        },
+        {
+          "date": "2025-02-24",
+          "strategy": -0.0845,
+          "benchmark": -0.5807
+        },
+        {
+          "date": "2025-03-02",
+          "strategy": -0.0845,
+          "benchmark": -0.595
+        },
+        {
+          "date": "2025-03-08",
+          "strategy": -0.0845,
+          "benchmark": -0.6736
+        },
+        {
+          "date": "2025-03-14",
+          "strategy": -0.0845,
+          "benchmark": -0.6858
+        },
+        {
+          "date": "2025-03-20",
+          "strategy": -0.0845,
+          "benchmark": -0.5372
+        },
+        {
+          "date": "2025-03-26",
+          "strategy": -0.0274,
+          "benchmark": -0.5617
+        },
+        {
+          "date": "2025-04-01",
+          "strategy": -0.0274,
+          "benchmark": -0.6315
+        },
+        {
+          "date": "2025-04-07",
+          "strategy": -0.0274,
+          "benchmark": -0.6703
+        },
+        {
+          "date": "2025-04-13",
+          "strategy": -0.0274,
+          "benchmark": -0.6371
+        },
+        {
+          "date": "2025-04-19",
+          "strategy": -0.0428,
+          "benchmark": -0.6216
+        },
+        {
+          "date": "2025-04-25",
+          "strategy": -0.0032,
+          "benchmark": -0.599
+        },
+        {
+          "date": "2025-05-01",
+          "strategy": -0.0371,
+          "benchmark": -0.5975
+        },
+        {
+          "date": "2025-05-07",
+          "strategy": -0.0371,
+          "benchmark": -0.6075
+        },
+        {
+          "date": "2025-05-13",
+          "strategy": 0.0,
+          "benchmark": -0.5266
+        },
+        {
+          "date": "2025-05-19",
+          "strategy": -0.037,
+          "benchmark": -0.5702
+        },
+        {
+          "date": "2025-05-25",
+          "strategy": -0.0796,
+          "benchmark": -0.5463
+        },
+        {
+          "date": "2025-05-31",
+          "strategy": -0.105,
+          "benchmark": -0.555
+        },
+        {
+          "date": "2025-06-06",
+          "strategy": -0.105,
+          "benchmark": -0.5525
+        },
+        {
+          "date": "2025-06-12",
+          "strategy": -0.1238,
+          "benchmark": -0.5107
+        },
+        {
+          "date": "2025-06-18",
+          "strategy": -0.1527,
+          "benchmark": -0.5691
+        },
+        {
+          "date": "2025-06-24",
+          "strategy": -0.1527,
+          "benchmark": -0.5735
+        },
+        {
+          "date": "2025-06-30",
+          "strategy": -0.1471,
+          "benchmark": -0.5486
+        },
+        {
+          "date": "2025-07-06",
+          "strategy": -0.1884,
+          "benchmark": -0.561
+        },
+        {
+          "date": "2025-07-12",
+          "strategy": -0.2145,
+          "benchmark": -0.548
+        },
+        {
+          "date": "2025-07-18",
+          "strategy": -0.1625,
+          "benchmark": -0.4908
+        },
+        {
+          "date": "2025-07-24",
+          "strategy": -0.1596,
+          "benchmark": -0.4877
+        },
+        {
+          "date": "2025-07-30",
+          "strategy": -0.1944,
+          "benchmark": -0.4605
+        },
+        {
+          "date": "2025-08-05",
+          "strategy": -0.1944,
+          "benchmark": -0.5043
+        },
+        {
+          "date": "2025-08-11",
+          "strategy": -0.2126,
+          "benchmark": -0.4696
+        },
+        {
+          "date": "2025-08-17",
+          "strategy": -0.2369,
+          "benchmark": -0.4659
+        },
+        {
+          "date": "2025-08-23",
+          "strategy": -0.25,
+          "benchmark": -0.4647
+        },
+        {
+          "date": "2025-08-29",
+          "strategy": -0.2506,
+          "benchmark": -0.5194
+        },
+        {
+          "date": "2025-09-04",
+          "strategy": -0.2506,
+          "benchmark": -0.5473
+        },
+        {
+          "date": "2025-09-10",
+          "strategy": -0.2506,
+          "benchmark": -0.514
+        },
+        {
+          "date": "2025-09-16",
+          "strategy": -0.2497,
+          "benchmark": -0.5086
+        },
+        {
+          "date": "2025-09-22",
+          "strategy": -0.2552,
+          "benchmark": -0.4899
+        },
+        {
+          "date": "2025-09-28",
+          "strategy": -0.2342,
+          "benchmark": -0.4899
+        },
+        {
+          "date": "2025-10-04",
+          "strategy": -0.1961,
+          "benchmark": -0.3388
+        },
+        {
+          "date": "2025-10-10",
+          "strategy": -0.2603,
+          "benchmark": -0.4491
+        },
+        {
+          "date": "2025-10-16",
+          "strategy": -0.236,
+          "benchmark": -0.4392
+        },
+        {
+          "date": "2025-10-22",
+          "strategy": -0.236,
+          "benchmark": -0.4754
+        },
+        {
+          "date": "2025-10-28",
+          "strategy": -0.236,
+          "benchmark": -0.4949
+        },
+        {
+          "date": "2025-11-03",
+          "strategy": -0.236,
+          "benchmark": -0.5695
+        },
+        {
+          "date": "2025-11-09",
+          "strategy": -0.236,
+          "benchmark": -0.5072
+        },
+        {
+          "date": "2025-11-15",
+          "strategy": -0.2459,
+          "benchmark": -0.532
+        },
+        {
+          "date": "2025-11-21",
+          "strategy": -0.2459,
+          "benchmark": -0.5987
+        },
+        {
+          "date": "2025-11-27",
+          "strategy": -0.2459,
+          "benchmark": -0.5204
+        },
+        {
+          "date": "2025-12-03",
+          "strategy": -0.2459,
+          "benchmark": -0.536
+        },
+        {
+          "date": "2025-12-09",
+          "strategy": -0.2459,
+          "benchmark": -0.5422
+        },
+        {
+          "date": "2025-12-15",
+          "strategy": -0.2459,
+          "benchmark": -0.6075
+        },
+        {
+          "date": "2025-12-21",
+          "strategy": -0.2459,
+          "benchmark": -0.6516
+        },
+        {
+          "date": "2025-12-27",
+          "strategy": -0.2459,
+          "benchmark": -0.6415
+        },
+        {
+          "date": "2026-01-02",
+          "strategy": -0.2431,
+          "benchmark": -0.6129
+        },
+        {
+          "date": "2026-01-08",
+          "strategy": -0.2546,
+          "benchmark": -0.6242
+        },
+        {
+          "date": "2026-01-14",
+          "strategy": -0.2686,
+          "benchmark": -0.6025
+        },
+        {
+          "date": "2026-01-20",
+          "strategy": -0.2601,
+          "benchmark": -0.6342
+        },
+        {
+          "date": "2026-01-26",
+          "strategy": -0.2601,
+          "benchmark": -0.6319
+        },
+        {
+          "date": "2026-02-01",
+          "strategy": -0.2601,
+          "benchmark": -0.7073
+        },
+        {
+          "date": "2026-02-07",
+          "strategy": -0.2601,
+          "benchmark": -0.7333
+        },
+        {
+          "date": "2026-02-13",
+          "strategy": -0.2601,
+          "benchmark": -0.7484
+        },
+        {
+          "date": "2026-02-19",
+          "strategy": -0.2601,
+          "benchmark": -0.7577
+        },
+        {
+          "date": "2026-02-25",
+          "strategy": -0.2601,
+          "benchmark": -0.7432
+        },
+        {
+          "date": "2026-03-03",
+          "strategy": -0.2601,
+          "benchmark": -0.7403
+        },
+        {
+          "date": "2026-03-09",
+          "strategy": -0.2601,
+          "benchmark": -0.7357
+        },
+        {
+          "date": "2026-03-15",
+          "strategy": -0.2601,
+          "benchmark": -0.7069
+        },
+        {
+          "date": "2026-03-21",
+          "strategy": -0.2804,
+          "benchmark": -0.7374
+        },
+        {
+          "date": "2026-03-27",
+          "strategy": -0.2804,
+          "benchmark": -0.736
+        },
+        {
+          "date": "2026-04-02",
+          "strategy": -0.2804,
+          "benchmark": -0.7424
+        },
+        {
+          "date": "2026-04-08",
+          "strategy": -0.2887,
+          "benchmark": -0.7144
+        },
+        {
+          "date": "2026-04-14",
+          "strategy": -0.2941,
+          "benchmark": -0.6984
+        },
+        {
+          "date": "2026-04-20",
+          "strategy": -0.2989,
+          "benchmark": -0.7042
+        },
+        {
+          "date": "2026-04-26",
+          "strategy": -0.2989,
+          "benchmark": -0.7044
+        },
+        {
+          "date": "2026-05-02",
+          "strategy": -0.2989,
+          "benchmark": -0.7167
+        },
+        {
+          "date": "2026-05-08",
+          "strategy": -0.3014,
+          "benchmark": -0.6984
+        },
+        {
+          "date": "2026-05-14",
+          "strategy": -0.306,
+          "benchmark": -0.7047
+        },
+        {
+          "date": "2026-05-20",
+          "strategy": -0.306,
+          "benchmark": -0.7175
+        },
+        {
+          "date": "2026-05-26",
+          "strategy": -0.306,
+          "benchmark": -0.7262
+        },
+        {
+          "date": "2026-06-01",
+          "strategy": -0.3225,
+          "benchmark": -0.7213
+        },
+        {
+          "date": "2026-06-07",
+          "strategy": -0.3524,
+          "benchmark": -0.755
+        },
+        {
+          "date": "2026-06-13",
+          "strategy": -0.3524,
+          "benchmark": -0.7389
+        }
+      ]
+    },
+    "TWT": {
+      "metrics": {
+        "total_return": -0.061,
+        "max_drawdown": -0.3579,
+        "sharpe_ratio": 0.034,
+        "calmar_ratio": -0.046,
+        "win_rate": 0.384,
+        "days_in_market_pct": 0.289,
+        "time_in_market": 0.121
+      },
+      "benchmark_metrics": {
+        "total_return": -0.6098,
+        "max_drawdown": -0.8023,
+        "sharpe_ratio": -0.064,
+        "calmar_ratio": -0.272,
+        "win_rate": 0.494,
+        "days_in_market_pct": 0.998,
+        "time_in_market": 0.998
+      },
+      "period_start": "2023-10-27",
+      "period_end": "2026-06-17",
+      "equity_curve": [
+        {
+          "date": "2023-10-27",
+          "strategy": 1.0,
+          "benchmark": 1.3271
+        },
+        {
+          "date": "2023-11-02",
+          "strategy": 1.0,
+          "benchmark": 1.4499
+        },
+        {
+          "date": "2023-11-08",
+          "strategy": 1.1529,
+          "benchmark": 1.8845
+        },
+        {
+          "date": "2023-11-14",
+          "strategy": 1.0923,
+          "benchmark": 1.507
+        },
+        {
+          "date": "2023-11-20",
+          "strategy": 1.0923,
+          "benchmark": 1.5259
+        },
+        {
+          "date": "2023-11-26",
+          "strategy": 1.0923,
+          "benchmark": 1.5208
+        },
+        {
+          "date": "2023-12-02",
+          "strategy": 1.0799,
+          "benchmark": 1.5311
+        },
+        {
+          "date": "2023-12-08",
+          "strategy": 1.0901,
+          "benchmark": 1.607
+        },
+        {
+          "date": "2023-12-14",
+          "strategy": 1.0743,
+          "benchmark": 1.5153
+        },
+        {
+          "date": "2023-12-20",
+          "strategy": 1.0743,
+          "benchmark": 1.4916
+        },
+        {
+          "date": "2023-12-26",
+          "strategy": 1.1316,
+          "benchmark": 1.6875
+        },
+        {
+          "date": "2024-01-01",
+          "strategy": 1.1053,
+          "benchmark": 1.6055
+        },
+        {
+          "date": "2024-01-07",
+          "strategy": 1.1053,
+          "benchmark": 1.3553
+        },
+        {
+          "date": "2024-01-13",
+          "strategy": 1.1053,
+          "benchmark": 1.475
+        },
+        {
+          "date": "2024-01-19",
+          "strategy": 1.1053,
+          "benchmark": 1.4005
+        },
+        {
+          "date": "2024-01-25",
+          "strategy": 1.1053,
+          "benchmark": 1.4118
+        },
+        {
+          "date": "2024-01-31",
+          "strategy": 1.1053,
+          "benchmark": 1.3667
+        },
+        {
+          "date": "2024-02-06",
+          "strategy": 1.1053,
+          "benchmark": 1.4522
+        },
+        {
+          "date": "2024-02-12",
+          "strategy": 1.1225,
+          "benchmark": 1.5186
+        },
+        {
+          "date": "2024-02-18",
+          "strategy": 1.1977,
+          "benchmark": 1.7202
+        },
+        {
+          "date": "2024-02-24",
+          "strategy": 1.1911,
+          "benchmark": 1.7022
+        },
+        {
+          "date": "2024-03-01",
+          "strategy": 1.2127,
+          "benchmark": 1.8212
+        },
+        {
+          "date": "2024-03-07",
+          "strategy": 1.1979,
+          "benchmark": 1.8891
+        },
+        {
+          "date": "2024-03-13",
+          "strategy": 1.2312,
+          "benchmark": 2.087
+        },
+        {
+          "date": "2024-03-19",
+          "strategy": 1.1121,
+          "benchmark": 1.5624
+        },
+        {
+          "date": "2024-03-25",
+          "strategy": 1.1121,
+          "benchmark": 1.8146
+        },
+        {
+          "date": "2024-03-31",
+          "strategy": 1.1039,
+          "benchmark": 1.7872
+        },
+        {
+          "date": "2024-04-06",
+          "strategy": 1.1039,
+          "benchmark": 1.6015
+        },
+        {
+          "date": "2024-04-12",
+          "strategy": 1.0685,
+          "benchmark": 1.4109
+        },
+        {
+          "date": "2024-04-18",
+          "strategy": 1.0685,
+          "benchmark": 1.3772
+        },
+        {
+          "date": "2024-04-24",
+          "strategy": 1.0208,
+          "benchmark": 1.3935
+        },
+        {
+          "date": "2024-04-30",
+          "strategy": 1.0199,
+          "benchmark": 1.3483
+        },
+        {
+          "date": "2024-05-06",
+          "strategy": 1.0044,
+          "benchmark": 1.4342
+        },
+        {
+          "date": "2024-05-12",
+          "strategy": 1.0036,
+          "benchmark": 1.3743
+        },
+        {
+          "date": "2024-05-18",
+          "strategy": 1.0036,
+          "benchmark": 1.4039
+        },
+        {
+          "date": "2024-05-24",
+          "strategy": 0.9935,
+          "benchmark": 1.4195
+        },
+        {
+          "date": "2024-05-30",
+          "strategy": 1.0185,
+          "benchmark": 1.5501
+        },
+        {
+          "date": "2024-06-05",
+          "strategy": 1.0307,
+          "benchmark": 1.7377
+        },
+        {
+          "date": "2024-06-11",
+          "strategy": 0.9694,
+          "benchmark": 1.4232
+        },
+        {
+          "date": "2024-06-17",
+          "strategy": 0.9694,
+          "benchmark": 1.3576
+        },
+        {
+          "date": "2024-06-23",
+          "strategy": 0.9694,
+          "benchmark": 1.2397
+        },
+        {
+          "date": "2024-06-29",
+          "strategy": 0.9694,
+          "benchmark": 1.3258
+        },
+        {
+          "date": "2024-07-05",
+          "strategy": 0.874,
+          "benchmark": 1.2543
+        },
+        {
+          "date": "2024-07-11",
+          "strategy": 0.8968,
+          "benchmark": 1.2794
+        },
+        {
+          "date": "2024-07-17",
+          "strategy": 0.8968,
+          "benchmark": 1.3514
+        },
+        {
+          "date": "2024-07-23",
+          "strategy": 0.8968,
+          "benchmark": 1.2799
+        },
+        {
+          "date": "2024-07-29",
+          "strategy": 0.8968,
+          "benchmark": 1.2864
+        },
+        {
+          "date": "2024-08-04",
+          "strategy": 0.8404,
+          "benchmark": 1.1191
+        },
+        {
+          "date": "2024-08-10",
+          "strategy": 0.8404,
+          "benchmark": 1.1523
+        },
+        {
+          "date": "2024-08-16",
+          "strategy": 0.8404,
+          "benchmark": 1.0692
+        },
+        {
+          "date": "2024-08-22",
+          "strategy": 0.8404,
+          "benchmark": 1.1724
+        },
+        {
+          "date": "2024-08-28",
+          "strategy": 0.8384,
+          "benchmark": 1.1062
+        },
+        {
+          "date": "2024-09-03",
+          "strategy": 0.8384,
+          "benchmark": 1.0335
+        },
+        {
+          "date": "2024-09-09",
+          "strategy": 0.8384,
+          "benchmark": 1.0777
+        },
+        {
+          "date": "2024-09-15",
+          "strategy": 0.8951,
+          "benchmark": 1.2049
+        },
+        {
+          "date": "2024-09-21",
+          "strategy": 0.8298,
+          "benchmark": 1.0597
+        },
+        {
+          "date": "2024-09-27",
+          "strategy": 0.9095,
+          "benchmark": 1.3361
+        },
+        {
+          "date": "2024-10-03",
+          "strategy": 0.9118,
+          "benchmark": 1.3402
+        },
+        {
+          "date": "2024-10-09",
+          "strategy": 0.9111,
+          "benchmark": 1.3212
+        },
+        {
+          "date": "2024-10-15",
+          "strategy": 0.8992,
+          "benchmark": 1.4603
+        },
+        {
+          "date": "2024-10-21",
+          "strategy": 0.8775,
+          "benchmark": 1.3627
+        },
+        {
+          "date": "2024-10-27",
+          "strategy": 0.8775,
+          "benchmark": 1.2858
+        },
+        {
+          "date": "2024-11-02",
+          "strategy": 0.8775,
+          "benchmark": 1.2636
+        },
+        {
+          "date": "2024-11-08",
+          "strategy": 0.8717,
+          "benchmark": 1.2992
+        },
+        {
+          "date": "2024-11-14",
+          "strategy": 0.9041,
+          "benchmark": 1.2076
+        },
+        {
+          "date": "2024-11-20",
+          "strategy": 0.9041,
+          "benchmark": 1.1632
+        },
+        {
+          "date": "2024-11-26",
+          "strategy": 0.9192,
+          "benchmark": 1.3595
+        },
+        {
+          "date": "2024-12-02",
+          "strategy": 1.0131,
+          "benchmark": 1.6278
+        },
+        {
+          "date": "2024-12-08",
+          "strategy": 1.1137,
+          "benchmark": 1.9246
+        },
+        {
+          "date": "2024-12-14",
+          "strategy": 1.022,
+          "benchmark": 1.7198
+        },
+        {
+          "date": "2024-12-20",
+          "strategy": 1.022,
+          "benchmark": 1.5671
+        },
+        {
+          "date": "2024-12-26",
+          "strategy": 1.022,
+          "benchmark": 1.5219
+        },
+        {
+          "date": "2025-01-01",
+          "strategy": 1.022,
+          "benchmark": 1.5409
+        },
+        {
+          "date": "2025-01-07",
+          "strategy": 0.9885,
+          "benchmark": 1.5167
+        },
+        {
+          "date": "2025-01-13",
+          "strategy": 0.9591,
+          "benchmark": 1.4792
+        },
+        {
+          "date": "2025-01-19",
+          "strategy": 0.9355,
+          "benchmark": 1.4259
+        },
+        {
+          "date": "2025-01-25",
+          "strategy": 0.9347,
+          "benchmark": 1.3345
+        },
+        {
+          "date": "2025-01-31",
+          "strategy": 0.9347,
+          "benchmark": 1.3055
+        },
+        {
+          "date": "2025-02-06",
+          "strategy": 0.9347,
+          "benchmark": 1.0657
+        },
+        {
+          "date": "2025-02-12",
+          "strategy": 0.9347,
+          "benchmark": 1.2578
+        },
+        {
+          "date": "2025-02-18",
+          "strategy": 0.9523,
+          "benchmark": 1.3037
+        },
+        {
+          "date": "2025-02-24",
+          "strategy": 0.9615,
+          "benchmark": 1.2228
+        },
+        {
+          "date": "2025-03-02",
+          "strategy": 0.9615,
+          "benchmark": 1.3693
+        },
+        {
+          "date": "2025-03-08",
+          "strategy": 0.9615,
+          "benchmark": 1.2562
+        },
+        {
+          "date": "2025-03-14",
+          "strategy": 0.9615,
+          "benchmark": 1.1029
+        },
+        {
+          "date": "2025-03-20",
+          "strategy": 0.9615,
+          "benchmark": 1.1395
+        },
+        {
+          "date": "2025-03-26",
+          "strategy": 0.9615,
+          "benchmark": 1.1692
+        },
+        {
+          "date": "2025-04-01",
+          "strategy": 0.9615,
+          "benchmark": 1.0922
+        },
+        {
+          "date": "2025-04-07",
+          "strategy": 0.9615,
+          "benchmark": 0.9559
+        },
+        {
+          "date": "2025-04-13",
+          "strategy": 0.9615,
+          "benchmark": 0.9783
+        },
+        {
+          "date": "2025-04-19",
+          "strategy": 0.9615,
+          "benchmark": 0.9816
+        },
+        {
+          "date": "2025-04-25",
+          "strategy": 0.9618,
+          "benchmark": 1.0529
+        },
+        {
+          "date": "2025-05-01",
+          "strategy": 0.9341,
+          "benchmark": 1.049
+        },
+        {
+          "date": "2025-05-07",
+          "strategy": 0.9285,
+          "benchmark": 0.9768
+        },
+        {
+          "date": "2025-05-13",
+          "strategy": 0.9712,
+          "benchmark": 1.1441
+        },
+        {
+          "date": "2025-05-19",
+          "strategy": 0.9341,
+          "benchmark": 1.0594
+        },
+        {
+          "date": "2025-05-25",
+          "strategy": 0.9341,
+          "benchmark": 1.0686
+        },
+        {
+          "date": "2025-05-31",
+          "strategy": 0.9341,
+          "benchmark": 0.9996
+        },
+        {
+          "date": "2025-06-06",
+          "strategy": 0.9341,
+          "benchmark": 1.0101
+        },
+        {
+          "date": "2025-06-12",
+          "strategy": 0.9113,
+          "benchmark": 0.9811
+        },
+        {
+          "date": "2025-06-18",
+          "strategy": 0.9089,
+          "benchmark": 0.9614
+        },
+        {
+          "date": "2025-06-24",
+          "strategy": 0.9004,
+          "benchmark": 0.8947
+        },
+        {
+          "date": "2025-06-30",
+          "strategy": 0.9004,
+          "benchmark": 0.8912
+        },
+        {
+          "date": "2025-07-06",
+          "strategy": 0.9004,
+          "benchmark": 0.9005
+        },
+        {
+          "date": "2025-07-12",
+          "strategy": 0.917,
+          "benchmark": 0.9508
+        },
+        {
+          "date": "2025-07-18",
+          "strategy": 0.963,
+          "benchmark": 1.0413
+        },
+        {
+          "date": "2025-07-24",
+          "strategy": 0.9501,
+          "benchmark": 1.0103
+        },
+        {
+          "date": "2025-07-30",
+          "strategy": 0.9501,
+          "benchmark": 0.9904
+        },
+        {
+          "date": "2025-08-05",
+          "strategy": 0.9501,
+          "benchmark": 0.9527
+        },
+        {
+          "date": "2025-08-11",
+          "strategy": 0.9388,
+          "benchmark": 0.9805
+        },
+        {
+          "date": "2025-08-17",
+          "strategy": 0.9245,
+          "benchmark": 1.0043
+        },
+        {
+          "date": "2025-08-23",
+          "strategy": 0.9403,
+          "benchmark": 1.015
+        },
+        {
+          "date": "2025-08-29",
+          "strategy": 0.9395,
+          "benchmark": 0.9375
+        },
+        {
+          "date": "2025-09-04",
+          "strategy": 0.9395,
+          "benchmark": 0.9171
+        },
+        {
+          "date": "2025-09-10",
+          "strategy": 0.9395,
+          "benchmark": 0.9644
+        },
+        {
+          "date": "2025-09-16",
+          "strategy": 0.963,
+          "benchmark": 1.0102
+        },
+        {
+          "date": "2025-09-22",
+          "strategy": 1.1217,
+          "benchmark": 1.5145
+        },
+        {
+          "date": "2025-09-28",
+          "strategy": 1.1543,
+          "benchmark": 1.6892
+        },
+        {
+          "date": "2025-10-04",
+          "strategy": 1.1716,
+          "benchmark": 1.8643
+        },
+        {
+          "date": "2025-10-10",
+          "strategy": 1.0114,
+          "benchmark": 1.6182
+        },
+        {
+          "date": "2025-10-16",
+          "strategy": 1.0106,
+          "benchmark": 1.6937
+        },
+        {
+          "date": "2025-10-22",
+          "strategy": 1.0106,
+          "benchmark": 1.5553
+        },
+        {
+          "date": "2025-10-28",
+          "strategy": 1.0106,
+          "benchmark": 1.597
+        },
+        {
+          "date": "2025-11-03",
+          "strategy": 1.0106,
+          "benchmark": 1.4693
+        },
+        {
+          "date": "2025-11-09",
+          "strategy": 1.0106,
+          "benchmark": 1.6246
+        },
+        {
+          "date": "2025-11-15",
+          "strategy": 1.0106,
+          "benchmark": 1.502
+        },
+        {
+          "date": "2025-11-21",
+          "strategy": 1.0106,
+          "benchmark": 1.3461
+        },
+        {
+          "date": "2025-11-27",
+          "strategy": 1.0106,
+          "benchmark": 1.3548
+        },
+        {
+          "date": "2025-12-03",
+          "strategy": 1.0106,
+          "benchmark": 1.3697
+        },
+        {
+          "date": "2025-12-09",
+          "strategy": 1.0106,
+          "benchmark": 1.299
+        },
+        {
+          "date": "2025-12-15",
+          "strategy": 1.0106,
+          "benchmark": 1.2497
+        },
+        {
+          "date": "2025-12-21",
+          "strategy": 1.0106,
+          "benchmark": 1.0607
+        },
+        {
+          "date": "2025-12-27",
+          "strategy": 1.0106,
+          "benchmark": 1.1023
+        },
+        {
+          "date": "2026-01-02",
+          "strategy": 1.0106,
+          "benchmark": 1.1361
+        },
+        {
+          "date": "2026-01-08",
+          "strategy": 1.0026,
+          "benchmark": 1.1622
+        },
+        {
+          "date": "2026-01-14",
+          "strategy": 1.0026,
+          "benchmark": 1.1728
+        },
+        {
+          "date": "2026-01-20",
+          "strategy": 0.9578,
+          "benchmark": 1.0896
+        },
+        {
+          "date": "2026-01-26",
+          "strategy": 0.957,
+          "benchmark": 1.0801
+        },
+        {
+          "date": "2026-02-01",
+          "strategy": 0.957,
+          "benchmark": 0.8553
+        },
+        {
+          "date": "2026-02-07",
+          "strategy": 0.957,
+          "benchmark": 0.6809
+        },
+        {
+          "date": "2026-02-13",
+          "strategy": 0.957,
+          "benchmark": 0.647
+        },
+        {
+          "date": "2026-02-19",
+          "strategy": 0.957,
+          "benchmark": 0.6599
+        },
+        {
+          "date": "2026-02-25",
+          "strategy": 0.957,
+          "benchmark": 0.6515
+        },
+        {
+          "date": "2026-03-03",
+          "strategy": 0.957,
+          "benchmark": 0.6129
+        },
+        {
+          "date": "2026-03-09",
+          "strategy": 0.957,
+          "benchmark": 0.6228
+        },
+        {
+          "date": "2026-03-15",
+          "strategy": 0.9742,
+          "benchmark": 0.6705
+        },
+        {
+          "date": "2026-03-21",
+          "strategy": 0.9608,
+          "benchmark": 0.6283
+        },
+        {
+          "date": "2026-03-27",
+          "strategy": 0.9608,
+          "benchmark": 0.5775
+        },
+        {
+          "date": "2026-04-02",
+          "strategy": 0.9608,
+          "benchmark": 0.5029
+        },
+        {
+          "date": "2026-04-08",
+          "strategy": 0.9511,
+          "benchmark": 0.5046
+        },
+        {
+          "date": "2026-04-14",
+          "strategy": 0.9503,
+          "benchmark": 0.5096
+        },
+        {
+          "date": "2026-04-20",
+          "strategy": 0.9286,
+          "benchmark": 0.5319
+        },
+        {
+          "date": "2026-04-26",
+          "strategy": 0.9327,
+          "benchmark": 0.5658
+        },
+        {
+          "date": "2026-05-02",
+          "strategy": 0.9236,
+          "benchmark": 0.537
+        },
+        {
+          "date": "2026-05-08",
+          "strategy": 0.9341,
+          "benchmark": 0.5988
+        },
+        {
+          "date": "2026-05-14",
+          "strategy": 0.9721,
+          "benchmark": 0.6445
+        },
+        {
+          "date": "2026-05-20",
+          "strategy": 0.9576,
+          "benchmark": 0.5919
+        },
+        {
+          "date": "2026-05-26",
+          "strategy": 0.9576,
+          "benchmark": 0.5741
+        },
+        {
+          "date": "2026-06-01",
+          "strategy": 0.9486,
+          "benchmark": 0.5709
+        },
+        {
+          "date": "2026-06-07",
+          "strategy": 0.939,
+          "benchmark": 0.4726
+        },
+        {
+          "date": "2026-06-13",
+          "strategy": 0.939,
+          "benchmark": 0.5011
+        }
+      ],
+      "drawdown_curve": [
+        {
+          "date": "2023-10-27",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-11-02",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-11-08",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-11-14",
+          "strategy": -0.0526,
+          "benchmark": -0.2003
+        },
+        {
+          "date": "2023-11-20",
+          "strategy": -0.0526,
+          "benchmark": -0.1903
+        },
+        {
+          "date": "2023-11-26",
+          "strategy": -0.0526,
+          "benchmark": -0.193
+        },
+        {
+          "date": "2023-12-02",
+          "strategy": -0.0633,
+          "benchmark": -0.1875
+        },
+        {
+          "date": "2023-12-08",
+          "strategy": -0.0545,
+          "benchmark": -0.1473
+        },
+        {
+          "date": "2023-12-14",
+          "strategy": -0.0682,
+          "benchmark": -0.1959
+        },
+        {
+          "date": "2023-12-20",
+          "strategy": -0.0682,
+          "benchmark": -0.2085
+        },
+        {
+          "date": "2023-12-26",
+          "strategy": -0.0185,
+          "benchmark": -0.1045
+        },
+        {
+          "date": "2024-01-01",
+          "strategy": -0.0413,
+          "benchmark": -0.148
+        },
+        {
+          "date": "2024-01-07",
+          "strategy": -0.0413,
+          "benchmark": -0.2808
+        },
+        {
+          "date": "2024-01-13",
+          "strategy": -0.0413,
+          "benchmark": -0.2173
+        },
+        {
+          "date": "2024-01-19",
+          "strategy": -0.0413,
+          "benchmark": -0.2568
+        },
+        {
+          "date": "2024-01-25",
+          "strategy": -0.0413,
+          "benchmark": -0.2508
+        },
+        {
+          "date": "2024-01-31",
+          "strategy": -0.0413,
+          "benchmark": -0.2748
+        },
+        {
+          "date": "2024-02-06",
+          "strategy": -0.0413,
+          "benchmark": -0.2294
+        },
+        {
+          "date": "2024-02-12",
+          "strategy": -0.0264,
+          "benchmark": -0.1942
+        },
+        {
+          "date": "2024-02-18",
+          "strategy": 0.0,
+          "benchmark": -0.0872
+        },
+        {
+          "date": "2024-02-24",
+          "strategy": -0.0055,
+          "benchmark": -0.0967
+        },
+        {
+          "date": "2024-03-01",
+          "strategy": 0.0,
+          "benchmark": -0.0336
+        },
+        {
+          "date": "2024-03-07",
+          "strategy": -0.0122,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-03-13",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-03-19",
+          "strategy": -0.0967,
+          "benchmark": -0.2514
+        },
+        {
+          "date": "2024-03-25",
+          "strategy": -0.0967,
+          "benchmark": -0.1305
+        },
+        {
+          "date": "2024-03-31",
+          "strategy": -0.1034,
+          "benchmark": -0.1437
+        },
+        {
+          "date": "2024-04-06",
+          "strategy": -0.1034,
+          "benchmark": -0.2326
+        },
+        {
+          "date": "2024-04-12",
+          "strategy": -0.1321,
+          "benchmark": -0.324
+        },
+        {
+          "date": "2024-04-18",
+          "strategy": -0.1321,
+          "benchmark": -0.3401
+        },
+        {
+          "date": "2024-04-24",
+          "strategy": -0.1709,
+          "benchmark": -0.3323
+        },
+        {
+          "date": "2024-04-30",
+          "strategy": -0.1716,
+          "benchmark": -0.354
+        },
+        {
+          "date": "2024-05-06",
+          "strategy": -0.1842,
+          "benchmark": -0.3128
+        },
+        {
+          "date": "2024-05-12",
+          "strategy": -0.1849,
+          "benchmark": -0.3415
+        },
+        {
+          "date": "2024-05-18",
+          "strategy": -0.1849,
+          "benchmark": -0.3273
+        },
+        {
+          "date": "2024-05-24",
+          "strategy": -0.1931,
+          "benchmark": -0.3198
+        },
+        {
+          "date": "2024-05-30",
+          "strategy": -0.1728,
+          "benchmark": -0.2573
+        },
+        {
+          "date": "2024-06-05",
+          "strategy": -0.1628,
+          "benchmark": -0.1674
+        },
+        {
+          "date": "2024-06-11",
+          "strategy": -0.2126,
+          "benchmark": -0.3181
+        },
+        {
+          "date": "2024-06-17",
+          "strategy": -0.2126,
+          "benchmark": -0.3495
+        },
+        {
+          "date": "2024-06-23",
+          "strategy": -0.2126,
+          "benchmark": -0.406
+        },
+        {
+          "date": "2024-06-29",
+          "strategy": -0.2126,
+          "benchmark": -0.3647
+        },
+        {
+          "date": "2024-07-05",
+          "strategy": -0.2901,
+          "benchmark": -0.399
+        },
+        {
+          "date": "2024-07-11",
+          "strategy": -0.2716,
+          "benchmark": -0.387
+        },
+        {
+          "date": "2024-07-17",
+          "strategy": -0.2716,
+          "benchmark": -0.3525
+        },
+        {
+          "date": "2024-07-23",
+          "strategy": -0.2716,
+          "benchmark": -0.3867
+        },
+        {
+          "date": "2024-07-29",
+          "strategy": -0.2716,
+          "benchmark": -0.3836
+        },
+        {
+          "date": "2024-08-04",
+          "strategy": -0.3174,
+          "benchmark": -0.4638
+        },
+        {
+          "date": "2024-08-10",
+          "strategy": -0.3174,
+          "benchmark": -0.4479
+        },
+        {
+          "date": "2024-08-16",
+          "strategy": -0.3174,
+          "benchmark": -0.4877
+        },
+        {
+          "date": "2024-08-22",
+          "strategy": -0.3174,
+          "benchmark": -0.4382
+        },
+        {
+          "date": "2024-08-28",
+          "strategy": -0.319,
+          "benchmark": -0.47
+        },
+        {
+          "date": "2024-09-03",
+          "strategy": -0.319,
+          "benchmark": -0.5048
+        },
+        {
+          "date": "2024-09-09",
+          "strategy": -0.319,
+          "benchmark": -0.4836
+        },
+        {
+          "date": "2024-09-15",
+          "strategy": -0.273,
+          "benchmark": -0.4227
+        },
+        {
+          "date": "2024-09-21",
+          "strategy": -0.326,
+          "benchmark": -0.4922
+        },
+        {
+          "date": "2024-09-27",
+          "strategy": -0.2613,
+          "benchmark": -0.3598
+        },
+        {
+          "date": "2024-10-03",
+          "strategy": -0.2594,
+          "benchmark": -0.3578
+        },
+        {
+          "date": "2024-10-09",
+          "strategy": -0.26,
+          "benchmark": -0.3669
+        },
+        {
+          "date": "2024-10-15",
+          "strategy": -0.2697,
+          "benchmark": -0.3003
+        },
+        {
+          "date": "2024-10-21",
+          "strategy": -0.2873,
+          "benchmark": -0.3471
+        },
+        {
+          "date": "2024-10-27",
+          "strategy": -0.2873,
+          "benchmark": -0.3839
+        },
+        {
+          "date": "2024-11-02",
+          "strategy": -0.2873,
+          "benchmark": -0.3945
+        },
+        {
+          "date": "2024-11-08",
+          "strategy": -0.292,
+          "benchmark": -0.3775
+        },
+        {
+          "date": "2024-11-14",
+          "strategy": -0.2657,
+          "benchmark": -0.4214
+        },
+        {
+          "date": "2024-11-20",
+          "strategy": -0.2657,
+          "benchmark": -0.4426
+        },
+        {
+          "date": "2024-11-26",
+          "strategy": -0.2534,
+          "benchmark": -0.3486
+        },
+        {
+          "date": "2024-12-02",
+          "strategy": -0.1771,
+          "benchmark": -0.22
+        },
+        {
+          "date": "2024-12-08",
+          "strategy": -0.0954,
+          "benchmark": -0.0778
+        },
+        {
+          "date": "2024-12-14",
+          "strategy": -0.1699,
+          "benchmark": -0.1759
+        },
+        {
+          "date": "2024-12-20",
+          "strategy": -0.1699,
+          "benchmark": -0.2491
+        },
+        {
+          "date": "2024-12-26",
+          "strategy": -0.1699,
+          "benchmark": -0.2708
+        },
+        {
+          "date": "2025-01-01",
+          "strategy": -0.1699,
+          "benchmark": -0.2617
+        },
+        {
+          "date": "2025-01-07",
+          "strategy": -0.1971,
+          "benchmark": -0.2733
+        },
+        {
+          "date": "2025-01-13",
+          "strategy": -0.221,
+          "benchmark": -0.2912
+        },
+        {
+          "date": "2025-01-19",
+          "strategy": -0.2402,
+          "benchmark": -0.3168
+        },
+        {
+          "date": "2025-01-25",
+          "strategy": -0.2408,
+          "benchmark": -0.3606
+        },
+        {
+          "date": "2025-01-31",
+          "strategy": -0.2408,
+          "benchmark": -0.3745
+        },
+        {
+          "date": "2025-02-06",
+          "strategy": -0.2408,
+          "benchmark": -0.4894
+        },
+        {
+          "date": "2025-02-12",
+          "strategy": -0.2408,
+          "benchmark": -0.3973
+        },
+        {
+          "date": "2025-02-18",
+          "strategy": -0.2265,
+          "benchmark": -0.3753
+        },
+        {
+          "date": "2025-02-24",
+          "strategy": -0.2191,
+          "benchmark": -0.4141
+        },
+        {
+          "date": "2025-03-02",
+          "strategy": -0.2191,
+          "benchmark": -0.3439
+        },
+        {
+          "date": "2025-03-08",
+          "strategy": -0.2191,
+          "benchmark": -0.3981
+        },
+        {
+          "date": "2025-03-14",
+          "strategy": -0.2191,
+          "benchmark": -0.4715
+        },
+        {
+          "date": "2025-03-20",
+          "strategy": -0.2191,
+          "benchmark": -0.454
+        },
+        {
+          "date": "2025-03-26",
+          "strategy": -0.2191,
+          "benchmark": -0.4398
+        },
+        {
+          "date": "2025-04-01",
+          "strategy": -0.2191,
+          "benchmark": -0.4767
+        },
+        {
+          "date": "2025-04-07",
+          "strategy": -0.2191,
+          "benchmark": -0.542
+        },
+        {
+          "date": "2025-04-13",
+          "strategy": -0.2191,
+          "benchmark": -0.5312
+        },
+        {
+          "date": "2025-04-19",
+          "strategy": -0.2191,
+          "benchmark": -0.5297
+        },
+        {
+          "date": "2025-04-25",
+          "strategy": -0.2188,
+          "benchmark": -0.4955
+        },
+        {
+          "date": "2025-05-01",
+          "strategy": -0.2413,
+          "benchmark": -0.4974
+        },
+        {
+          "date": "2025-05-07",
+          "strategy": -0.2459,
+          "benchmark": -0.532
+        },
+        {
+          "date": "2025-05-13",
+          "strategy": -0.2112,
+          "benchmark": -0.4518
+        },
+        {
+          "date": "2025-05-19",
+          "strategy": -0.2413,
+          "benchmark": -0.4924
+        },
+        {
+          "date": "2025-05-25",
+          "strategy": -0.2413,
+          "benchmark": -0.488
+        },
+        {
+          "date": "2025-05-31",
+          "strategy": -0.2413,
+          "benchmark": -0.521
+        },
+        {
+          "date": "2025-06-06",
+          "strategy": -0.2413,
+          "benchmark": -0.516
+        },
+        {
+          "date": "2025-06-12",
+          "strategy": -0.2598,
+          "benchmark": -0.5299
+        },
+        {
+          "date": "2025-06-18",
+          "strategy": -0.2618,
+          "benchmark": -0.5393
+        },
+        {
+          "date": "2025-06-24",
+          "strategy": -0.2687,
+          "benchmark": -0.5713
+        },
+        {
+          "date": "2025-06-30",
+          "strategy": -0.2687,
+          "benchmark": -0.573
+        },
+        {
+          "date": "2025-07-06",
+          "strategy": -0.2687,
+          "benchmark": -0.5685
+        },
+        {
+          "date": "2025-07-12",
+          "strategy": -0.2552,
+          "benchmark": -0.5444
+        },
+        {
+          "date": "2025-07-18",
+          "strategy": -0.2178,
+          "benchmark": -0.5011
+        },
+        {
+          "date": "2025-07-24",
+          "strategy": -0.2283,
+          "benchmark": -0.5159
+        },
+        {
+          "date": "2025-07-30",
+          "strategy": -0.2283,
+          "benchmark": -0.5254
+        },
+        {
+          "date": "2025-08-05",
+          "strategy": -0.2283,
+          "benchmark": -0.5435
+        },
+        {
+          "date": "2025-08-11",
+          "strategy": -0.2375,
+          "benchmark": -0.5302
+        },
+        {
+          "date": "2025-08-17",
+          "strategy": -0.2491,
+          "benchmark": -0.5188
+        },
+        {
+          "date": "2025-08-23",
+          "strategy": -0.2363,
+          "benchmark": -0.5137
+        },
+        {
+          "date": "2025-08-29",
+          "strategy": -0.2369,
+          "benchmark": -0.5508
+        },
+        {
+          "date": "2025-09-04",
+          "strategy": -0.2369,
+          "benchmark": -0.5606
+        },
+        {
+          "date": "2025-09-10",
+          "strategy": -0.2369,
+          "benchmark": -0.5379
+        },
+        {
+          "date": "2025-09-16",
+          "strategy": -0.2178,
+          "benchmark": -0.516
+        },
+        {
+          "date": "2025-09-22",
+          "strategy": -0.0889,
+          "benchmark": -0.2743
+        },
+        {
+          "date": "2025-09-28",
+          "strategy": -0.0625,
+          "benchmark": -0.1906
+        },
+        {
+          "date": "2025-10-04",
+          "strategy": -0.0484,
+          "benchmark": -0.1067
+        },
+        {
+          "date": "2025-10-10",
+          "strategy": -0.1785,
+          "benchmark": -0.2246
+        },
+        {
+          "date": "2025-10-16",
+          "strategy": -0.1792,
+          "benchmark": -0.1885
+        },
+        {
+          "date": "2025-10-22",
+          "strategy": -0.1792,
+          "benchmark": -0.2548
+        },
+        {
+          "date": "2025-10-28",
+          "strategy": -0.1792,
+          "benchmark": -0.2348
+        },
+        {
+          "date": "2025-11-03",
+          "strategy": -0.1792,
+          "benchmark": -0.296
+        },
+        {
+          "date": "2025-11-09",
+          "strategy": -0.1792,
+          "benchmark": -0.2216
+        },
+        {
+          "date": "2025-11-15",
+          "strategy": -0.1792,
+          "benchmark": -0.2803
+        },
+        {
+          "date": "2025-11-21",
+          "strategy": -0.1792,
+          "benchmark": -0.355
+        },
+        {
+          "date": "2025-11-27",
+          "strategy": -0.1792,
+          "benchmark": -0.3508
+        },
+        {
+          "date": "2025-12-03",
+          "strategy": -0.1792,
+          "benchmark": -0.3437
+        },
+        {
+          "date": "2025-12-09",
+          "strategy": -0.1792,
+          "benchmark": -0.3776
+        },
+        {
+          "date": "2025-12-15",
+          "strategy": -0.1792,
+          "benchmark": -0.4012
+        },
+        {
+          "date": "2025-12-21",
+          "strategy": -0.1792,
+          "benchmark": -0.4918
+        },
+        {
+          "date": "2025-12-27",
+          "strategy": -0.1792,
+          "benchmark": -0.4718
+        },
+        {
+          "date": "2026-01-02",
+          "strategy": -0.1792,
+          "benchmark": -0.4556
+        },
+        {
+          "date": "2026-01-08",
+          "strategy": -0.1857,
+          "benchmark": -0.4431
+        },
+        {
+          "date": "2026-01-14",
+          "strategy": -0.1857,
+          "benchmark": -0.438
+        },
+        {
+          "date": "2026-01-20",
+          "strategy": -0.2221,
+          "benchmark": -0.4779
+        },
+        {
+          "date": "2026-01-26",
+          "strategy": -0.2227,
+          "benchmark": -0.4825
+        },
+        {
+          "date": "2026-02-01",
+          "strategy": -0.2227,
+          "benchmark": -0.5902
+        },
+        {
+          "date": "2026-02-07",
+          "strategy": -0.2227,
+          "benchmark": -0.6737
+        },
+        {
+          "date": "2026-02-13",
+          "strategy": -0.2227,
+          "benchmark": -0.69
+        },
+        {
+          "date": "2026-02-19",
+          "strategy": -0.2227,
+          "benchmark": -0.6838
+        },
+        {
+          "date": "2026-02-25",
+          "strategy": -0.2227,
+          "benchmark": -0.6878
+        },
+        {
+          "date": "2026-03-03",
+          "strategy": -0.2227,
+          "benchmark": -0.7063
+        },
+        {
+          "date": "2026-03-09",
+          "strategy": -0.2227,
+          "benchmark": -0.7016
+        },
+        {
+          "date": "2026-03-15",
+          "strategy": -0.2087,
+          "benchmark": -0.6787
+        },
+        {
+          "date": "2026-03-21",
+          "strategy": -0.2196,
+          "benchmark": -0.6989
+        },
+        {
+          "date": "2026-03-27",
+          "strategy": -0.2196,
+          "benchmark": -0.7233
+        },
+        {
+          "date": "2026-04-02",
+          "strategy": -0.2196,
+          "benchmark": -0.759
+        },
+        {
+          "date": "2026-04-08",
+          "strategy": -0.2275,
+          "benchmark": -0.7582
+        },
+        {
+          "date": "2026-04-14",
+          "strategy": -0.2282,
+          "benchmark": -0.7558
+        },
+        {
+          "date": "2026-04-20",
+          "strategy": -0.2458,
+          "benchmark": -0.7451
+        },
+        {
+          "date": "2026-04-26",
+          "strategy": -0.2424,
+          "benchmark": -0.7289
+        },
+        {
+          "date": "2026-05-02",
+          "strategy": -0.2498,
+          "benchmark": -0.7427
+        },
+        {
+          "date": "2026-05-08",
+          "strategy": -0.2413,
+          "benchmark": -0.7131
+        },
+        {
+          "date": "2026-05-14",
+          "strategy": -0.2104,
+          "benchmark": -0.6912
+        },
+        {
+          "date": "2026-05-20",
+          "strategy": -0.2222,
+          "benchmark": -0.7164
+        },
+        {
+          "date": "2026-05-26",
+          "strategy": -0.2222,
+          "benchmark": -0.7249
+        },
+        {
+          "date": "2026-06-01",
+          "strategy": -0.2295,
+          "benchmark": -0.7264
+        },
+        {
+          "date": "2026-06-07",
+          "strategy": -0.2373,
+          "benchmark": -0.7736
+        },
+        {
+          "date": "2026-06-13",
+          "strategy": -0.2373,
+          "benchmark": -0.7599
+        }
+      ]
+    },
+    "BTC": {
+      "metrics": {
+        "total_return": 0.065,
+        "max_drawdown": -0.1487,
+        "sharpe_ratio": 0.215,
+        "calmar_ratio": 0.112,
+        "win_rate": 0.366,
+        "days_in_market_pct": 0.309,
+        "time_in_market": 0.118
+      },
+      "benchmark_metrics": {
+        "total_return": 0.9233,
+        "max_drawdown": -0.5116,
+        "sharpe_ratio": 0.623,
+        "calmar_ratio": 0.364,
+        "win_rate": 0.509,
+        "days_in_market_pct": 1.0,
+        "time_in_market": 1.0
+      },
+      "period_start": "2023-10-27",
+      "period_end": "2026-06-17",
+      "equity_curve": [
+        {
+          "date": "2023-10-27",
+          "strategy": 1.0,
+          "benchmark": 1.2751
+        },
+        {
+          "date": "2023-11-02",
+          "strategy": 1.0076,
+          "benchmark": 1.3146
+        },
+        {
+          "date": "2023-11-08",
+          "strategy": 1.0076,
+          "benchmark": 1.3403
+        },
+        {
+          "date": "2023-11-14",
+          "strategy": 1.0122,
+          "benchmark": 1.3375
+        },
+        {
+          "date": "2023-11-20",
+          "strategy": 0.9864,
+          "benchmark": 1.4089
+        },
+        {
+          "date": "2023-11-26",
+          "strategy": 0.9858,
+          "benchmark": 1.4088
+        },
+        {
+          "date": "2023-12-02",
+          "strategy": 0.9944,
+          "benchmark": 1.4842
+        },
+        {
+          "date": "2023-12-08",
+          "strategy": 1.0204,
+          "benchmark": 1.6618
+        },
+        {
+          "date": "2023-12-14",
+          "strategy": 1.0164,
+          "benchmark": 1.6186
+        },
+        {
+          "date": "2023-12-20",
+          "strategy": 1.0164,
+          "benchmark": 1.6429
+        },
+        {
+          "date": "2023-12-26",
+          "strategy": 1.0164,
+          "benchmark": 1.5993
+        },
+        {
+          "date": "2024-01-01",
+          "strategy": 1.0164,
+          "benchmark": 1.6621
+        },
+        {
+          "date": "2024-01-07",
+          "strategy": 1.0033,
+          "benchmark": 1.6527
+        },
+        {
+          "date": "2024-01-13",
+          "strategy": 0.954,
+          "benchmark": 1.612
+        },
+        {
+          "date": "2024-01-19",
+          "strategy": 0.954,
+          "benchmark": 1.5673
+        },
+        {
+          "date": "2024-01-25",
+          "strategy": 0.954,
+          "benchmark": 1.5034
+        },
+        {
+          "date": "2024-01-31",
+          "strategy": 0.9447,
+          "benchmark": 1.6019
+        },
+        {
+          "date": "2024-02-06",
+          "strategy": 0.9512,
+          "benchmark": 1.6215
+        },
+        {
+          "date": "2024-02-12",
+          "strategy": 1.0129,
+          "benchmark": 1.878
+        },
+        {
+          "date": "2024-02-18",
+          "strategy": 1.0308,
+          "benchmark": 1.9615
+        },
+        {
+          "date": "2024-02-24",
+          "strategy": 1.0249,
+          "benchmark": 1.9401
+        },
+        {
+          "date": "2024-03-01",
+          "strategy": 1.1025,
+          "benchmark": 2.3472
+        },
+        {
+          "date": "2024-03-07",
+          "strategy": 1.1455,
+          "benchmark": 2.514
+        },
+        {
+          "date": "2024-03-13",
+          "strategy": 1.1658,
+          "benchmark": 2.7491
+        },
+        {
+          "date": "2024-03-19",
+          "strategy": 1.0977,
+          "benchmark": 2.3302
+        },
+        {
+          "date": "2024-03-25",
+          "strategy": 1.0977,
+          "benchmark": 2.629
+        },
+        {
+          "date": "2024-03-31",
+          "strategy": 1.0916,
+          "benchmark": 2.6817
+        },
+        {
+          "date": "2024-04-06",
+          "strategy": 1.0916,
+          "benchmark": 2.592
+        },
+        {
+          "date": "2024-04-12",
+          "strategy": 1.0769,
+          "benchmark": 2.5251
+        },
+        {
+          "date": "2024-04-18",
+          "strategy": 1.0479,
+          "benchmark": 2.3879
+        },
+        {
+          "date": "2024-04-24",
+          "strategy": 1.0479,
+          "benchmark": 2.4187
+        },
+        {
+          "date": "2024-04-30",
+          "strategy": 1.0479,
+          "benchmark": 2.2826
+        },
+        {
+          "date": "2024-05-06",
+          "strategy": 1.0479,
+          "benchmark": 2.3764
+        },
+        {
+          "date": "2024-05-12",
+          "strategy": 1.0479,
+          "benchmark": 2.3132
+        },
+        {
+          "date": "2024-05-18",
+          "strategy": 1.0362,
+          "benchmark": 2.5175
+        },
+        {
+          "date": "2024-05-24",
+          "strategy": 1.0199,
+          "benchmark": 2.579
+        },
+        {
+          "date": "2024-05-30",
+          "strategy": 1.0191,
+          "benchmark": 2.5716
+        },
+        {
+          "date": "2024-06-05",
+          "strategy": 1.0227,
+          "benchmark": 2.6752
+        },
+        {
+          "date": "2024-06-11",
+          "strategy": 1.0175,
+          "benchmark": 2.5325
+        },
+        {
+          "date": "2024-06-17",
+          "strategy": 1.0175,
+          "benchmark": 2.502
+        },
+        {
+          "date": "2024-06-23",
+          "strategy": 1.0175,
+          "benchmark": 2.3781
+        },
+        {
+          "date": "2024-06-29",
+          "strategy": 1.0175,
+          "benchmark": 2.2944
+        },
+        {
+          "date": "2024-07-05",
+          "strategy": 1.0175,
+          "benchmark": 2.1305
+        },
+        {
+          "date": "2024-07-11",
+          "strategy": 1.0312,
+          "benchmark": 2.1572
+        },
+        {
+          "date": "2024-07-17",
+          "strategy": 1.025,
+          "benchmark": 2.4111
+        },
+        {
+          "date": "2024-07-23",
+          "strategy": 1.0535,
+          "benchmark": 2.4806
+        },
+        {
+          "date": "2024-07-29",
+          "strategy": 1.0698,
+          "benchmark": 2.5126
+        },
+        {
+          "date": "2024-08-04",
+          "strategy": 1.063,
+          "benchmark": 2.1881
+        },
+        {
+          "date": "2024-08-10",
+          "strategy": 1.063,
+          "benchmark": 2.2921
+        },
+        {
+          "date": "2024-08-16",
+          "strategy": 1.0731,
+          "benchmark": 2.215
+        },
+        {
+          "date": "2024-08-22",
+          "strategy": 1.0731,
+          "benchmark": 2.2715
+        },
+        {
+          "date": "2024-08-28",
+          "strategy": 1.068,
+          "benchmark": 2.221
+        },
+        {
+          "date": "2024-09-03",
+          "strategy": 1.0671,
+          "benchmark": 2.1628
+        },
+        {
+          "date": "2024-09-09",
+          "strategy": 1.0671,
+          "benchmark": 2.146
+        },
+        {
+          "date": "2024-09-15",
+          "strategy": 1.0837,
+          "benchmark": 2.2247
+        },
+        {
+          "date": "2024-09-21",
+          "strategy": 1.1095,
+          "benchmark": 2.3833
+        },
+        {
+          "date": "2024-09-27",
+          "strategy": 1.1105,
+          "benchmark": 2.4744
+        },
+        {
+          "date": "2024-10-03",
+          "strategy": 1.1096,
+          "benchmark": 2.2856
+        },
+        {
+          "date": "2024-10-09",
+          "strategy": 1.1096,
+          "benchmark": 2.2813
+        },
+        {
+          "date": "2024-10-15",
+          "strategy": 1.1176,
+          "benchmark": 2.5235
+        },
+        {
+          "date": "2024-10-21",
+          "strategy": 1.1283,
+          "benchmark": 2.5349
+        },
+        {
+          "date": "2024-10-27",
+          "strategy": 1.1269,
+          "benchmark": 2.5591
+        },
+        {
+          "date": "2024-11-02",
+          "strategy": 1.1264,
+          "benchmark": 2.61
+        },
+        {
+          "date": "2024-11-08",
+          "strategy": 1.132,
+          "benchmark": 2.8785
+        },
+        {
+          "date": "2024-11-14",
+          "strategy": 1.2169,
+          "benchmark": 3.2854
+        },
+        {
+          "date": "2024-11-20",
+          "strategy": 1.2394,
+          "benchmark": 3.5473
+        },
+        {
+          "date": "2024-11-26",
+          "strategy": 1.2331,
+          "benchmark": 3.4599
+        },
+        {
+          "date": "2024-12-02",
+          "strategy": 1.2331,
+          "benchmark": 3.6057
+        },
+        {
+          "date": "2024-12-08",
+          "strategy": 1.2501,
+          "benchmark": 3.804
+        },
+        {
+          "date": "2024-12-14",
+          "strategy": 1.2501,
+          "benchmark": 3.8156
+        },
+        {
+          "date": "2024-12-20",
+          "strategy": 1.2113,
+          "benchmark": 3.6796
+        },
+        {
+          "date": "2024-12-26",
+          "strategy": 1.2113,
+          "benchmark": 3.6039
+        },
+        {
+          "date": "2025-01-01",
+          "strategy": 1.2113,
+          "benchmark": 3.5587
+        },
+        {
+          "date": "2025-01-07",
+          "strategy": 1.1769,
+          "benchmark": 3.6476
+        },
+        {
+          "date": "2025-01-13",
+          "strategy": 1.1473,
+          "benchmark": 3.5566
+        },
+        {
+          "date": "2025-01-19",
+          "strategy": 1.1518,
+          "benchmark": 3.8123
+        },
+        {
+          "date": "2025-01-25",
+          "strategy": 1.1694,
+          "benchmark": 3.9408
+        },
+        {
+          "date": "2025-01-31",
+          "strategy": 1.1694,
+          "benchmark": 3.8536
+        },
+        {
+          "date": "2025-02-06",
+          "strategy": 1.1456,
+          "benchmark": 3.6326
+        },
+        {
+          "date": "2025-02-12",
+          "strategy": 1.1456,
+          "benchmark": 3.6821
+        },
+        {
+          "date": "2025-02-18",
+          "strategy": 1.1456,
+          "benchmark": 3.5994
+        },
+        {
+          "date": "2025-02-24",
+          "strategy": 1.1461,
+          "benchmark": 3.4444
+        },
+        {
+          "date": "2025-03-02",
+          "strategy": 1.1461,
+          "benchmark": 3.5466
+        },
+        {
+          "date": "2025-03-08",
+          "strategy": 1.1411,
+          "benchmark": 3.2439
+        },
+        {
+          "date": "2025-03-14",
+          "strategy": 1.1402,
+          "benchmark": 3.1596
+        },
+        {
+          "date": "2025-03-20",
+          "strategy": 1.1402,
+          "benchmark": 3.1687
+        },
+        {
+          "date": "2025-03-26",
+          "strategy": 1.1352,
+          "benchmark": 3.2697
+        },
+        {
+          "date": "2025-04-01",
+          "strategy": 1.1197,
+          "benchmark": 3.2038
+        },
+        {
+          "date": "2025-04-07",
+          "strategy": 1.1197,
+          "benchmark": 2.9783
+        },
+        {
+          "date": "2025-04-13",
+          "strategy": 1.1197,
+          "benchmark": 3.1512
+        },
+        {
+          "date": "2025-04-19",
+          "strategy": 1.1197,
+          "benchmark": 3.2008
+        },
+        {
+          "date": "2025-04-25",
+          "strategy": 1.1672,
+          "benchmark": 3.5605
+        },
+        {
+          "date": "2025-05-01",
+          "strategy": 1.1594,
+          "benchmark": 3.6302
+        },
+        {
+          "date": "2025-05-07",
+          "strategy": 1.1594,
+          "benchmark": 3.6505
+        },
+        {
+          "date": "2025-05-13",
+          "strategy": 1.1636,
+          "benchmark": 3.9166
+        },
+        {
+          "date": "2025-05-19",
+          "strategy": 1.1591,
+          "benchmark": 3.9719
+        },
+        {
+          "date": "2025-05-25",
+          "strategy": 1.1525,
+          "benchmark": 4.101
+        },
+        {
+          "date": "2025-05-31",
+          "strategy": 1.1525,
+          "benchmark": 3.935
+        },
+        {
+          "date": "2025-06-06",
+          "strategy": 1.1525,
+          "benchmark": 3.9235
+        },
+        {
+          "date": "2025-06-12",
+          "strategy": 1.1416,
+          "benchmark": 3.9756
+        },
+        {
+          "date": "2025-06-18",
+          "strategy": 1.1383,
+          "benchmark": 3.9461
+        },
+        {
+          "date": "2025-06-24",
+          "strategy": 1.1681,
+          "benchmark": 3.9911
+        },
+        {
+          "date": "2025-06-30",
+          "strategy": 1.1672,
+          "benchmark": 4.0311
+        },
+        {
+          "date": "2025-07-06",
+          "strategy": 1.1672,
+          "benchmark": 4.1085
+        },
+        {
+          "date": "2025-07-12",
+          "strategy": 1.2008,
+          "benchmark": 4.4176
+        },
+        {
+          "date": "2025-07-18",
+          "strategy": 1.1984,
+          "benchmark": 4.4366
+        },
+        {
+          "date": "2025-07-24",
+          "strategy": 1.1984,
+          "benchmark": 4.4522
+        },
+        {
+          "date": "2025-07-30",
+          "strategy": 1.1982,
+          "benchmark": 4.4334
+        },
+        {
+          "date": "2025-08-05",
+          "strategy": 1.1982,
+          "benchmark": 4.2938
+        },
+        {
+          "date": "2025-08-11",
+          "strategy": 1.1939,
+          "benchmark": 4.4652
+        },
+        {
+          "date": "2025-08-17",
+          "strategy": 1.1861,
+          "benchmark": 4.417
+        },
+        {
+          "date": "2025-08-23",
+          "strategy": 1.1861,
+          "benchmark": 4.343
+        },
+        {
+          "date": "2025-08-29",
+          "strategy": 1.1861,
+          "benchmark": 4.0774
+        },
+        {
+          "date": "2025-09-04",
+          "strategy": 1.1861,
+          "benchmark": 4.1659
+        },
+        {
+          "date": "2025-09-10",
+          "strategy": 1.1815,
+          "benchmark": 4.2874
+        },
+        {
+          "date": "2025-09-16",
+          "strategy": 1.1856,
+          "benchmark": 4.3938
+        },
+        {
+          "date": "2025-09-22",
+          "strategy": 1.1871,
+          "benchmark": 4.2382
+        },
+        {
+          "date": "2025-09-28",
+          "strategy": 1.1815,
+          "benchmark": 4.2198
+        },
+        {
+          "date": "2025-10-04",
+          "strategy": 1.2007,
+          "benchmark": 4.6046
+        },
+        {
+          "date": "2025-10-10",
+          "strategy": 1.1567,
+          "benchmark": 4.2428
+        },
+        {
+          "date": "2025-10-16",
+          "strategy": 1.1441,
+          "benchmark": 4.0705
+        },
+        {
+          "date": "2025-10-22",
+          "strategy": 1.1441,
+          "benchmark": 4.0469
+        },
+        {
+          "date": "2025-10-28",
+          "strategy": 1.1441,
+          "benchmark": 4.2475
+        },
+        {
+          "date": "2025-11-03",
+          "strategy": 1.1441,
+          "benchmark": 4.0099
+        },
+        {
+          "date": "2025-11-09",
+          "strategy": 1.1441,
+          "benchmark": 3.9399
+        },
+        {
+          "date": "2025-11-15",
+          "strategy": 1.1441,
+          "benchmark": 3.5965
+        },
+        {
+          "date": "2025-11-21",
+          "strategy": 1.1441,
+          "benchmark": 3.2027
+        },
+        {
+          "date": "2025-11-27",
+          "strategy": 1.1441,
+          "benchmark": 3.4362
+        },
+        {
+          "date": "2025-12-03",
+          "strategy": 1.1441,
+          "benchmark": 3.515
+        },
+        {
+          "date": "2025-12-09",
+          "strategy": 1.1441,
+          "benchmark": 3.4868
+        },
+        {
+          "date": "2025-12-15",
+          "strategy": 1.1441,
+          "benchmark": 3.2518
+        },
+        {
+          "date": "2025-12-21",
+          "strategy": 1.1441,
+          "benchmark": 3.3355
+        },
+        {
+          "date": "2025-12-27",
+          "strategy": 1.1441,
+          "benchmark": 3.3061
+        },
+        {
+          "date": "2026-01-02",
+          "strategy": 1.1441,
+          "benchmark": 3.3858
+        },
+        {
+          "date": "2026-01-08",
+          "strategy": 1.1276,
+          "benchmark": 3.4274
+        },
+        {
+          "date": "2026-01-14",
+          "strategy": 1.1355,
+          "benchmark": 3.6475
+        },
+        {
+          "date": "2026-01-20",
+          "strategy": 1.1259,
+          "benchmark": 3.3268
+        },
+        {
+          "date": "2026-01-26",
+          "strategy": 1.1259,
+          "benchmark": 3.3238
+        },
+        {
+          "date": "2026-02-01",
+          "strategy": 1.1213,
+          "benchmark": 2.8957
+        },
+        {
+          "date": "2026-02-07",
+          "strategy": 1.1213,
+          "benchmark": 2.6068
+        },
+        {
+          "date": "2026-02-13",
+          "strategy": 1.1213,
+          "benchmark": 2.5904
+        },
+        {
+          "date": "2026-02-19",
+          "strategy": 1.1213,
+          "benchmark": 2.5208
+        },
+        {
+          "date": "2026-02-25",
+          "strategy": 1.1213,
+          "benchmark": 2.5579
+        },
+        {
+          "date": "2026-03-03",
+          "strategy": 1.1213,
+          "benchmark": 2.571
+        },
+        {
+          "date": "2026-03-09",
+          "strategy": 1.1213,
+          "benchmark": 2.5746
+        },
+        {
+          "date": "2026-03-15",
+          "strategy": 1.1219,
+          "benchmark": 2.7395
+        },
+        {
+          "date": "2026-03-21",
+          "strategy": 1.1123,
+          "benchmark": 2.5928
+        },
+        {
+          "date": "2026-03-27",
+          "strategy": 1.1123,
+          "benchmark": 2.4984
+        },
+        {
+          "date": "2026-04-02",
+          "strategy": 1.1123,
+          "benchmark": 2.517
+        },
+        {
+          "date": "2026-04-08",
+          "strategy": 1.1307,
+          "benchmark": 2.6738
+        },
+        {
+          "date": "2026-04-14",
+          "strategy": 1.1432,
+          "benchmark": 2.789
+        },
+        {
+          "date": "2026-04-20",
+          "strategy": 1.135,
+          "benchmark": 2.8533
+        },
+        {
+          "date": "2026-04-26",
+          "strategy": 1.1337,
+          "benchmark": 2.9593
+        },
+        {
+          "date": "2026-05-02",
+          "strategy": 1.1363,
+          "benchmark": 2.9604
+        },
+        {
+          "date": "2026-05-08",
+          "strategy": 1.1378,
+          "benchmark": 3.017
+        },
+        {
+          "date": "2026-05-14",
+          "strategy": 1.1369,
+          "benchmark": 3.0508
+        },
+        {
+          "date": "2026-05-20",
+          "strategy": 1.1183,
+          "benchmark": 2.9177
+        },
+        {
+          "date": "2026-05-26",
+          "strategy": 1.1183,
+          "benchmark": 2.8566
+        },
+        {
+          "date": "2026-06-01",
+          "strategy": 1.1052,
+          "benchmark": 2.6866
+        },
+        {
+          "date": "2026-06-07",
+          "strategy": 1.065,
+          "benchmark": 2.3827
+        },
+        {
+          "date": "2026-06-13",
+          "strategy": 1.065,
+          "benchmark": 2.425
+        }
+      ],
+      "drawdown_curve": [
+        {
+          "date": "2023-10-27",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-11-02",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-11-08",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-11-14",
+          "strategy": 0.0,
+          "benchmark": -0.0021
+        },
+        {
+          "date": "2023-11-20",
+          "strategy": -0.0255,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-11-26",
+          "strategy": -0.0261,
+          "benchmark": -0.0001
+        },
+        {
+          "date": "2023-12-02",
+          "strategy": -0.0176,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-12-08",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2023-12-14",
+          "strategy": -0.0039,
+          "benchmark": -0.026
+        },
+        {
+          "date": "2023-12-20",
+          "strategy": -0.0039,
+          "benchmark": -0.0114
+        },
+        {
+          "date": "2023-12-26",
+          "strategy": -0.0039,
+          "benchmark": -0.0376
+        },
+        {
+          "date": "2024-01-01",
+          "strategy": -0.0039,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-01-07",
+          "strategy": -0.0168,
+          "benchmark": -0.0057
+        },
+        {
+          "date": "2024-01-13",
+          "strategy": -0.0651,
+          "benchmark": -0.0301
+        },
+        {
+          "date": "2024-01-19",
+          "strategy": -0.0651,
+          "benchmark": -0.057
+        },
+        {
+          "date": "2024-01-25",
+          "strategy": -0.0651,
+          "benchmark": -0.0955
+        },
+        {
+          "date": "2024-01-31",
+          "strategy": -0.0742,
+          "benchmark": -0.0362
+        },
+        {
+          "date": "2024-02-06",
+          "strategy": -0.0678,
+          "benchmark": -0.0244
+        },
+        {
+          "date": "2024-02-12",
+          "strategy": -0.0074,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-02-18",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-02-24",
+          "strategy": -0.0057,
+          "benchmark": -0.0109
+        },
+        {
+          "date": "2024-03-01",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-03-07",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-03-13",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-03-19",
+          "strategy": -0.0584,
+          "benchmark": -0.1524
+        },
+        {
+          "date": "2024-03-25",
+          "strategy": -0.0584,
+          "benchmark": -0.0437
+        },
+        {
+          "date": "2024-03-31",
+          "strategy": -0.0636,
+          "benchmark": -0.0245
+        },
+        {
+          "date": "2024-04-06",
+          "strategy": -0.0636,
+          "benchmark": -0.0571
+        },
+        {
+          "date": "2024-04-12",
+          "strategy": -0.0763,
+          "benchmark": -0.0815
+        },
+        {
+          "date": "2024-04-18",
+          "strategy": -0.1011,
+          "benchmark": -0.1314
+        },
+        {
+          "date": "2024-04-24",
+          "strategy": -0.1011,
+          "benchmark": -0.1202
+        },
+        {
+          "date": "2024-04-30",
+          "strategy": -0.1011,
+          "benchmark": -0.1697
+        },
+        {
+          "date": "2024-05-06",
+          "strategy": -0.1011,
+          "benchmark": -0.1356
+        },
+        {
+          "date": "2024-05-12",
+          "strategy": -0.1011,
+          "benchmark": -0.1586
+        },
+        {
+          "date": "2024-05-18",
+          "strategy": -0.1112,
+          "benchmark": -0.0842
+        },
+        {
+          "date": "2024-05-24",
+          "strategy": -0.1252,
+          "benchmark": -0.0619
+        },
+        {
+          "date": "2024-05-30",
+          "strategy": -0.1258,
+          "benchmark": -0.0646
+        },
+        {
+          "date": "2024-06-05",
+          "strategy": -0.1227,
+          "benchmark": -0.0269
+        },
+        {
+          "date": "2024-06-11",
+          "strategy": -0.1272,
+          "benchmark": -0.0788
+        },
+        {
+          "date": "2024-06-17",
+          "strategy": -0.1272,
+          "benchmark": -0.0899
+        },
+        {
+          "date": "2024-06-23",
+          "strategy": -0.1272,
+          "benchmark": -0.135
+        },
+        {
+          "date": "2024-06-29",
+          "strategy": -0.1272,
+          "benchmark": -0.1654
+        },
+        {
+          "date": "2024-07-05",
+          "strategy": -0.1272,
+          "benchmark": -0.225
+        },
+        {
+          "date": "2024-07-11",
+          "strategy": -0.1155,
+          "benchmark": -0.2153
+        },
+        {
+          "date": "2024-07-17",
+          "strategy": -0.1208,
+          "benchmark": -0.1229
+        },
+        {
+          "date": "2024-07-23",
+          "strategy": -0.0963,
+          "benchmark": -0.0977
+        },
+        {
+          "date": "2024-07-29",
+          "strategy": -0.0823,
+          "benchmark": -0.086
+        },
+        {
+          "date": "2024-08-04",
+          "strategy": -0.0882,
+          "benchmark": -0.2041
+        },
+        {
+          "date": "2024-08-10",
+          "strategy": -0.0882,
+          "benchmark": -0.1662
+        },
+        {
+          "date": "2024-08-16",
+          "strategy": -0.0795,
+          "benchmark": -0.1943
+        },
+        {
+          "date": "2024-08-22",
+          "strategy": -0.0795,
+          "benchmark": -0.1737
+        },
+        {
+          "date": "2024-08-28",
+          "strategy": -0.0839,
+          "benchmark": -0.1921
+        },
+        {
+          "date": "2024-09-03",
+          "strategy": -0.0847,
+          "benchmark": -0.2133
+        },
+        {
+          "date": "2024-09-09",
+          "strategy": -0.0847,
+          "benchmark": -0.2194
+        },
+        {
+          "date": "2024-09-15",
+          "strategy": -0.0704,
+          "benchmark": -0.1908
+        },
+        {
+          "date": "2024-09-21",
+          "strategy": -0.0483,
+          "benchmark": -0.1331
+        },
+        {
+          "date": "2024-09-27",
+          "strategy": -0.0474,
+          "benchmark": -0.0999
+        },
+        {
+          "date": "2024-10-03",
+          "strategy": -0.0482,
+          "benchmark": -0.1686
+        },
+        {
+          "date": "2024-10-09",
+          "strategy": -0.0482,
+          "benchmark": -0.1702
+        },
+        {
+          "date": "2024-10-15",
+          "strategy": -0.0413,
+          "benchmark": -0.0821
+        },
+        {
+          "date": "2024-10-21",
+          "strategy": -0.0322,
+          "benchmark": -0.0779
+        },
+        {
+          "date": "2024-10-27",
+          "strategy": -0.0334,
+          "benchmark": -0.0691
+        },
+        {
+          "date": "2024-11-02",
+          "strategy": -0.0338,
+          "benchmark": -0.0506
+        },
+        {
+          "date": "2024-11-08",
+          "strategy": -0.029,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-11-14",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-11-20",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-11-26",
+          "strategy": -0.0051,
+          "benchmark": -0.0246
+        },
+        {
+          "date": "2024-12-02",
+          "strategy": -0.0051,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-12-08",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-12-14",
+          "strategy": 0.0,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2024-12-20",
+          "strategy": -0.031,
+          "benchmark": -0.0356
+        },
+        {
+          "date": "2024-12-26",
+          "strategy": -0.031,
+          "benchmark": -0.0555
+        },
+        {
+          "date": "2025-01-01",
+          "strategy": -0.031,
+          "benchmark": -0.0673
+        },
+        {
+          "date": "2025-01-07",
+          "strategy": -0.0586,
+          "benchmark": -0.044
+        },
+        {
+          "date": "2025-01-13",
+          "strategy": -0.0822,
+          "benchmark": -0.0679
+        },
+        {
+          "date": "2025-01-19",
+          "strategy": -0.0786,
+          "benchmark": -0.0009
+        },
+        {
+          "date": "2025-01-25",
+          "strategy": -0.0646,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-01-31",
+          "strategy": -0.0646,
+          "benchmark": -0.0221
+        },
+        {
+          "date": "2025-02-06",
+          "strategy": -0.0836,
+          "benchmark": -0.0782
+        },
+        {
+          "date": "2025-02-12",
+          "strategy": -0.0836,
+          "benchmark": -0.0656
+        },
+        {
+          "date": "2025-02-18",
+          "strategy": -0.0836,
+          "benchmark": -0.0866
+        },
+        {
+          "date": "2025-02-24",
+          "strategy": -0.0832,
+          "benchmark": -0.126
+        },
+        {
+          "date": "2025-03-02",
+          "strategy": -0.0832,
+          "benchmark": -0.1
+        },
+        {
+          "date": "2025-03-08",
+          "strategy": -0.0872,
+          "benchmark": -0.1768
+        },
+        {
+          "date": "2025-03-14",
+          "strategy": -0.0879,
+          "benchmark": -0.1982
+        },
+        {
+          "date": "2025-03-20",
+          "strategy": -0.0879,
+          "benchmark": -0.1959
+        },
+        {
+          "date": "2025-03-26",
+          "strategy": -0.0919,
+          "benchmark": -0.1703
+        },
+        {
+          "date": "2025-04-01",
+          "strategy": -0.1043,
+          "benchmark": -0.187
+        },
+        {
+          "date": "2025-04-07",
+          "strategy": -0.1043,
+          "benchmark": -0.2442
+        },
+        {
+          "date": "2025-04-13",
+          "strategy": -0.1043,
+          "benchmark": -0.2004
+        },
+        {
+          "date": "2025-04-19",
+          "strategy": -0.1043,
+          "benchmark": -0.1878
+        },
+        {
+          "date": "2025-04-25",
+          "strategy": -0.0663,
+          "benchmark": -0.0965
+        },
+        {
+          "date": "2025-05-01",
+          "strategy": -0.0726,
+          "benchmark": -0.0788
+        },
+        {
+          "date": "2025-05-07",
+          "strategy": -0.0726,
+          "benchmark": -0.0737
+        },
+        {
+          "date": "2025-05-13",
+          "strategy": -0.0692,
+          "benchmark": -0.0061
+        },
+        {
+          "date": "2025-05-19",
+          "strategy": -0.0728,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-05-25",
+          "strategy": -0.0781,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-05-31",
+          "strategy": -0.0781,
+          "benchmark": -0.0405
+        },
+        {
+          "date": "2025-06-06",
+          "strategy": -0.0781,
+          "benchmark": -0.0433
+        },
+        {
+          "date": "2025-06-12",
+          "strategy": -0.0868,
+          "benchmark": -0.0306
+        },
+        {
+          "date": "2025-06-18",
+          "strategy": -0.0894,
+          "benchmark": -0.0378
+        },
+        {
+          "date": "2025-06-24",
+          "strategy": -0.0656,
+          "benchmark": -0.0268
+        },
+        {
+          "date": "2025-06-30",
+          "strategy": -0.0663,
+          "benchmark": -0.017
+        },
+        {
+          "date": "2025-07-06",
+          "strategy": -0.0663,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-07-12",
+          "strategy": -0.0394,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-07-18",
+          "strategy": -0.0414,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-07-24",
+          "strategy": -0.0414,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-07-30",
+          "strategy": -0.0415,
+          "benchmark": -0.0042
+        },
+        {
+          "date": "2025-08-05",
+          "strategy": -0.0415,
+          "benchmark": -0.0356
+        },
+        {
+          "date": "2025-08-11",
+          "strategy": -0.045,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-08-17",
+          "strategy": -0.0512,
+          "benchmark": -0.0108
+        },
+        {
+          "date": "2025-08-23",
+          "strategy": -0.0512,
+          "benchmark": -0.0274
+        },
+        {
+          "date": "2025-08-29",
+          "strategy": -0.0512,
+          "benchmark": -0.0868
+        },
+        {
+          "date": "2025-09-04",
+          "strategy": -0.0512,
+          "benchmark": -0.067
+        },
+        {
+          "date": "2025-09-10",
+          "strategy": -0.0549,
+          "benchmark": -0.0398
+        },
+        {
+          "date": "2025-09-16",
+          "strategy": -0.0516,
+          "benchmark": -0.016
+        },
+        {
+          "date": "2025-09-22",
+          "strategy": -0.0504,
+          "benchmark": -0.0508
+        },
+        {
+          "date": "2025-09-28",
+          "strategy": -0.0549,
+          "benchmark": -0.055
+        },
+        {
+          "date": "2025-10-04",
+          "strategy": -0.0395,
+          "benchmark": 0.0
+        },
+        {
+          "date": "2025-10-10",
+          "strategy": -0.0747,
+          "benchmark": -0.0786
+        },
+        {
+          "date": "2025-10-16",
+          "strategy": -0.0848,
+          "benchmark": -0.116
+        },
+        {
+          "date": "2025-10-22",
+          "strategy": -0.0848,
+          "benchmark": -0.1211
+        },
+        {
+          "date": "2025-10-28",
+          "strategy": -0.0848,
+          "benchmark": -0.0776
+        },
+        {
+          "date": "2025-11-03",
+          "strategy": -0.0848,
+          "benchmark": -0.1292
+        },
+        {
+          "date": "2025-11-09",
+          "strategy": -0.0848,
+          "benchmark": -0.1444
+        },
+        {
+          "date": "2025-11-15",
+          "strategy": -0.0848,
+          "benchmark": -0.2189
+        },
+        {
+          "date": "2025-11-21",
+          "strategy": -0.0848,
+          "benchmark": -0.3045
+        },
+        {
+          "date": "2025-11-27",
+          "strategy": -0.0848,
+          "benchmark": -0.2537
+        },
+        {
+          "date": "2025-12-03",
+          "strategy": -0.0848,
+          "benchmark": -0.2366
+        },
+        {
+          "date": "2025-12-09",
+          "strategy": -0.0848,
+          "benchmark": -0.2428
+        },
+        {
+          "date": "2025-12-15",
+          "strategy": -0.0848,
+          "benchmark": -0.2938
+        },
+        {
+          "date": "2025-12-21",
+          "strategy": -0.0848,
+          "benchmark": -0.2756
+        },
+        {
+          "date": "2025-12-27",
+          "strategy": -0.0848,
+          "benchmark": -0.282
+        },
+        {
+          "date": "2026-01-02",
+          "strategy": -0.0848,
+          "benchmark": -0.2647
+        },
+        {
+          "date": "2026-01-08",
+          "strategy": -0.098,
+          "benchmark": -0.2557
+        },
+        {
+          "date": "2026-01-14",
+          "strategy": -0.0917,
+          "benchmark": -0.2079
+        },
+        {
+          "date": "2026-01-20",
+          "strategy": -0.0994,
+          "benchmark": -0.2775
+        },
+        {
+          "date": "2026-01-26",
+          "strategy": -0.0994,
+          "benchmark": -0.2782
+        },
+        {
+          "date": "2026-02-01",
+          "strategy": -0.103,
+          "benchmark": -0.3711
+        },
+        {
+          "date": "2026-02-07",
+          "strategy": -0.103,
+          "benchmark": -0.4339
+        },
+        {
+          "date": "2026-02-13",
+          "strategy": -0.103,
+          "benchmark": -0.4374
+        },
+        {
+          "date": "2026-02-19",
+          "strategy": -0.103,
+          "benchmark": -0.4525
+        },
+        {
+          "date": "2026-02-25",
+          "strategy": -0.103,
+          "benchmark": -0.4445
+        },
+        {
+          "date": "2026-03-03",
+          "strategy": -0.103,
+          "benchmark": -0.4416
+        },
+        {
+          "date": "2026-03-09",
+          "strategy": -0.103,
+          "benchmark": -0.4409
+        },
+        {
+          "date": "2026-03-15",
+          "strategy": -0.1026,
+          "benchmark": -0.4051
+        },
+        {
+          "date": "2026-03-21",
+          "strategy": -0.1102,
+          "benchmark": -0.4369
+        },
+        {
+          "date": "2026-03-27",
+          "strategy": -0.1102,
+          "benchmark": -0.4574
+        },
+        {
+          "date": "2026-04-02",
+          "strategy": -0.1102,
+          "benchmark": -0.4534
+        },
+        {
+          "date": "2026-04-08",
+          "strategy": -0.0955,
+          "benchmark": -0.4193
+        },
+        {
+          "date": "2026-04-14",
+          "strategy": -0.0855,
+          "benchmark": -0.3943
+        },
+        {
+          "date": "2026-04-20",
+          "strategy": -0.0921,
+          "benchmark": -0.3803
+        },
+        {
+          "date": "2026-04-26",
+          "strategy": -0.0931,
+          "benchmark": -0.3573
+        },
+        {
+          "date": "2026-05-02",
+          "strategy": -0.091,
+          "benchmark": -0.3571
+        },
+        {
+          "date": "2026-05-08",
+          "strategy": -0.0898,
+          "benchmark": -0.3448
+        },
+        {
+          "date": "2026-05-14",
+          "strategy": -0.0906,
+          "benchmark": -0.3374
+        },
+        {
+          "date": "2026-05-20",
+          "strategy": -0.1054,
+          "benchmark": -0.3664
+        },
+        {
+          "date": "2026-05-26",
+          "strategy": -0.1054,
+          "benchmark": -0.3796
+        },
+        {
+          "date": "2026-06-01",
+          "strategy": -0.1159,
+          "benchmark": -0.4165
+        },
+        {
+          "date": "2026-06-07",
+          "strategy": -0.1481,
+          "benchmark": -0.4825
+        },
+        {
+          "date": "2026-06-13",
+          "strategy": -0.1481,
+          "benchmark": -0.4734
+        }
+      ]
+    }
+  },
+  "live": {
+    "name": "ChainSage Conviction Gate",
+    "version": "0.4.0",
+    "track": "BNB Hack Track 2 \u2014 Strategy Skills",
+    "description": "Only trade when derivatives, on-chain holder, and narrative layers align. Default to flat when they disagree.",
+    "universe": [
+      "BNB",
+      "CAKE",
+      "TWT",
+      "BTC"
+    ],
+    "scoring_rules": {
+      "derivatives": {
+        "bullish": "funding_rate > 0.01% AND price > ema_21",
+        "bearish": "funding_rate < -0.01% OR price < ema_21 * 0.98",
+        "neutral": "otherwise"
+      },
+      "on_chain": {
+        "bullish": "holder_change_7d > 2%",
+        "bearish": "holder_change_7d < -1%"
+      },
+      "narrative": {
+        "bullish": "sector_rank <= 10 AND fng >= 40",
+        "bearish": "fng < 20 OR sector_rank > 50"
+      }
+    },
+    "conviction_formula": "conviction = (sum(layer_scores) + 1) / 4, clamped to [0, 1]",
+    "exposure_formula": "target_exposure = conviction * 0.8 when signal=long",
+    "standard_falsifiers": [
+      "fng < 20",
+      "funding_rate > 0.05%",
+      "holder_distribution_concentration > 0.6",
+      "narrative_momentum < -0.3"
+    ],
+    "ecosystem": {
+      "chain": "BNB Smart Chain (BSC)",
+      "focus_tokens": [
+        "BNB",
+        "CAKE",
+        "TWT"
+      ],
+      "data_layer": "CoinMarketCap AI Agent Hub (MCP)",
+      "bsc_tokens": {
+        "BNB": {
+          "contract": "native",
+          "dex": "PancakeSwap"
+        },
+        "CAKE": {
+          "contract": "0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82",
+          "dex": "PancakeSwap"
+        },
+        "TWT": {
+          "contract": "0x4B0F1812e5Df2A09796481Ff14017e6005508003",
+          "dex": "PancakeSwap"
+        }
+      },
+      "execution_path_track1": {
+        "signing": "Trust Wallet Agent Kit (TWAK) \u2014 self-custody local signing",
+        "sdk": "BNB AI Agent SDK \u2014 PancakeSwap swap execution on BSC",
+        "example": "When signal=long on BNB, TWAK agent swaps USDT \u2192 BNB on PancakeSwap at target_exposure"
+      }
+    },
+    "trust_wallet": {
+      "action": "cash",
+      "target_token": "BNB",
+      "target_exposure_pct": 0.0,
+      "bsc_contract": "native",
+      "dex": "PancakeSwap",
+      "note": "Skill emits allocation only \u2014 TWAK signs and executes on user rules"
+    },
+    "timeframe": "1D",
+    "entry_rules": [
+      "At least 2 of 3 layers score >= 0.2 (bullish per scoring_rules)",
+      "No layer scores <= -0.3 (strongly bearish)",
+      "Fear & Greed >= 20",
+      "No active falsifier",
+      "All required CMC MCP tool payloads available"
+    ],
+    "exit_rules": [
+      "Any layer turns strongly bearish (<= -0.3)",
+      "Fear & Greed drops below 20",
+      "Any standard falsifier triggers",
+      "CMC derivatives or metrics data becomes unavailable"
+    ],
+    "position_sizing": {
+      "method": "conviction_scaled",
+      "min_exposure": 0.0,
+      "max_position_size": 0.8,
+      "formula": "target_exposure = conviction * 0.8 when long",
+      "example": "conviction 0.63 \u2192 target_exposure 0.504 (63% \u00d7 80%)"
+    },
+    "risk_limits": {
+      "max_drawdown_gate": 0.25,
+      "default_signal": "flat",
+      "long_only": true
+    },
+    "cmc_data_sources": [
+      "get_crypto_quotes_latest",
+      "get_global_metrics_latest"
+    ],
+    "current_decision": {
+      "timestamp": "2026-06-19",
+      "asset": "BNB",
+      "signal": "flat",
+      "conviction": 0.0,
+      "target_exposure": 0.0,
+      "regime": "data-incomplete",
+      "layers": {},
+      "falsifiers": [
+        "CMC MCP data incomplete \u2014 do not trade"
+      ],
+      "reasons": [
+        "Required CMC tool payload missing for this asset"
+      ]
+    },
+    "mcp_tool_payloads": {
+      "get_crypto_quotes_latest": {
+        "price": 577.6215192794466,
+        "volume_24h": 1053568643.7689714,
+        "percent_change_7d": -4.84060713,
+        "percent_change_24h": -2.07302431,
+        "market_cap": 77853832160.63907
+      },
+      "get_global_metrics_latest": {
+        "value": 20.0,
+        "classification": "Fear"
+      },
+      "get_crypto_technical_analysis": {
+        "source": "unavailable"
+      },
+      "get_global_crypto_derivatives_metrics": {
+        "source": "unavailable"
+      },
+      "get_crypto_metrics": {
+        "source": "unavailable"
+      },
+      "trending_crypto_narratives": {
+        "source": "unavailable"
+      }
+    },
+    "data_source": "coinmarketcap_live",
+    "fear_greed": 20.0,
+    "plain_english": "Extreme fear (Fear & Greed = 20). Sitting out \u2014 capital preservation mode.",
+    "updated_at": "2026-06-19T18:22:09.259857+00:00"
+  },
+  "verify": {
+    "BNB": {
+      "total_return": -0.1303,
+      "max_drawdown": -0.3525,
+      "sharpe_ratio": -0.184,
+      "calmar_ratio": -0.102,
+      "win_rate": 0.377,
+      "days_in_market_pct": 0.333,
+      "time_in_market": 0.135
+    },
+    "CAKE": {
+      "total_return": 1.1422,
+      "max_drawdown": -0.3576,
+      "sharpe_ratio": 0.789,
+      "calmar_ratio": 0.615,
+      "win_rate": 0.383,
+      "days_in_market_pct": 0.341,
+      "time_in_market": 0.149
+    },
+    "TWT": {
+      "total_return": -0.061,
+      "max_drawdown": -0.3579,
+      "sharpe_ratio": 0.034,
+      "calmar_ratio": -0.046,
+      "win_rate": 0.384,
+      "days_in_market_pct": 0.289,
+      "time_in_market": 0.121
+    },
+    "BTC": {
+      "total_return": 0.065,
+      "max_drawdown": -0.1487,
+      "sharpe_ratio": 0.215,
+      "calmar_ratio": 0.112,
+      "win_rate": 0.366,
+      "days_in_market_pct": 0.309,
+      "time_in_market": 0.118
+    }
+  },
+  "headline": [
+    {
+      "asset": "BNB",
+      "return": -0.1303,
+      "benchmark_return": 1.694,
+      "max_dd": -0.3525,
+      "benchmark_max_dd": -0.5623,
+      "sharpe": -0.184,
+      "days_in_market": 0.333
+    },
+    {
+      "asset": "CAKE",
+      "return": 1.1422,
+      "benchmark_return": 0.1423,
+      "max_dd": -0.3576,
+      "benchmark_max_dd": -0.7753,
+      "sharpe": 0.789,
+      "days_in_market": 0.341
+    },
+    {
+      "asset": "TWT",
+      "return": -0.061,
+      "benchmark_return": -0.6098,
+      "max_dd": -0.3579,
+      "benchmark_max_dd": -0.8023,
+      "sharpe": 0.034,
+      "days_in_market": 0.289
+    },
+    {
+      "asset": "BTC",
+      "return": 0.065,
+      "benchmark_return": 0.9233,
+      "max_dd": -0.1487,
+      "benchmark_max_dd": -0.5116,
+      "sharpe": 0.215,
+      "days_in_market": 0.309
+    }
+  ],
+  "layer_mcp": {
+    "derivatives": [
+      "get_global_crypto_derivatives_metrics",
+      "get_crypto_technical_analysis"
+    ],
+    "onchain": [
+      "get_crypto_metrics"
+    ],
+    "narrative": [
+      "trending_crypto_narratives",
+      "get_global_metrics_latest"
+    ]
+  },
+  "built_at": "2026-06-19T18:22:09.259857+00:00",
+  "hero": {
+    "best_asset": "CAKE",
+    "best_return": 1.1422,
+    "best_benchmark_return": 0.1423,
+    "btc_dd_strategy": -0.1487,
+    "btc_dd_benchmark": -0.5116,
+    "btc_dd_improvement_pts": 36.3
+  },
+  "methodology": {
+    "title": "ChainSage: A Research-Grade Strategy Skill",
+    "subtitle": "Not a black box \u2014 a reproducible framework for strategy validation.",
+    "test_count": 40,
+    "is_period": "2023-01-01 \u2192 2024-06-30",
+    "oos_period": "2024-07-01 \u2192 2026-06-01",
+    "rigor": [
+      "IS/OOS contamination guard with enforced date splits",
+      "40 unit tests covering signal math, no-lookahead, schema validation, institutional risk metrics",
+      "Ensemble architecture: regime-aware routing between momentum and mean reversion",
+      "Threshold discovery via IS q10 quantiles (no OOS peeking)"
+    ],
+    "falsifier_log": [
+      {
+        "trigger": "oi_change_24h > 50%",
+        "action": "FLAT",
+        "note": "Soft warning \u2014 capital preserved, exposure unchanged"
+      },
+      {
+        "trigger": "funding > 0.08%",
+        "action": "FLAT",
+        "note": "Hard stop \u2014 overheated funding"
+      },
+      {
+        "trigger": "fng < 15",
+        "action": "FLAT",
+        "note": "Hard stop \u2014 extreme fear regime"
+      }
+    ],
+    "regime_routing": [
+      {
+        "condition": "ATR > 5% (14d)",
+        "route": "FundingMeanReversion",
+        "detail": "Long when funding < IS q10 in high vol"
+      },
+      {
+        "condition": "ATR < 5%",
+        "route": "MomentumGates",
+        "detail": "Conviction gate across derivatives / on-chain / narrative"
+      }
+    ],
+    "conclusion": "The OOS period (2024\u20132026) lacked the regime conditions required for our thesis. The skill correctly minimized exposure rather than force trades into unfavorable markets.",
+    "why_matters": "Most hackathon strategies claim fake Sharpe ratios. ChainSage provides the infrastructure to test, validate, and reject bad strategies \u2014 the foundation of real quant research.",
+    "modes": {
+      "conservative": {
+        "asset": "CAKE",
+        "is_sharpe": 0.91,
+        "oos_sharpe": 0.0,
+        "is_time_in_market": 0.101,
+        "oos_time_in_market": 0.042,
+        "time_in_market_pct": 4,
+        "interpretation": "Avoids unfavorable regimes"
+      },
+      "ensemble": {
+        "asset": "CAKE",
+        "is_sharpe": 1.89,
+        "oos_sharpe": 0.36,
+        "is_time_in_market": 0.387,
+        "oos_time_in_market": 0.335,
+        "time_in_market_pct": 34,
+        "interpretation": "MR rarely triggers after IS q10; routes to momentum"
+      },
+      "aggressive": {
+        "asset": "CAKE",
+        "is_sharpe": 1.89,
+        "oos_sharpe": 0.36,
+        "is_time_in_market": 0.387,
+        "oos_time_in_market": 0.335,
+        "time_in_market_pct": 34,
+        "interpretation": "Research depth; higher variance"
+      }
+    },
+    "headline_mode": "conservative",
+    "headline_asset": "CAKE",
+    "headline_is_sharpe": 0.91,
+    "headline_oos_sharpe": 0.0,
+    "institutional_risk": {
+      "asset": "CAKE",
+      "mode": "conservative",
+      "is_period": "2023-01-01 \u2192 2024-06-30",
+      "standard_sharpe_is": 0.91,
+      "deflated_sharpe": 0.78,
+      "deflated_sharpe_probability": 1.0,
+      "n_trials": 3,
+      "n_observations": 247,
+      "pbo": 0.02,
+      "walk_forward": {
+        "n_windows": 7,
+        "mean_sharpe": -0.01,
+        "std_sharpe": 0.55,
+        "wf_sharpe_label": "-0.01 \u00b1 0.55",
+        "train_months": 6,
+        "test_months": 3
+      },
+      "decay": {
+        "is_sharpe": 0.91,
+        "oos_sharpe": 0.0,
+        "decay_ratio": 0.0,
+        "decay_pct": 100.0,
+        "interpretation": "regime_mismatch",
+        "conclusion": "Edge not preserved in OOS regime"
+      }
+    },
+    "research_pipeline": {
+      "deflated_sharpe": 0.78,
+      "standard_sharpe_is": 0.91,
+      "pbo": 0.02,
+      "pbo_pct": 2,
+      "wf_sharpe_label": "-0.01 \u00b1 0.55",
+      "wf_n_windows": 7,
+      "decay": {
+        "is_sharpe": 0.91,
+        "oos_sharpe": 0.0,
+        "decay_ratio": 0.0,
+        "decay_pct": 100.0,
+        "interpretation": "regime_mismatch",
+        "conclusion": "Edge not preserved in OOS regime"
+      }
+    }
+  },
+  "ensemble_regime_timeline": [
+    {
+      "date": "2025-08-22",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "long"
+    },
+    {
+      "date": "2025-08-27",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-09-01",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-09-06",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-09-11",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "long"
+    },
+    {
+      "date": "2025-09-16",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-09-21",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "long"
+    },
+    {
+      "date": "2025-09-26",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-10-01",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-10-06",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "long"
+    },
+    {
+      "date": "2025-10-11",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-10-16",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-10-21",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-10-26",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-10-31",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-11-05",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-11-10",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-11-15",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-11-20",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-11-25",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-11-30",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-12-05",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-12-10",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-12-15",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-12-20",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-12-25",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2025-12-30",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-01-04",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "long"
+    },
+    {
+      "date": "2026-01-09",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-01-14",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-01-19",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-01-24",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-01-29",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-02-03",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-02-08",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-02-13",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-02-18",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-02-23",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-02-28",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-03-05",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-03-10",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-03-15",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "long"
+    },
+    {
+      "date": "2026-03-20",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-03-25",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-03-30",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-04-04",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "long"
+    },
+    {
+      "date": "2026-04-09",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "long"
+    },
+    {
+      "date": "2026-04-14",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "long"
+    },
+    {
+      "date": "2026-04-19",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-04-24",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-04-29",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-05-04",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-05-09",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "long"
+    },
+    {
+      "date": "2026-05-14",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-05-19",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-05-24",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-05-29",
+      "volatility_regime": "low",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-06-03",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-06-08",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    },
+    {
+      "date": "2026-06-13",
+      "volatility_regime": "normal",
+      "sub_strategy": "momentum_gates",
+      "signal": "flat"
+    }
+  ],
+  "conservative_mode": {
+    "asset": "CAKE",
+    "label": "ChainSage Conservative Mode",
+    "full_period": {
+      "total_return": 0.2141,
+      "max_drawdown": -0.2061,
+      "sharpe_ratio": 0.354,
+      "calmar_ratio": 0.252,
+      "win_rate": 0.333,
+      "days_in_market_pct": 0.056,
+      "time_in_market": 0.025
+    },
+    "in_sample": {
+      "total_return": 0.2512,
+      "max_drawdown": -0.1108,
+      "sharpe_ratio": 0.911,
+      "calmar_ratio": 2.308,
+      "win_rate": 0.36,
+      "days_in_market_pct": 0.101,
+      "time_in_market": 0.046
+    },
+    "out_of_sample": {
+      "total_return": -0.0287,
+      "max_drawdown": -0.2054,
+      "sharpe_ratio": 0.0,
+      "calmar_ratio": -0.053,
+      "win_rate": 0.321,
+      "days_in_market_pct": 0.042,
+      "time_in_market": 0.019
+    },
+    "config": "config/conservative.yaml"
+  },
+  "featured_mode": "conservative",
+  "ensemble_oos": {},
+  "regime_timeline": [
+    {
+      "date": "2024-12-06",
+      "regime": "aligned"
+    },
+    {
+      "date": "2024-12-13",
+      "regime": "divergent"
+    },
+    {
+      "date": "2024-12-20",
+      "regime": "divergent"
+    },
+    {
+      "date": "2024-12-27",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-01-03",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-01-10",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-01-17",
+      "regime": "aligned"
+    },
+    {
+      "date": "2025-01-24",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-01-31",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-02-07",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-02-14",
+      "regime": "aligned"
+    },
+    {
+      "date": "2025-02-21",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-02-28",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-03-07",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-03-14",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-03-21",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-03-28",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-04-04",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-04-11",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-04-18",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-04-25",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-05-02",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-05-09",
+      "regime": "aligned"
+    },
+    {
+      "date": "2025-05-16",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-05-23",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-05-30",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-06-06",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-06-13",
+      "regime": "aligned"
+    },
+    {
+      "date": "2025-06-20",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-06-27",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-07-04",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-07-11",
+      "regime": "aligned"
+    },
+    {
+      "date": "2025-07-18",
+      "regime": "aligned"
+    },
+    {
+      "date": "2025-07-25",
+      "regime": "aligned"
+    },
+    {
+      "date": "2025-08-01",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-08-08",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-08-15",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-08-22",
+      "regime": "aligned"
+    },
+    {
+      "date": "2025-08-29",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-09-05",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-09-12",
+      "regime": "aligned"
+    },
+    {
+      "date": "2025-09-19",
+      "regime": "aligned"
+    },
+    {
+      "date": "2025-09-26",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-10-03",
+      "regime": "aligned"
+    },
+    {
+      "date": "2025-10-10",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-10-17",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-10-24",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-10-31",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-11-07",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-11-14",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-11-21",
+      "regime": "risk-off"
+    },
+    {
+      "date": "2025-11-28",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-12-05",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-12-12",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-12-19",
+      "regime": "divergent"
+    },
+    {
+      "date": "2025-12-26",
+      "regime": "divergent"
+    },
+    {
+      "date": "2026-01-02",
+      "regime": "aligned"
+    },
+    {
+      "date": "2026-01-09",
+      "regime": "divergent"
+    },
+    {
+      "date": "2026-01-16",
+      "regime": "divergent"
+    },
+    {
+      "date": "2026-01-23",
+      "regime": "divergent"
+    },
+    {
+      "date": "2026-01-30",
+      "regime": "divergent"
+    },
+    {
+      "date": "2026-02-06",
+      "regime": "risk-off"
+    },
+    {
+      "date": "2026-02-13",
+      "regime": "risk-off"
+    },
+    {
+      "date": "2026-02-20",
+      "regime": "risk-off"
+    },
+    {
+      "date": "2026-02-27",
+      "regime": "divergent"
+    },
+    {
+      "date": "2026-03-06",
+      "regime": "divergent"
+    },
+    {
+      "date": "2026-03-13",
+      "regime": "aligned"
+    },
+    {
+      "date": "2026-03-20",
+      "regime": "divergent"
+    },
+    {
+      "date": "2026-03-27",
+      "regime": "divergent"
+    },
+    {
+      "date": "2026-04-03",
+      "regime": "divergent"
+    },
+    {
+      "date": "2026-04-10",
+      "regime": "divergent"
+    },
+    {
+      "date": "2026-04-17",
+      "regime": "aligned"
+    },
+    {
+      "date": "2026-04-24",
+      "regime": "divergent"
+    },
+    {
+      "date": "2026-05-01",
+      "regime": "divergent"
+    },
+    {
+      "date": "2026-05-08",
+      "regime": "aligned"
+    },
+    {
+      "date": "2026-05-15",
+      "regime": "aligned"
+    },
+    {
+      "date": "2026-05-22",
+      "regime": "divergent"
+    },
+    {
+      "date": "2026-05-29",
+      "regime": "divergent"
+    },
+    {
+      "date": "2026-06-05",
+      "regime": "divergent"
+    },
+    {
+      "date": "2026-06-12",
+      "regime": "divergent"
+    }
+  ],
+  "spec_excerpt": {
+    "entry_rules": [
+      "At least 2 of 3 layers score >= 0.5",
+      "No layer scores <= -0.5",
+      "No hard_stop falsifier active",
+      "All required CMC MCP tool payloads available"
+    ],
+    "trust_wallet": {
+      "action": "cash",
+      "target_token": "BNB",
+      "target_exposure_pct": 0.0,
+      "bsc_contract": "native",
+      "dex": "PancakeSwap",
+      "note": "Skill emits allocation only \u2014 TWAK signs and executes on user rules"
+    }
+  }
+}

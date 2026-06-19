@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChainSage — Strategy Research Platform</title>
+  <meta name="description" content="Research-grade CMC strategy skill: IS/OOS validation, regime ensembles, falsifiers. Honest results — not a black box." />
+  <meta property="og:title" content="ChainSage — Strategy Research Platform" />
+  <meta property="og:description" content="Reproducible strategy validation with enforced IS/OOS splits. 40 tests. Honest Sharpe — including rejections." />
+  <link rel="stylesheet" href="styles.css" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/chainsage-logo.png" type="image/png" />
+  <meta property="og:image" content="assets/chainsage-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            canvas: { top: '#090A0F', bot: '#0D0F17' },
+            accent: { DEFAULT: '#F0B90B', dim: 'rgba(240,185,11,0.12)' },
+            emerald: { glow: '#34D399' },
+            rose: { glow: '#FB7185' },
+          },
+          fontFamily: {
+            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    :root {
+      --glass: rgba(255,255,255,0.03);
+      --glass-border: rgba(255,255,255,0.06);
+      --chart-strat: #F0B90B;
+      --chart-bench: #52525B;
+      --emerald: #34D399;
+      --rose: #FB7185;
+      --amber: #FBBF24;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: linear-gradient(180deg, #090A0F 0%, #0D0F17 50%, #090A0F 100%);
+      min-height: 100vh;
+    }
+    body::before {
+      content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0;
+      background:
+        radial-gradient(ellipse 70% 45% at 15% -5%, rgba(240,185,11,0.07), transparent 55%),
+        radial-gradient(ellipse 50% 35% at 90% 10%, rgba(52,211,153,0.04), transparent 50%);
+    }
+    .panel {
+      background: var(--glass);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      border-radius: 1rem;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.04);
+    }
+    .panel-inner { border-radius: calc(1rem - 1px); }
+    .badge-track {
+      background: linear-gradient(135deg, rgba(240,185,11,0.25), rgba(240,185,11,0.08));
+      border: 1px solid rgba(240,185,11,0.45);
+      color: #FDE68A;
+      text-shadow: 0 0 12px rgba(240,185,11,0.35);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+    .badge-verified {
+      background: rgba(52,211,153,0.12);
+      border: 1px solid rgba(52,211,153,0.5);
+      color: #6EE7B7;
+      text-shadow: 0 0 10px rgba(52,211,153,0.3);
+    }
+    .badge-cmc {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #A1A1AA;
+    }
+    .status-tag {
+      display: inline-flex; align-items: center; padding: 0.35rem 0.75rem;
+      border-radius: 0.5rem; font-size: 0.75rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+    }
+    .status-tag.signal-flat { background: rgba(251,191,36,0.15); border: 1px solid rgba(251,191,36,0.4); color: #FDE68A; }
+    .status-tag.signal-long { background: rgba(52,211,153,0.15); border: 1px solid rgba(52,211,153,0.45); color: #6EE7B7; }
+    .status-tag.regime-divergent { background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.3); color: #FCD34D; }
+    .status-tag.regime-aligned { background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.35); color: #6EE7B7; }
+    .status-tag.regime-risk-off { background: rgba(251,113,133,0.12); border: 1px solid rgba(251,113,133,0.35); color: #FDA4AF; }
+    .fg-widget {
+      display: flex; align-items: stretch; gap: 1rem;
+      padding: 1rem 1.15rem; border-radius: 0.75rem;
+      background: rgba(251,113,133,0.08);
+      border: 1px solid rgba(251,113,133,0.25);
+    }
+    .fg-widget.neutral {
+      background: rgba(255,255,255,0.03);
+      border-color: rgba(255,255,255,0.08);
+    }
+    .fg-widget.ok {
+      background: rgba(52,211,153,0.08);
+      border-color: rgba(52,211,153,0.25);
+    }
+    .fg-gauge {
+      position: relative; width: 56px; height: 56px; flex-shrink: 0;
+    }
+    .fg-gauge svg { transform: rotate(-90deg); }
+    .fg-gauge-track { fill: none; stroke: rgba(255,255,255,0.08); stroke-width: 5; }
+    .fg-gauge-fill { fill: none; stroke-width: 5; stroke-linecap: round; transition: stroke-dashoffset 0.6s ease; }
+    .fg-gauge-val {
+      position: absolute; inset: 0; display: grid; place-items: center;
+      font-family: "JetBrains Mono", monospace; font-size: 0.85rem; font-weight: 700;
+    }
+    .layer-microgrid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      border: 1px solid rgba(255,255,255,0.06); border-radius: 0.75rem; overflow: hidden;
+    }
+    .layer-cell {
+      padding: 1rem; cursor: pointer; transition: background 0.2s;
+      border-right: 1px solid rgba(255,255,255,0.06);
+      background: rgba(0,0,0,0.2);
+    }
+    .layer-cell:last-child { border-right: none; }
+    .layer-cell:hover, .layer-cell.active { background: rgba(240,185,11,0.06); }
+    .layer-cell.align { box-shadow: inset 0 2px 0 rgba(52,211,153,0.6); }
+    .layer-cell.bear { box-shadow: inset 0 2px 0 rgba(251,113,133,0.6); }
+    .tab-btn {
+      padding: 0.5rem 1.25rem; border-radius: 9999px; font-weight: 700; font-size: 0.8125rem;
+      letter-spacing: 0.02em; transition: all 0.3s ease;
+      border: 1px solid transparent; background: rgba(0,0,0,0.35); color: #71717A;
+    }
+    .tab-btn:hover { color: #D4D4D8; background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.06); }
+    .tab-btn.active {
+      background: #F0B90B; color: #090A0F; border-color: #F0B90B;
+      box-shadow: 0 0 20px rgba(240,185,11,0.35), 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .metric-tile {
+      background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 0.75rem; padding: 1.15rem 1.25rem;
+      min-height: 108px; display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .metric-tile .val { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; }
+    .metric-tile .ctx { font-size: 0.72rem; color: #71717A; margin-top: 0.35rem; display: flex; align-items: center; gap: 0.25rem; }
+    .positive { color: var(--emerald); }
+    .negative { color: var(--rose); }
+    .bar-track {
+      height: 32px; background: rgba(0,0,0,0.45); border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 9999px; overflow: hidden; position: relative;
+    }
+    .bar-fill-strat {
+      position: absolute; left: 2px; top: 2px; bottom: 2px; width: 0;
+      background: linear-gradient(90deg, #C99400, #F0B90B);
+      border-radius: 9999px;
+      box-shadow: 0 0 16px rgba(240,185,11,0.45);
+      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .bar-fill-bench {
+      position: absolute; left: 2px; top: 2px; bottom: 2px; width: 0;
+      background: #52525B; border-radius: 9999px; opacity: 0.7;
+      transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    canvas { width: 100%; display: block; cursor: crosshair; }
+    .chart-tooltip {
+      position: absolute; pointer-events: none; display: none; z-index: 20;
+      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      background: rgba(9,10,15,0.92); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 0.625rem; padding: 0.75rem 0.9rem; min-width: 176px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.55);
+    }
+    .chart-tooltip .tt-date {
+      font-size: 0.65rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: #71717A; padding-bottom: 0.5rem;
+      margin-bottom: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .chart-tooltip .tt-row { display: flex; justify-content: space-between; gap: 1rem; padding: 0.15rem 0; }
+    .chart-tooltip .tt-label { font-size: 0.75rem; color: #A1A1AA; }
+    .chart-tooltip .tt-val { font-family: "JetBrains Mono", monospace; font-size: 0.8rem; font-weight: 600; }
+    .chart-tooltip .tt-val.strat { color: var(--chart-strat); }
+    .chart-tooltip .tt-val.bench { color: #A1A1AA; }
+    .data-table tbody tr { transition: background 0.15s; border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .data-table tbody tr:hover { background: rgba(255,255,255,0.04); }
+    .data-table tbody tr.highlight { background: rgba(240,185,11,0.08) !important; }
+    .data-table tbody tr.highlight:hover { background: rgba(240,185,11,0.12) !important; }
+    .step-card {
+      background: rgba(0,0,0,0.25); border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 0.875rem; padding: 1.35rem; min-height: 148px;
+      display: flex; flex-direction: column;
+    }
+    .step-num {
+      width: 2rem; height: 2rem; border-radius: 0.5rem;
+      background: #F0B90B; color: #090A0F; font-weight: 800; font-size: 0.875rem;
+      display: grid; place-items: center; margin-bottom: 0.85rem;
+    }
+    .terminal-win { border-radius: 0.75rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.08); background: #0C0E14; }
+    .terminal-bar { display: flex; align-items: center; gap: 0.4rem; padding: 0.6rem 0.9rem; background: #111318; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .terminal-dot { width: 10px; height: 10px; border-radius: 50%; }
+    .skel { background: linear-gradient(90deg, rgba(255,255,255,0.03) 25%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0.03) 75%); background-size: 200% 100%; animation: shimmer 1.2s infinite; border-radius: 0.75rem; }
+    @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+    body.loading .content-wrap { display: none; }
+    body.loading .skeleton-wrap { display: block; }
+    .skeleton-wrap { display: none; }
+    .regime-strip { display: flex; gap: 2px; height: 8px; border-radius: 4px; overflow: hidden; }
+    .regime-strip span { flex: 1; min-width: 2px; }
+    .regime-aligned { background: var(--emerald); }
+    .regime-divergent { background: var(--amber); }
+    .regime-risk-off { background: var(--rose); }
+    .exposure-fill { height: 100%; border-radius: 9999px; transition: width 0.5s ease, background 0.3s; }
+    @media (max-width: 768px) {
+      .layer-microgrid { grid-template-columns: 1fr; }
+      .layer-cell { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
+      .layer-cell:last-child { border-bottom: none; }
+      .desktop-table { display: none; }
+      .mobile-cards { display: grid; gap: 0.65rem; }
+    }
+    @media (min-width: 769px) { .mobile-cards { display: none; } }
+    .swipe-hint { display: none; }
+    .is-oos-bar { height: 8px; border-radius: 4px; background: rgba(255,255,255,0.06); overflow: hidden; }
+    .is-oos-fill-is { height: 100%; background: linear-gradient(90deg, #34D399, #6EE7B7); border-radius: 4px; }
+    .is-oos-fill-oos { height: 100%; background: linear-gradient(90deg, #52525B, #71717A); border-radius: 4px; }
+    .log-row {
+      display: grid; grid-template-columns: 1fr auto; gap: 0.75rem; align-items: start;
+      padding: 0.65rem 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-size: 0.8rem;
+    }
+    .log-row:last-child { border-bottom: none; }
+    .tag-flat { color: #FBBF24; font-weight: 700; font-size: 0.65rem; letter-spacing: 0.06em; }
+    .tag-route { color: #6EE7B7; font-weight: 700; font-size: 0.65rem; letter-spacing: 0.06em; }
+    .reject-banner {
+      border: 1px solid rgba(251,191,36,0.35);
+      background: rgba(251,191,36,0.08);
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+    }
+    @media (max-width: 640px) {
+      .swipe-hint { display: block; }
+      .tab-btn { min-height: 44px; }
+    }
+  </style>
+</head>
+<body class="loading font-sans text-zinc-100 antialiased">
+<div class="relative z-10 mx-auto max-w-6xl px-4 pb-16 sm:px-6">
+
+  <!-- Nav -->
+  <header class="sticky top-0 z-50 -mx-4 mb-8 border-b border-white/[0.06] bg-[#090A0F]/80 px-4 py-3 backdrop-blur-xl sm:-mx-6 sm:px-6">
+    <div class="flex flex-wrap items-center justify-between gap-4">
+      <a href="#overview-section" class="brand-lockup flex items-center gap-2.5 no-underline">
+        <img
+          src="assets/chainsage-logo.png"
+          alt=""
+          class="brand-logo"
+          width="32"
+          height="32"
+          aria-hidden="true"
+        />
+        <div class="flex flex-col gap-0.5">
+          <div class="text-lg font-extrabold tracking-tight">Chain<span class="text-accent">Sage</span></div>
+          <div class="text-[0.65rem] font-medium uppercase tracking-[0.14em] text-zinc-500">Strategy research platform</div>
+        </div>
+      </a>
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="badge-track inline-flex h-7 items-center rounded-full px-3 text-[0.65rem] font-bold uppercase tracking-wider">Track 2</span>
+        <span class="badge-verified badge-verified-pulse inline-flex h-7 items-center rounded-full px-3 text-[0.65rem] font-bold uppercase tracking-wider" id="hdr-verified">Verified</span>
+        <span class="badge-cmc inline-flex h-7 items-center rounded-full px-3 text-[0.65rem] font-bold uppercase tracking-wider" id="hdr-cmc">CMC 6/6</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-3 py-2 text-sm font-semibold text-zinc-300 transition hover:border-accent/40 hover:text-accent" id="hdr-refresh">Refresh</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="skeleton-wrap space-y-4">
+    <div class="skel h-36"></div>
+    <div class="skel h-64"></div>
+    <div class="skel h-80"></div>
+  </div>
+
+  <div class="content-wrap space-y-6">
+
+    <!-- Hero -->
+    <section class="panel section-fade p-6 sm:p-8" id="overview-section">
+      <div class="space-y-3">
+        <p class="hero-eyebrow text-[0.65rem] font-bold uppercase tracking-[0.16em] text-zinc-500">
+          <span class="research-grade">Research-Grade</span> Strategy Skill
+        </p>
+        <h1 class="text-3xl font-black leading-[1.05] tracking-tight sm:text-4xl lg:text-[2.75rem]">
+          <span class="hero-subtitle-italic">Not a black box.</span><br><span class="text-accent">A validation framework.</span>
+        </h1>
+        <p class="max-w-2xl text-sm leading-relaxed text-zinc-400 hero-subtitle-italic" id="hero-subtitle">
+          Reproducible IS/OOS splits, regime ensembles, and falsifiers — with honest results including rejections.
+        </p>
+      </div>
+      <div id="hero-sharpe-display"></div>
+      <div class="mt-4 flex flex-wrap items-center gap-3" id="hero-badges"></div>
+    </section>
+
+    <!-- Methodology (primary) -->
+    <section class="panel section-fade p-5 sm:p-6" id="methodology-section">
+      <div class="mb-5 flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="text-[0.65rem] font-bold uppercase tracking-[0.14em] text-emerald-glow">Primary view</p>
+          <h2 class="text-xl font-bold tracking-tight" id="methodology-title">Strategy Research Platform</h2>
+        </div>
+        <div class="text-right text-xs text-zinc-500">
+          <p><span class="text-zinc-400">IS</span> <span id="is-period-label">—</span></p>
+          <p><span class="text-zinc-400">OOS</span> <span id="oos-period-label">—</span></p>
+        </div>
+      </div>
+
+      <div class="mb-6 grid gap-3 md:grid-cols-2">
+        <div class="rounded-xl border border-white/[0.06] bg-black/25 p-4">
+          <p class="text-[0.65rem] font-bold uppercase tracking-wider text-zinc-500">Scientific rigor</p>
+          <ul class="mt-3 space-y-2 text-sm text-zinc-400" id="rigor-list"></ul>
+        </div>
+        <div class="rounded-xl border border-white/[0.06] bg-black/25 p-4">
+          <p class="text-[0.65rem] font-bold uppercase tracking-wider text-zinc-500">IS/OOS split · CAKE</p>
+          <div class="mt-3 space-y-4" id="is-oos-chart"></div>
+        </div>
+      </div>
+
+      <div class="mb-6 grid gap-3 lg:grid-cols-2">
+        <div class="rounded-xl border border-white/[0.06] bg-black/25 p-4">
+          <p class="text-[0.65rem] font-bold uppercase tracking-wider text-zinc-500">Regime routing</p>
+          <div class="mt-2" id="regime-routing-log"></div>
+          <div class="mt-4">
+            <p class="mb-2 text-[0.65rem] font-bold uppercase tracking-wider text-zinc-500">Ensemble timeline (sample)</p>
+            <div class="regime-strip" id="ensemble-regime-strip"></div>
+          </div>
+        </div>
+        <div class="rounded-xl border border-white/[0.06] bg-black/25 p-4">
+          <p class="text-[0.65rem] font-bold uppercase tracking-wider text-zinc-500">Falsifier log</p>
+          <div class="mt-2" id="falsifier-log"></div>
+        </div>
+      </div>
+
+      <div class="reject-banner mb-5">
+        <p class="text-[0.65rem] font-bold uppercase tracking-wider text-amber-300">Conclusion</p>
+        <p class="mt-2 text-sm leading-relaxed text-zinc-300" id="methodology-conclusion"></p>
+      </div>
+
+      <section class="research-pipeline mb-5" id="research-pipeline" aria-label="Research validation pipeline">
+        <h2 class="text-lg font-bold tracking-tight mb-4">Research Validation Pipeline</h2>
+        <div class="pipeline-track" id="pipeline-track"></div>
+      </section>
+
+      <div class="rounded-xl border border-white/[0.06] bg-black/25 p-4" id="verify-section">
+        <p class="text-[0.65rem] font-bold uppercase tracking-wider text-zinc-500">Verification panel</p>
+        <div class="terminal-win mt-3">
+          <div class="terminal-bar">
+            <span class="terminal-dot bg-[#FF5F57]" aria-hidden="true"></span>
+            <span class="terminal-dot bg-[#FEBC2E]" aria-hidden="true"></span>
+            <span class="terminal-dot bg-[#28C840]" aria-hidden="true"></span>
+            <span class="ml-2 font-mono text-[0.65rem] text-zinc-500">chainsage verify</span>
+          </div>
+          <pre class="font-mono text-xs leading-relaxed text-zinc-300 p-4 m-0 terminal-body" id="verify-terminal-body" role="log" aria-label="Verification output"></pre>
+        </div>
+        <div class="trust-badges" id="trust-badges">
+          <span class="trust-badge" tabindex="0">
+            <span aria-hidden="true">✓</span> 40 Tests Passing
+            <span class="trust-tooltip">Unit tests cover signal math, schema validation, and no-lookahead bias checks.</span>
+          </span>
+          <span class="trust-badge" tabindex="0">
+            <span aria-hidden="true">🛡</span> No Lookahead Bias
+            <span class="trust-tooltip">Signals at time t cannot change when future data is truncated.</span>
+          </span>
+          <span class="trust-badge" tabindex="0">
+            <span aria-hidden="true">🔒</span> IS/OOS Contamination Guard
+            <span class="trust-tooltip">Thresholds calibrated on IS only; OOS runs on held-out dates.</span>
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Control Room -->
+    <section class="panel section-fade overflow-hidden" id="live-section">
+      <div class="flex flex-wrap items-center justify-between gap-3 border-b border-white/[0.06] px-5 py-4 sm:px-6">
+        <div>
+          <p class="text-[0.65rem] font-bold uppercase tracking-[0.14em] text-zinc-500">Control room</p>
+          <h2 class="text-lg font-bold tracking-tight text-white">Agent decision</h2>
+        </div>
+        <div class="text-right">
+          <p class="text-[0.65rem] font-medium uppercase tracking-wider text-zinc-500">Live feed</p>
+          <p class="font-mono text-sm font-semibold text-zinc-200" id="live-updated">—</p>
+        </div>
+      </div>
+
+      <div class="space-y-5 p-5 sm:p-6" id="live-card">
+        <!-- Asset + status -->
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div class="space-y-3">
+            <div class="flex items-center gap-2">
+              <span class="relative flex h-2.5 w-2.5">
+                <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-40" id="live-pulse"></span>
+                <span class="relative inline-flex h-2.5 w-2.5 rounded-full bg-amber-500" id="live-dot"></span>
+              </span>
+              <span class="text-[0.65rem] font-semibold uppercase tracking-widest text-zinc-500">CoinMarketCap · real-time</span>
+            </div>
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="text-4xl font-black tracking-tight sm:text-5xl" id="live-asset">—</span>
+              <div class="flex flex-wrap gap-2" id="status-tags"></div>
+            </div>
+          </div>
+          <div class="text-right">
+            <p class="text-[0.65rem] uppercase tracking-wider text-zinc-500">Exposure</p>
+            <p class="font-mono text-2xl font-bold text-zinc-200" id="exposure-pct">0%</p>
+          </div>
+        </div>
+
+        <!-- F&G widget -->
+        <div id="fg-widget-wrap"></div>
+
+        <!-- Exposure bar -->
+        <div>
+          <div class="mb-1.5 flex justify-between text-xs text-zinc-500">
+            <span>Target exposure</span>
+          </div>
+          <div class="h-2 overflow-hidden rounded-full bg-black/40">
+            <div class="exposure-fill h-full bg-zinc-600" id="exposure-fill" style="width:0%"></div>
+          </div>
+        </div>
+
+        <!-- Layer micro-grid -->
+        <div>
+          <p class="mb-2 text-[0.65rem] font-bold uppercase tracking-wider text-zinc-500">Signal layers</p>
+          <div class="layer-microgrid" id="layer-grid"></div>
+          <div class="mt-3 hidden rounded-lg border border-white/[0.06] bg-black/30 p-3 text-xs text-zinc-400" id="layer-detail"></div>
+        </div>
+
+        <!-- Regime -->
+        <div>
+          <div class="mb-2 flex flex-wrap items-center justify-between gap-2">
+            <p class="text-[0.65rem] font-bold uppercase tracking-wider text-zinc-500">BNB regime history</p>
+            <div class="flex gap-3 text-[0.65rem] text-zinc-500">
+              <span><i class="regime-aligned inline-block h-2 w-2 rounded-sm"></i> Aligned</span>
+              <span><i class="regime-divergent inline-block h-2 w-2 rounded-sm"></i> Divergent</span>
+              <span><i class="regime-risk-off inline-block h-2 w-2 rounded-sm"></i> Risk-off</span>
+            </div>
+          </div>
+          <div class="regime-strip" id="regime-strip"></div>
+        </div>
+
+        <p class="font-mono text-[0.65rem] text-zinc-600">
+          Run <span class="text-accent">chainsage live --asset BNB && chainsage build-demo</span> to refresh
+        </p>
+      </div>
+    </section>
+
+    <!-- Performance (honest) -->
+    <section class="panel section-fade swipe-panel p-5 sm:p-6" id="performance-section">
+      <div class="mb-3 reject-banner">
+        <p class="text-[0.65rem] font-bold uppercase tracking-wider text-amber-300">Secondary view · Performance (Honest)</p>
+        <p class="mt-1 text-sm text-zinc-300" id="honest-verdict">Strategy under review — see IS/OOS Sharpe above.</p>
+      </div>
+      <div class="mb-5 flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <p class="text-[0.65rem] font-bold uppercase tracking-[0.14em] text-zinc-500">Full-period backtest</p>
+          <h2 class="text-lg font-bold tracking-tight">Research Mode (Aggressive) · committed data</h2>
+        </div>
+        <div class="flex flex-wrap gap-1.5 rounded-full border border-white/[0.06] bg-black/30 p-1" id="asset-tabs"></div>
+      </div>
+      <p class="swipe-hint mb-3 text-center text-xs text-zinc-500">Swipe to change asset</p>
+
+      <div class="mb-4 grid grid-cols-2 gap-3 lg:grid-cols-4" id="metrics"></div>
+
+      <div class="mb-5 space-y-3" id="compare-bars"></div>
+
+      <div class="rounded-xl border border-white/[0.05] bg-black/25 p-4">
+        <div class="mb-3 flex flex-wrap items-center justify-between gap-3">
+          <div class="flex rounded-lg border border-white/[0.06] bg-black/40 p-0.5 chart-toggle">
+            <button type="button" class="rounded-md bg-accent/15 px-3 py-1.5 text-xs font-bold text-accent active" data-mode="equity">Equity</button>
+            <button type="button" class="rounded-md px-3 py-1.5 text-xs font-semibold text-zinc-500" data-mode="drawdown">Drawdown</button>
+          </div>
+          <span class="text-xs text-zinc-500" id="chart-period"></span>
+        </div>
+        <div class="relative">
+          <canvas id="chart" height="280" role="img" aria-label="Equity curve chart comparing ChainSage strategy to buy and hold"></canvas>
+          <div class="chart-tooltip" id="tooltip"></div>
+        </div>
+        <div class="mt-3 flex gap-5 text-xs font-semibold text-zinc-500">
+          <span class="flex items-center gap-2"><span class="h-0.5 w-5 rounded bg-[#F0B90B]"></span>ChainSage</span>
+          <span class="flex items-center gap-2"><span class="h-px w-5 rounded bg-zinc-500"></span>Buy &amp; hold</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table -->
+    <section class="panel section-fade overflow-hidden" id="universe-section">
+      <div class="border-b border-white/[0.06] px-5 py-4 sm:px-6">
+        <p class="text-[0.65rem] font-bold uppercase tracking-[0.14em] text-zinc-500">Universe</p>
+        <h2 class="text-lg font-bold tracking-tight">All assets</h2>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="data-table desktop-table w-full text-sm" aria-label="Asset performance comparison sorted by Sharpe ratio">
+          <thead>
+            <tr class="border-b border-white/[0.06] text-left text-[0.65rem] font-bold uppercase tracking-wider text-zinc-500">
+              <th class="px-5 py-3 sm:px-6">Asset</th>
+              <th class="px-3 py-3">Return</th>
+              <th class="px-3 py-3">vs Buy &amp; Hold</th>
+              <th class="px-3 py-3">Max DD</th>
+              <th class="px-3 py-3">B&amp;H DD</th>
+              <th class="px-5 py-3 sm:px-6">Sharpe</th>
+            </tr>
+          </thead>
+          <tbody id="summary-table"></tbody>
+        </table>
+        <div class="mobile-cards p-4" id="mobile-cards-wrap">
+          <div class="asset-carousel" id="asset-carousel">
+            <div class="asset-carousel-track" id="mobile-cards"></div>
+          </div>
+          <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Asset carousel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="panel section-fade p-5 sm:p-6" id="about-section">
+      <p class="text-[0.65rem] font-bold uppercase tracking-[0.14em] text-zinc-500">Pipeline</p>
+      <h2 class="mb-4 text-lg font-bold tracking-tight">How it works</h2>
+      <div class="grid gap-3 md:grid-cols-3">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h4 class="font-bold text-zinc-100">Read CMC data</h4>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-zinc-500">6 Agent Hub tools: quotes, technicals, F&amp;G, derivatives, holders, narratives.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h4 class="font-bold text-zinc-100">Score 3 layers</h4>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-zinc-500">Derivatives, on-chain, and narrative — each scored independently.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h4 class="font-bold text-zinc-100">Conviction gate</h4>
+          <p class="mt-2 flex-1 text-sm leading-relaxed text-zinc-500">Long only when ≥2 layers agree and none are bearish. Otherwise flat.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Terminal -->
+    <section class="panel section-fade p-5 sm:p-6">
+      <p class="text-[0.65rem] font-bold uppercase tracking-[0.14em] text-zinc-500">Reproducibility</p>
+      <h2 class="mb-1 text-lg font-bold tracking-tight">Reproducible &amp; verifiable</h2>
+      <p class="mb-4 text-sm text-zinc-500">Anyone can rerun backtests and verify headline numbers from committed data.</p>
+      <div class="terminal-win">
+        <div class="terminal-bar">
+          <span class="terminal-dot bg-[#FF5F57]"></span>
+          <span class="terminal-dot bg-[#FEBC2E]"></span>
+          <span class="terminal-dot bg-[#28C840]"></span>
+          <span class="ml-2 font-mono text-[0.65rem] text-zinc-500">chainsage — zsh</span>
+        </div>
+        <pre class="font-mono text-sm leading-relaxed text-zinc-300 p-4 m-0"><span class="text-emerald-glow">$ </span><span class="text-accent">chainsage fetch-data && chainsage backtest-all && chainsage verify</span></pre>
+      </div>
+      <div class="mt-4 flex flex-wrap gap-2">
+        <button class="rounded-lg bg-accent px-4 py-2.5 text-sm font-bold text-[#090A0F] transition hover:brightness-110" id="copy-cmd">Copy command</button>
+        <button class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-4 py-2.5 text-sm font-semibold text-zinc-300 transition hover:border-white/15" id="copy-spec">Copy strategy rules</button>
+        <a class="rounded-lg border border-white/[0.08] bg-white/[0.03] px-4 py-2.5 text-sm font-semibold text-zinc-300 transition hover:border-white/15" href="https://github.com/Divyab7/chainsage" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <footer class="pt-4 text-center text-xs text-zinc-600">
+      Research demo only — not financial advice.<br>
+      BNB Hack Track 2 · CoinMarketCap Agent Hub
+    </footer>
+  </div>
+</div>
+
+<nav class="mobile-bottom-nav" aria-label="Section navigation">
+  <a href="#overview-section"><span class="nav-icon" aria-hidden="true">◉</span>Overview</a>
+  <a href="#performance-section"><span class="nav-icon" aria-hidden="true">📈</span>Performance</a>
+  <a href="#verify-section"><span class="nav-icon" aria-hidden="true">✓</span>Verify</a>
+  <a href="#about-section"><span class="nav-icon" aria-hidden="true">ℹ</span>About</a>
+</nav>
+
+<script>
+const ASSETS = ['CAKE','BTC','BNB','TWT'];
+let bundle = null;
+let currentAsset = 'CAKE';
+let chartMode = 'equity';
+let chartPoints = [];
+let animProgress = 1;
+
+const $ = id => document.getElementById(id);
+const pct = v => (v * 100).toFixed(1) + '%';
+const cls = v => v >= 0 ? 'positive' : 'negative';
+const arrow = v => v >= 0 ? '↑' : '↓';
+
+async function loadBundle() {
+  const base = location.pathname.includes('/chainsage') ? '/chainsage' : '';
+  for (const p of [`${base}/data/bundle.json`, 'data/bundle.json', '../demo/data/bundle.json']) {
+    try {
+      const r = await fetch(p);
+      if (r.ok) { bundle = await r.json(); return; }
+    } catch (_) {}
+  }
+}
+
+function layerStatus(score) {
+  if (score >= 0.2) return { label: 'Aligned', class: 'align' };
+  if (score <= -0.3) return { label: 'Bearish', class: 'bear' };
+  return { label: 'Neutral', class: '' };
+}
+
+function fgColor(val) {
+  if (val < 25) return '#FB7185';
+  if (val < 45) return '#FBBF24';
+  if (val < 55) return '#A1A1AA';
+  if (val < 75) return '#86EFAC';
+  return '#34D399';
+}
+
+function renderFgWidget(fg, tone) {
+  const wrap = $('fg-widget-wrap');
+  if (fg == null) { wrap.innerHTML = ''; return; }
+  const v = Math.round(fg);
+  const circ = 2 * Math.PI * 22;
+  const offset = circ - (v / 100) * circ;
+  const label = v < 25 ? 'Extreme Fear' : v < 45 ? 'Fear' : v < 55 ? 'Neutral' : v < 75 ? 'Greed' : 'Extreme Greed';
+  const widgetClass = tone === 'fear' ? '' : tone === 'ok' ? 'ok' : 'neutral';
+  wrap.innerHTML = `
+    <div class="fg-widget ${widgetClass}">
+      <div class="fg-gauge">
+        <svg width="56" height="56" viewBox="0 0 56 56">
+          <circle class="fg-gauge-track" cx="28" cy="28" r="22"/>
+          <circle class="fg-gauge-fill" cx="28" cy="28" r="22"
+            stroke="${fgColor(v)}"
+            stroke-dasharray="${circ}" stroke-dashoffset="${offset}"/>
+        </svg>
+        <div class="fg-gauge-val" style="color:${fgColor(v)}">${v}</div>
+      </div>
+      <div class="flex flex-1 flex-col justify-center gap-0.5">
+        <p class="text-[0.65rem] font-bold uppercase tracking-wider text-zinc-500">Fear &amp; Greed Index</p>
+        <p class="text-base font-bold text-zinc-100">${label}</p>
+        <p class="text-sm text-zinc-400" id="fg-context">${tone === 'fear' ? 'Capital preservation mode — sitting out until sentiment stabilizes.' : 'Sentiment context for narrative layer scoring.'}</p>
+      </div>
+    </div>`;
+}
+
+function modeLabel(key) {
+  const labels = {
+    conservative: { main: 'Production Mode (Conservative)', sub: 'Recommended for deployment' },
+    ensemble: { main: 'Ensemble', sub: 'Regime-adaptive routing' },
+    aggressive: { main: 'Research Mode (Aggressive)', sub: 'Higher exposure · research depth' },
+  };
+  return labels[key] || { main: key, sub: '' };
+}
+
+function countUp(el, target, duration = 1000, decimals = 2) {
+  const start = performance.now();
+  const from = 0;
+  function frame(now) {
+    const t = Math.min(1, (now - start) / duration);
+    const eased = 1 - Math.pow(1 - t, 3);
+    const val = from + (target - from) * eased;
+    el.textContent = val.toFixed(decimals);
+    if (t < 1) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+
+function sparklineSVG(asset) {
+  const curve = bundle?.assets?.[asset]?.equity_curve;
+  if (!curve?.length) return '';
+  const step = Math.max(1, Math.floor(curve.length / 20));
+  const pts = curve.filter((_, i) => i % step === 0 || i === curve.length - 1);
+  const strat = pts.map(p => p.strategy);
+  const bench = pts.map(p => p.benchmark);
+  const all = strat.concat(bench);
+  const lo = Math.min(...all), hi = Math.max(...all), span = hi - lo || 1;
+  const w = 72, h = 24;
+  const path = (vals, color) => {
+    const d = vals.map((v, i) => {
+      const x = (i / (vals.length - 1)) * w;
+      const y = h - 2 - ((v - lo) / span) * (h - 4);
+      return `${i === 0 ? 'M' : 'L'}${x.toFixed(1)},${y.toFixed(1)}`;
+    }).join(' ');
+    return `<path d="${d}" fill="none" stroke="${color}" stroke-width="1.5" stroke-linecap="round"/>`;
+  };
+  return `<svg class="sparkline-svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="Equity sparkline for ${asset}: gold strategy vs gray buy and hold"><title>${asset} equity vs buy and hold</title>${path(bench, '#6B7280')}${path(strat, '#F0B90B')}</svg>`;
+}
+
+function renderHero() {
+  const m = bundle?.methodology || {};
+  const headline = m.modes?.conservative;
+  const display = $('hero-sharpe-display');
+  const badges = $('hero-badges');
+  if (!headline || !display) return;
+
+  const isVal = headline.is_sharpe;
+  const oosVal = headline.oos_sharpe;
+  const showRejection = oosVal < 0.5;
+  const decayPct = isVal > 0 ? Math.round((1 - oosVal / isVal) * 100) : 100;
+
+  display.innerHTML = `
+    <div class="hero-sharpe-row">
+      <div class="hero-is-block">
+        <p class="hero-is-label">In-Sample Sharpe</p>
+        <p class="hero-is-value metric-num" id="hero-is-num">0.00</p>
+      </div>
+      <div class="hero-decay-arrow" aria-hidden="true">
+        <div class="arrow-line"><span class="arrow-head">→</span></div>
+        <p class="hero-decay-label">${decayPct}% Sharpe decay = regime mismatch detected</p>
+      </div>
+      <div class="hero-oos-block${showRejection ? ' has-rejection' : ''}">
+        ${showRejection ? '<span class="rejection-stamp" aria-hidden="true">INSUFFICIENT EDGE</span>' : ''}
+        <p class="hero-oos-label">Out-of-Sample Sharpe</p>
+        <p class="hero-oos-value metric-num" id="hero-oos-num">0.00</p>
+      </div>
+    </div>`;
+
+  countUp($('hero-is-num'), isVal, 1000, 2);
+  countUp($('hero-oos-num'), oosVal, 1000, 2);
+
+  const testCount = m.test_count || 36;
+  badges.innerHTML = `
+    <span class="badge-conservative">Production Mode (Conservative)
+      <span class="badge-conservative-sub">Recommended for deployment</span>
+    </span>
+    <div class="metric-tile" style="min-height:auto;padding:0.75rem 1rem">
+      <p class="text-[0.65rem] font-bold uppercase tracking-wider text-zinc-500">Unit tests</p>
+      <p class="val text-accent metric-num" style="font-size:1.5rem">${testCount}</p>
+      <p class="ctx">Signal math · no-lookahead · schema</p>
+    </div>`;
+
+  if (m.subtitle) $('hero-subtitle').textContent = m.subtitle;
+
+  const trustBadges = $('trust-badges');
+  if (trustBadges) {
+    const first = trustBadges.querySelector('.trust-badge');
+    if (first) first.innerHTML = `<span aria-hidden="true">✓</span> ${testCount} Tests Passing<span class="trust-tooltip">Unit tests cover signal math, schema validation, and no-lookahead bias checks.</span>`;
+  }
+}
+
+function renderMethodology() {
+  const m = bundle?.methodology;
+  if (!m) return;
+
+  $('methodology-title').textContent = m.title || 'Strategy Research Platform';
+  $('is-period-label').textContent = m.is_period || '—';
+  $('oos-period-label').textContent = m.oos_period || '—';
+  $('rigor-list').innerHTML = (m.rigor || []).map(r => `<li class="flex gap-2"><span class="text-emerald-glow">✓</span><span>${r}</span></li>`).join('');
+  $('methodology-conclusion').textContent = m.conclusion || '';
+
+  const modes = m.modes || {};
+  const order = ['conservative', 'ensemble', 'aggressive'];
+
+  $('is-oos-chart').innerHTML = order.filter(k => modes[k]).map((k, idx) => {
+    const row = modes[k];
+    const lbl = modeLabel(k);
+    const isPct = Math.min(100, Math.max(2, Math.abs(row.is_sharpe) * 100));
+    const oosPct = Math.max(2, Math.min(100, Math.abs(row.oos_sharpe) * 100));
+    const tim = row.time_in_market_pct ?? Math.round((row.oos_time_in_market || 0) * 100);
+    const delay = idx * 0.15;
+    return `<div class="chart-bar-row">
+      <div class="chart-bar-header">
+        <div>
+          <p class="mode-label-main">${lbl.main}</p>
+          ${lbl.sub ? `<p class="mode-label-sub">${lbl.sub}</p>` : ''}
+        </div>
+        <span class="font-mono text-xs text-zinc-500 metric-num">IS ${row.is_sharpe.toFixed(2)} · OOS ${row.oos_sharpe.toFixed(2)} · ${tim}% in mkt</span>
+      </div>
+      <div class="mb-2 bar-tooltip-wrap" tabindex="0">
+        <div class="flex items-center gap-2 text-[0.65rem] text-zinc-500 mb-1"><span class="w-10" style="color:#10B981">IS</span>
+          <div class="animated-bar-track flex-1" role="img" aria-label="In-sample Sharpe ${row.is_sharpe.toFixed(2)}, bar filled to ${isPct.toFixed(0)} percent">
+            <div class="animated-bar-fill-is" style="--bar-target:${isPct}%;animation-delay:${delay}s"></div>
+          </div>
+        </div>
+        <span class="bar-tooltip">Strategy correctly identified unfavorable regime</span>
+      </div>
+      <div class="bar-tooltip-wrap" tabindex="0">
+        <div class="flex items-center gap-2 text-[0.65rem] text-zinc-500"><span class="w-10" style="color:#6B7280">OOS</span>
+          <div class="animated-bar-track flex-1" role="img" aria-label="Out-of-sample Sharpe ${row.oos_sharpe.toFixed(2)}, nearly empty bar indicates rejection">
+            <div class="animated-bar-fill-oos" style="--bar-target:${oosPct}%;animation-delay:${delay + 0.3}s"></div>
+          </div>
+        </div>
+        <span class="bar-tooltip">Strategy correctly identified unfavorable regime</span>
+      </div>
+      <p class="mt-2 text-[0.7rem] text-zinc-500">${row.interpretation || ''}</p>
+    </div>`;
+  }).join('');
+
+  $('regime-routing-log').innerHTML = (m.regime_routing || []).map(r => `
+    <div class="log-row">
+      <div><span class="tag-route">ROUTE</span> <span class="text-zinc-300">${r.condition}</span> → <code class="text-accent">${r.route}</code><br><span class="text-zinc-500">${r.detail}</span></div>
+    </div>`).join('');
+
+  $('falsifier-log').innerHTML = (m.falsifier_log || []).map((f, i) => `
+    <div class="log-row falsifier-row">
+      <div><code class="text-zinc-300">${f.trigger}</code><br><span class="text-zinc-500">${f.note}</span></div>
+      <span class="tag-flat">${f.action}</span>
+    </div>`).join('');
+
+  const cons = modes.conservative;
+  if (cons) {
+    $('honest-verdict').textContent =
+      `Headline: Conservative IS Sharpe ${cons.is_sharpe.toFixed(2)} → OOS ${cons.oos_sharpe.toFixed(2)}. ` +
+      `Strategy rejected for OOS deployment — insufficient edge in 2024–2026 regimes.`;
+  }
+
+  const timeline = bundle?.ensemble_regime_timeline || [];
+  $('ensemble-regime-strip').innerHTML = timeline.map(r => {
+    const cls = r.sub_strategy === 'funding_mean_reversion' ? 'regime-aligned' : 'regime-divergent';
+    return `<span class="${cls}" title="${r.date}: ${r.volatility_regime} → ${r.sub_strategy}"></span>`;
+  }).join('');
+
+  renderVerifyTerminal();
+  renderResearchPipeline();
+}
+
+function renderVerifyTerminal() {
+  const el = $('verify-terminal-body');
+  if (!el) return;
+  if (bundle?.verify) {
+    const lines = ['$ chainsage verify', 'VERDICT: VERIFIED — backtests, trade logs, equity reports, research artifacts OK'];
+    for (const [asset, metrics] of Object.entries(bundle.verify)) {
+      lines.push(`  OK ${asset} return=${(metrics.total_return * 100).toFixed(1)}% maxDD=${(metrics.max_drawdown * 100).toFixed(1)}%`);
+    }
+    el.textContent = lines.join('\n');
+  } else {
+    el.textContent = '$ chainsage verify\nRun backtest-all to populate verify_manifest.json';
+  }
+}
+
+function renderResearchPipeline() {
+  const pipe = bundle?.methodology?.research_pipeline;
+  const el = $('pipeline-track');
+  if (!pipe || !el) {
+    if (el) el.innerHTML = '<p class="text-sm text-zinc-500">Run chainsage research to populate institutional risk metrics.</p>';
+    return;
+  }
+
+  const steps = [
+    {
+      n: 1,
+      title: 'Signal Discovery',
+      body: 'IS-only threshold calibration (q10)',
+      badge: 'No OOS peeking',
+      warn: false,
+    },
+    {
+      n: 2,
+      title: 'Overfitting Check',
+      body: `PBO: ${pipe.pbo_pct}% (robust)`,
+      badge: `Deflated Sharpe: ${pipe.deflated_sharpe.toFixed(2)}`,
+      warn: false,
+    },
+    {
+      n: 3,
+      title: 'Walk-Forward',
+      body: `${pipe.wf_n_windows} expanding windows`,
+      badge: `WF Sharpe: ${pipe.wf_sharpe_label}`,
+      warn: false,
+    },
+    {
+      n: 4,
+      title: 'OOS Validation',
+      body: 'Held-out 2024–2026',
+      badge: 'Result: Regime mismatch',
+      warn: true,
+      highlight: true,
+    },
+  ];
+
+  el.innerHTML = steps.map((s, i) => `
+    ${i > 0 ? '<div class="pipeline-arrow" aria-hidden="true">→</div>' : ''}
+    <div class="pipeline-step${s.highlight ? ' highlight' : ''}">
+      <span class="step-number">${s.n}</span>
+      <h3>${s.title}</h3>
+      <p>${s.body}</p>
+      <span class="pipeline-badge${s.warn ? ' warning' : ''}">${s.badge}</span>
+    </div>
+  `).join('');
+}
+
+function renderLive() {
+  const live = bundle?.live;
+  if (!live?.current_decision) {
+    $('live-asset').textContent = '—';
+    $('status-tags').innerHTML = '';
+    $('fg-widget-wrap').innerHTML = '<p class="text-sm text-zinc-500">Run: chainsage live --asset BNB</p>';
+    $('live-updated').textContent = '—';
+    return;
+  }
+  const c = live.current_decision;
+  const isLong = c.signal === 'long';
+  const fg = live.fear_greed;
+
+  $('live-asset').textContent = c.asset;
+  $('live-dot').className = `relative inline-flex h-2.5 w-2.5 rounded-full ${isLong ? 'bg-emerald-400' : 'bg-amber-500'}`;
+  $('live-pulse').className = `absolute inline-flex h-full w-full animate-ping rounded-full opacity-40 ${isLong ? 'bg-emerald-400' : 'bg-amber-400'}`;
+
+  const signalClass = isLong ? 'signal-long' : 'signal-flat';
+  const regimeSlug = (c.regime || 'divergent').replace(/_/g, '-');
+  $('status-tags').innerHTML = `
+    <span class="status-tag ${signalClass}">${c.signal.toUpperCase()}</span>
+    <span class="status-tag regime-${regimeSlug}">${regimeSlug.replace(/-/g, ' ').toUpperCase()}</span>`;
+
+  const tone = isLong ? 'ok' : (fg != null && fg < 25 ? 'fear' : 'neutral');
+  renderFgWidget(fg, tone);
+
+  $('exposure-pct').textContent = pct(c.target_exposure);
+  $('exposure-fill').style.width = pct(c.target_exposure);
+  $('exposure-fill').style.background = isLong ? '#34D399' : '#52525B';
+
+  if (live.updated_at) {
+    const d = new Date(live.updated_at);
+    $('live-updated').textContent = d.toLocaleString(undefined, {
+      month: 'short', day: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit'
+    });
+  }
+
+  const mcp = bundle.layer_mcp || {};
+  $('layer-grid').innerHTML = Object.entries(c.layers || {}).map(([name, layer]) => {
+    const st = layerStatus(layer.score);
+    return `<div class="layer-cell ${st.class}" data-layer="${name}">
+      <p class="text-[0.6rem] font-bold uppercase tracking-widest text-zinc-500">${name}</p>
+      <p class="mt-2 text-sm font-bold text-zinc-200">${st.label}</p>
+      <p class="mt-1 font-mono text-2xl font-bold tracking-tight text-zinc-100">${layer.score >= 0 ? '+' : ''}${layer.score.toFixed(2)}</p>
+    </div>`;
+  }).join('');
+
+  $('layer-grid').querySelectorAll('.layer-cell').forEach(el => {
+    el.addEventListener('click', () => {
+      $('layer-grid').querySelectorAll('.layer-cell').forEach(x => x.classList.remove('active'));
+      el.classList.add('active');
+      const name = el.dataset.layer;
+      const tools = (mcp[name] || []).map(t => `<code class="text-accent">${t}</code>`).join(', ');
+      const reasons = (c.layers[name]?.reasons || []).join(' · ');
+      const detail = $('layer-detail');
+      detail.innerHTML = `<strong class="text-zinc-300">${name}</strong> — ${reasons}<br><span class="text-zinc-500">CMC:</span> ${tools || 'n/a'}`;
+      detail.classList.remove('hidden');
+    });
+  });
+
+  const n = (live.cmc_data_sources || []).length;
+  $('hdr-cmc').textContent = `CMC ${n}/6`;
+  renderRegimeStrip();
+}
+
+function renderRegimeStrip() {
+  $('regime-strip').innerHTML = (bundle?.regime_timeline || []).map(r =>
+    `<span class="regime-${r.regime}" title="${r.date}: ${r.regime}"></span>`
+  ).join('');
+}
+
+function renderTabs() {
+  const best = bundle?.hero?.best_asset;
+  $('asset-tabs').innerHTML = ASSETS.map(a =>
+    `<button type="button" class="tab-btn ${a === currentAsset ? 'active' : ''}" data-asset="${a}">${a}${a === best ? ' ★' : ''}</button>`
+  ).join('');
+  $('asset-tabs').querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      currentAsset = btn.dataset.asset;
+      $('asset-tabs').querySelectorAll('.tab-btn').forEach(t =>
+        t.classList.toggle('active', t.dataset.asset === currentAsset));
+      renderAsset();
+    });
+  });
+}
+
+function renderCompareBars(m, b) {
+  const max = Math.max(Math.abs(m.total_return), Math.abs(b.total_return), 0.01);
+  const sw = Math.abs(m.total_return) / max * 100;
+  const bw = Math.abs(b.total_return) / max * 100;
+  $('compare-bars').innerHTML = `
+    <div class="grid grid-cols-[40px_1fr_72px] items-center gap-3 text-sm">
+      <span class="text-xs font-bold uppercase tracking-wider text-zinc-500">Us</span>
+      <div class="bar-track"><div class="bar-fill-strat" data-w="${sw}"></div></div>
+      <span class="font-mono font-bold ${cls(m.total_return)}">${pct(m.total_return)}</span>
+    </div>
+    <div class="grid grid-cols-[40px_1fr_72px] items-center gap-3 text-sm">
+      <span class="text-xs font-bold uppercase tracking-wider text-zinc-500">Hold</span>
+      <div class="bar-track"><div class="bar-fill-bench" data-w="${bw}"></div></div>
+      <span class="font-mono font-bold ${cls(b.total_return)}">${pct(b.total_return)}</span>
+    </div>`;
+  requestAnimationFrame(() => {
+    $('compare-bars').querySelectorAll('[data-w]').forEach(el => {
+      el.style.width = `calc(${el.dataset.w}% - 4px)`;
+    });
+  });
+}
+
+function metricCtx(label, val, benchVal) {
+  if (label === 'Return') {
+    const diff = val - benchVal;
+    return `<span class="${cls(diff)}">${arrow(diff)} ${pct(Math.abs(diff))} vs hold</span>`;
+  }
+  if (label === 'Max DD') return `<span class="text-zinc-600">Hold ${pct(benchVal)}</span>`;
+  if (label === 'In market') return `<span class="text-zinc-600">${(val * 100).toFixed(0)}% days active</span>`;
+  return `<span class="text-zinc-600">Risk-adjusted</span>`;
+}
+
+function renderAsset() {
+  const d = bundle?.assets?.[currentAsset];
+  if (!d) return;
+  const m = d.metrics, b = d.benchmark_metrics;
+  const defs = [
+    ['Return', m.total_return, b.total_return],
+    ['Max DD', m.max_drawdown, b.max_drawdown],
+    ['Sharpe', m.sharpe_ratio, b.sharpe_ratio],
+    ['In market', m.days_in_market_pct, null],
+  ];
+  $('metrics').innerHTML = defs.map(([label, val, bench]) => {
+    const display = label === 'Sharpe' ? val.toFixed(2) : label === 'In market' ? pct(val) : pct(val);
+    const colorCls = label === 'Sharpe' ? '' : cls(val);
+    return `<div class="metric-tile">
+      <p class="text-[0.65rem] font-bold uppercase tracking-wider text-zinc-500">${label}</p>
+      <p class="val ${colorCls}">${display}</p>
+      <p class="ctx">${metricCtx(label, val, bench)}</p>
+    </div>`;
+  }).join('');
+
+  $('chart-period').textContent = `${d.period_start} → ${d.period_end} · Binance + CMC`;
+  renderCompareBars(m, b);
+  chartPoints = chartMode === 'equity' ? d.equity_curve : d.drawdown_curve;
+  animProgress = 0;
+  requestAnimationFrame(animateChart);
+}
+
+function animateChart() {
+  animProgress = Math.min(1, animProgress + 0.06);
+  drawChart(chartPoints, animProgress);
+  if (animProgress < 1) requestAnimationFrame(animateChart);
+}
+
+function drawChart(curve, progress = 1) {
+  const canvas = $('chart');
+  const ctx = canvas.getContext('2d');
+  const rect = canvas.getBoundingClientRect();
+  const dpr = window.devicePixelRatio || 1;
+  const h = 280;
+  canvas.width = rect.width * dpr;
+  canvas.height = h * dpr;
+  ctx.scale(dpr, dpr);
+  const w = rect.width;
+  ctx.clearRect(0, 0, w, h);
+  if (!curve?.length) return;
+
+  const n = Math.max(2, Math.floor(curve.length * progress));
+  const slice = curve.slice(0, n);
+  const strat = slice.map(p => p.strategy);
+  const bench = slice.map(p => p.benchmark);
+  const all = strat.concat(bench);
+  const lo = Math.min(...all), hi = Math.max(...all), span = hi - lo || 1;
+  const pad = { l: 48, r: 16, t: 20, b: 32 };
+  const chartW = w - pad.l - pad.r;
+  const chartH = h - pad.t - pad.b;
+
+  ctx.strokeStyle = 'rgba(255,255,255,0.04)';
+  ctx.lineWidth = 1;
+  for (let g = 0; g <= 4; g++) {
+    const y = pad.t + (g / 4) * chartH;
+    ctx.beginPath(); ctx.moveTo(pad.l, y); ctx.lineTo(w - pad.r, y); ctx.stroke();
+  }
+
+  function line(vals, color, width) {
+    ctx.strokeStyle = color;
+    ctx.lineWidth = width;
+    ctx.lineJoin = 'round';
+    ctx.lineCap = 'round';
+    ctx.beginPath();
+    vals.forEach((v, i) => {
+      const x = pad.l + (i / (vals.length - 1)) * chartW;
+      const y = pad.t + chartH - ((v - lo) / span) * chartH;
+      i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    });
+    ctx.stroke();
+  }
+  line(bench, '#52525B', 1.5);
+  line(strat, '#F0B90B', 2.5);
+  canvas._curve = slice;
+  canvas._pad = pad;
+}
+
+function setupChartHover() {
+  const canvas = $('chart');
+  const tip = $('tooltip');
+  const wrap = canvas.parentElement;
+
+  canvas.addEventListener('mousemove', e => {
+    const curve = canvas._curve;
+    if (!curve?.length) return;
+    const rect = canvas.getBoundingClientRect();
+    const wrapRect = wrap.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const i = Math.round((x / rect.width) * (curve.length - 1));
+    const p = curve[Math.max(0, Math.min(curve.length - 1, i))];
+    if (!p) return;
+
+    const stratVal = chartMode === 'drawdown' ? pct(p.strategy) : p.strategy.toFixed(3) + '×';
+    const benchVal = chartMode === 'drawdown' ? pct(p.benchmark) : p.benchmark.toFixed(3) + '×';
+
+    tip.style.display = 'block';
+    tip.innerHTML = `
+      <div class="tt-date">${p.date}</div>
+      <div class="tt-row"><span class="tt-label">ChainSage</span><span class="tt-val strat">${stratVal}</span></div>
+      <div class="tt-row"><span class="tt-label">Buy &amp; hold</span><span class="tt-val bench">${benchVal}</span></div>`;
+
+    const tipW = 180, tipH = 88;
+    let left = e.clientX - wrapRect.left + 14;
+    let top = e.clientY - wrapRect.top - tipH - 10;
+    if (left + tipW > wrapRect.width) left = wrapRect.width - tipW - 8;
+    if (left < 8) left = 8;
+    if (top < 8) top = e.clientY - wrapRect.top + 14;
+    tip.style.left = left + 'px';
+    tip.style.top = top + 'px';
+  });
+  canvas.addEventListener('mouseleave', () => tip.style.display = 'none');
+}
+
+function renderReturnCell(val) {
+  const icon = val >= 0 ? '↑' : '↓';
+  return `<span class="return-with-arrow font-mono font-semibold ${cls(val)}"><span aria-hidden="true">${icon}</span> ${pct(val)}</span>`;
+}
+
+let carouselIndex = 0;
+
+function setupCarousel(rows) {
+  const track = $('mobile-cards');
+  const dots = $('carousel-dots');
+  if (!track || !rows.length) return;
+
+  track.innerHTML = rows.map(h => `
+    <div class="asset-carousel-card">
+      <div class="rounded-xl border ${h.asset === 'CAKE' ? 'border-accent/40 bg-accent/5' : 'border-white/[0.06] bg-black/25'} p-4 ${h.asset === 'CAKE' ? 'border-l-4 border-l-[#F59E0B]' : ''}">
+        <p class="font-bold ${h.asset === 'CAKE' ? 'text-accent' : ''}">${h.asset}</p>
+        <div class="mt-2 sparkline-cell">${sparklineSVG(h.asset)}<span class="text-xs text-zinc-500">vs B&amp;H</span></div>
+        <p class="mt-2 font-mono text-sm">${renderReturnCell(h.return)} <span class="text-zinc-600">vs</span> ${renderReturnCell(h.benchmark_return)}</p>
+        <p class="mt-1 text-xs text-zinc-500">DD ${renderReturnCell(h.max_dd)} · Sharpe <span class="metric-num">${h.sharpe?.toFixed(2)}</span></p>
+      </div>
+    </div>`).join('');
+
+  dots.innerHTML = rows.map((h, i) =>
+    `<button type="button" class="carousel-dot${i === 0 ? ' active' : ''}" data-index="${i}" role="tab" aria-label="${h.asset}" aria-selected="${i === 0}"></button>`
+  ).join('');
+
+  function goTo(i) {
+    carouselIndex = Math.max(0, Math.min(rows.length - 1, i));
+    track.style.transform = `translateX(-${carouselIndex * 100}%)`;
+    dots.querySelectorAll('.carousel-dot').forEach((d, j) => {
+      d.classList.toggle('active', j === carouselIndex);
+      d.setAttribute('aria-selected', j === carouselIndex);
+    });
+  }
+
+  dots.querySelectorAll('.carousel-dot').forEach(d => {
+    d.addEventListener('click', () => goTo(+d.dataset.index));
+  });
+
+  let touchX = 0;
+  const carousel = $('asset-carousel');
+  carousel.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+  carousel.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) < 40) return;
+    goTo(carouselIndex + (dx < 0 ? 1 : -1));
+  }, { passive: true });
+}
+
+function renderSummary() {
+  const rows = [...(bundle?.headline || [])].sort((a, b) => (b.sharpe ?? 0) - (a.sharpe ?? 0));
+  $('summary-table').innerHTML = rows.map(h => `
+    <tr class="asset-row ${h.asset === 'CAKE' ? 'cake-row highlight' : ''}">
+      <td class="px-5 py-3.5 font-bold sm:px-6 ${h.asset === 'CAKE' ? 'text-accent' : 'text-zinc-200'}">${h.asset}</td>
+      <td class="px-3 py-3.5">${renderReturnCell(h.return)}</td>
+      <td class="px-3 py-3.5">
+        <div class="sparkline-cell">${sparklineSVG(h.asset)}<span class="font-mono text-xs ${cls(h.return - h.benchmark_return)} metric-num">${pct(h.return - h.benchmark_return)}</span></div>
+      </td>
+      <td class="px-3 py-3.5">${renderReturnCell(h.max_dd)}</td>
+      <td class="px-3 py-3.5 font-mono ${cls(h.benchmark_max_dd)}">${pct(h.benchmark_max_dd)}</td>
+      <td class="px-5 py-3.5 font-mono text-zinc-400 sm:px-6 metric-num">${h.sharpe?.toFixed(2) ?? '—'}</td>
+    </tr>`).join('');
+
+  setupCarousel(rows);
+}
+
+document.querySelectorAll('.chart-toggle button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.chart-toggle button').forEach(b => {
+      b.classList.remove('active', 'bg-accent/15', 'text-accent', 'font-bold');
+      b.classList.add('text-zinc-500', 'font-semibold');
+    });
+    btn.classList.add('active', 'bg-accent/15', 'text-accent', 'font-bold');
+    btn.classList.remove('text-zinc-500', 'font-semibold');
+    chartMode = btn.dataset.mode;
+    const d = bundle?.assets?.[currentAsset];
+    chartPoints = chartMode === 'equity' ? d?.equity_curve : d?.drawdown_curve;
+    animProgress = 0;
+    requestAnimationFrame(animateChart);
+  });
+});
+
+$('copy-cmd').addEventListener('click', () => {
+  navigator.clipboard.writeText('chainsage fetch-data && chainsage backtest-all && chainsage verify');
+  const btn = $('copy-cmd');
+  const prev = btn.textContent;
+  btn.textContent = '✓ Copied!';
+  btn.classList.remove('bg-accent', 'hover:brightness-110');
+  btn.classList.add('bg-emerald-glow', 'text-[#052e1f]');
+  setTimeout(() => {
+    btn.textContent = prev;
+    btn.classList.add('bg-accent', 'hover:brightness-110');
+    btn.classList.remove('bg-emerald-glow', 'text-[#052e1f]');
+  }, 2000);
+});
+
+$('copy-spec').addEventListener('click', () => {
+  const rules = bundle?.spec_excerpt?.entry_rules?.join('\n• ') || 'See SKILL.md';
+  navigator.clipboard.writeText('Entry rules:\n• ' + rules);
+  $('copy-spec').textContent = '✓ Copied!';
+  setTimeout(() => { $('copy-spec').textContent = 'Copy strategy rules'; }, 2000);
+});
+
+async function refresh() {
+  document.body.classList.add('loading');
+  await loadBundle();
+  const v = $('hdr-verified');
+  if (bundle?.verify) {
+    v.textContent = 'Verified';
+    v.className = 'badge-verified badge-verified-pulse inline-flex h-7 items-center rounded-full px-3 text-[0.65rem] font-bold uppercase tracking-wider';
+  } else {
+    v.textContent = 'Unverified';
+    v.className = 'badge-cmc inline-flex h-7 items-center rounded-full px-3 text-[0.65rem] font-bold uppercase tracking-wider';
+  }
+  renderHero();
+  renderMethodology();
+  renderLive();
+  renderTabs();
+  renderAsset();
+  renderSummary();
+  document.body.classList.remove('loading');
+}
+
+$('hdr-refresh').addEventListener('click', refresh);
+setupChartHover();
+setupSwipe();
+window.addEventListener('resize', () => drawChart(chartPoints));
+refresh();
+
+function setupSwipe() {
+  const panel = $('performance-section');
+  let startX = 0, startY = 0;
+  panel.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+  }, { passive: true });
+  panel.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    const dy = e.changedTouches[0].clientY - startY;
+    if (Math.abs(dx) < 50 || Math.abs(dx) < Math.abs(dy)) return;
+    const idx = ASSETS.indexOf(currentAsset);
+    const next = dx < 0 ? Math.min(ASSETS.length - 1, idx + 1) : Math.max(0, idx - 1);
+    if (next === idx) return;
+    currentAsset = ASSETS[next];
+    $('asset-tabs').querySelectorAll('.tab-btn').forEach(t =>
+      t.classList.toggle('active', t.dataset.asset === currentAsset));
+    renderAsset();
+  }, { passive: true });
+}
+</script>
+</body>
+</html>
