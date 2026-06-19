@@ -214,6 +214,44 @@ chainsage backtest --asset CAKE --mode ensemble
 
 ---
 
+## CI/CD
+
+GitHub Actions run on every **push** and **pull request**:
+
+| Workflow | File | What it does |
+|----------|------|----------------|
+| **chainsage-ci** | `.github/workflows/ci.yml` | `pytest` (40 tests) → `chainsage backtest-all` → `chainsage research` → `chainsage verify` |
+| **Deploy demo** | `.github/workflows/pages.yml` | Rebuilds backtests + demo bundle → deploys `demo/` to **GitHub Pages** on push to `main` |
+
+**chainsage-ci** must pass before merge. **Deploy demo** publishes the static dashboard (enable GitHub Pages under repo Settings → Pages → source: GitHub Actions).
+
+**Vercel (optional):** Import the repo, set **Root Directory** to `demo`, leave build command empty (bundle is committed). See `vercel.json` if deploying from repo root with rewrites.
+
+---
+
+## Adoption path
+
+ChainSage is designed for **three user personas**:
+
+| Persona | Pain point | How ChainSage helps | Adoption step |
+|---------|------------|---------------------|---------------|
+| **Retail trader** | Overwhelmed by conflicting signals | Clear buy/sell/neutral with confidence scores | Use via CMC Agent Hub (no code) |
+| **Quant researcher** | Can't trust backtests due to overfitting | Institutional-grade validation (PBO, DSR, walk-forward) | Clone repo, run `chainsage research` |
+| **DeFi treasury manager** | Need audited strategy before deploying capital | Full IS/OOS transparency + falsifiable claims | Integrate SDK, customize config |
+
+**Roadmap:**
+
+- ✅ **Phase 1 (Now):** Standalone backtesting framework
+- 🔄 **Phase 2 (Q3 2025):** CMC Agent Hub integration — users get signals without code
+- 📋 **Phase 3 (Q4 2025):** Trust Wallet alerts — push notifications for conviction signals
+- 📋 **Phase 4 (2026):** BSC vault integration — automated execution for treasuries
+
+**Why BNB Chain?**
+
+- CAKE (PancakeSwap) shows strongest signal in our tests — optimized for BSC ecosystem
+- Low fees enable frequent signal updates
+- CMC + Trust Wallet stack is production-ready on BSC
+
 ---
 
 **API headers:** REST `X-CMC_PRO_API_KEY` · MCP `X-CMC-MCP-API-KEY`
