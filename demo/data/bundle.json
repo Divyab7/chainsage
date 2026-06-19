@@ -6688,7 +6688,7 @@
     "data_source": "coinmarketcap_live",
     "fear_greed": 20.0,
     "plain_english": "Extreme fear (Fear & Greed = 20). Sitting out \u2014 capital preservation mode.",
-    "updated_at": "2026-06-19T18:22:09.259857+00:00"
+    "updated_at": "2026-06-19T19:23:51.217969+00:00"
   },
   "verify": {
     "BNB": {
@@ -6779,7 +6779,7 @@
       "get_global_metrics_latest"
     ]
   },
-  "built_at": "2026-06-19T18:22:09.259857+00:00",
+  "built_at": "2026-06-19T19:23:51.217969+00:00",
   "hero": {
     "best_asset": "CAKE",
     "best_return": 1.1422,
