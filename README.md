@@ -226,11 +226,10 @@ GitHub Actions run on every **push** and **pull request**:
 | Workflow | File | What it does |
 |----------|------|----------------|
 | **chainsage-ci** | `.github/workflows/ci.yml` | `pytest` (40 tests) → `chainsage backtest-all` → `chainsage research` → `chainsage verify` |
-| **Deploy demo** | `.github/workflows/pages.yml` | Rebuilds backtests + demo bundle → deploys `demo/` to **GitHub Pages** on push to `main` |
 
-**chainsage-ci** must pass before merge. **Deploy demo** publishes the static dashboard (enable GitHub Pages under repo Settings → Pages → source: GitHub Actions).
+**chainsage-ci** must pass before merge. The live demo is on **Vercel** (below).
 
-**Vercel (deployed):** [https://chainsage-virid.vercel.app/](https://chainsage-virid.vercel.app/)
+**Vercel (primary demo):** [https://chainsage-virid.vercel.app/](https://chainsage-virid.vercel.app/)
 
 | Setting | Value |
 |---------|--------|
@@ -255,10 +254,10 @@ ChainSage is designed for **three user personas**:
 
 **Roadmap:**
 
-- ✅ **Phase 1 (Now):** Standalone backtesting framework
-- 🔄 **Phase 2 (Q3 2025):** CMC Agent Hub integration — users get signals without code
-- 📋 **Phase 3 (Q4 2025):** Trust Wallet alerts — push notifications for conviction signals
-- 📋 **Phase 4 (2026):** BSC vault integration — automated execution for treasuries
+- ✅ **Phase 1:** Standalone backtesting framework
+- 🔄 **Phase 2:** CMC Agent Hub integration — users get signals without code
+- 📋 **Phase 3:** Trust Wallet alerts — push notifications for conviction signals
+- 📋 **Phase 4:** BSC vault integration — automated execution for treasuries
 
 **Why BNB Chain?**
 
