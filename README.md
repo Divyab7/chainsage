@@ -14,7 +14,8 @@ Not a black box — a **reproducible framework** for strategy validation. ChainS
 | Resource      | Location                                                                                  |
 | ------------- | ----------------------------------------------------------------------------------------- |
 | CMC Skill     | `[skills/chainsage-conviction-gate/SKILL.md](skills/chainsage-conviction-gate/SKILL.md)`  |
-| Live demo     | `python -m http.server 8080` → [http://localhost:8080/demo/](http://localhost:8080/demo/) |
+| Live demo     | **[https://chainsage-virid.vercel.app/](https://chainsage-virid.vercel.app/)** (static dashboard) |
+| Local demo    | `python -m http.server 8080` → [http://localhost:8080/demo/](http://localhost:8080/demo/) |
 | Strategy spec | `reports/bnb_strategy_spec.json`                                                          |
 
 
@@ -80,7 +81,11 @@ Writes:
 | `reports/event_study.csv`         | Regime forward-return study                                       |
 
 
-### 5. (Optional) View the demo
+### 5. View the demo
+
+**Live:** [https://chainsage-virid.vercel.app/](https://chainsage-virid.vercel.app/) — IS/OOS hero, asset table, verify panel, research pipeline (no login, no API key).
+
+**Local:**
 
 ```bash
 chainsage build-demo    # bundles reports → demo/data/bundle.json
@@ -88,7 +93,7 @@ python -m http.server 8080
 # open http://localhost:8080/demo/
 ```
 
-The demo reads **only** `demo/data/bundle.json` — no backend. Shows IS/OOS comparison, research pipeline, verification panel, and live decision (if `reports/live_decision.json` exists).
+The demo reads **only** `demo/data/bundle.json` — no backend. The Vercel site is the same static bundle; refresh in-browser reloads committed data (not live CMC).
 
 ### 6. (Optional) Live CMC decision
 
@@ -207,7 +212,7 @@ chainsage backtest --asset CAKE --mode ensemble
 | ------------------- | ---------------------------------------------- |
 | CMC Skill           | `skills/chainsage-conviction-gate/SKILL.md`    |
 | Strategy spec       | `reports/bnb_strategy_spec.json`               |
-| Demo dashboard      | `demo/index.html` + `demo/data/bundle.json`    |
+| Demo dashboard      | [chainsage-virid.vercel.app](https://chainsage-virid.vercel.app/) · `demo/index.html` + `demo/data/bundle.json` |
 | Conservative config | `config/conservative.yaml`                     |
 | Verification        | `chainsage verify` / `src/chainsage/verify.py` |
 
@@ -225,7 +230,16 @@ GitHub Actions run on every **push** and **pull request**:
 
 **chainsage-ci** must pass before merge. **Deploy demo** publishes the static dashboard (enable GitHub Pages under repo Settings → Pages → source: GitHub Actions).
 
-**Vercel (optional):** Import the repo, set **Root Directory** to `demo`, leave build command empty (bundle is committed). See `vercel.json` if deploying from repo root with rewrites.
+**Vercel (deployed):** [https://chainsage-virid.vercel.app/](https://chainsage-virid.vercel.app/)
+
+| Setting | Value |
+|---------|--------|
+| Root Directory | `demo` |
+| Build Command | *(empty)* |
+| Output Directory | `.` |
+| Environment variables | *(none — static site)* |
+
+Before redeploying, refresh the bundle: `chainsage build-demo`, commit `demo/data/bundle.json`, push. Deploying from repo root instead? Use `vercel.json` rewrites or open `/demo/` manually.
 
 ---
 
@@ -255,6 +269,19 @@ ChainSage is designed for **three user personas**:
 ---
 
 **API headers:** REST `X-CMC_PRO_API_KEY` · MCP `X-CMC-MCP-API-KEY`
+
+---
+
+## Contributors
+
+| Contributor | Role |
+|-------------|------|
+| [@Divyab7](https://github.com/Divyab7) | Primary author — strategy design, research, validation |
+| [@cursoragent](https://github.com/cursoragent) (Cursor Agent) | AI-assisted implementation — demo UI, institutional metrics, CI, docs |
+
+Co-authored commits use `Co-authored-by: Cursor <cursoragent@cursor.com>` so [Cursor Agent](https://github.com/cursoragent) appears on GitHub’s contributor graph.
+
+---
 
 ## License
 
